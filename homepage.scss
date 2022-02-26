@@ -5,6 +5,7 @@
 }
 
 body{
+    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -55,7 +56,6 @@ body{
 
         &:hover{
             background-color: rgb(245, 245, 245);
-            border-radius: 50px;
         }
 
         img{
@@ -129,6 +129,10 @@ body{
             }
             .insert{
                 font-size: 0.9rem;
+
+                a:hover{
+                    text-decoration: underline;
+                }
             }
         }
         .time-view{
@@ -139,17 +143,22 @@ body{
                 align-self: end;
                 width: 24px;
             }
-            .select{
+            .view{
                 font-size: 0.9rem;
+
+                a:hover{
+                    text-decoration: undeline;
+                }
             }
         }
-        }
     }
+        
+   }
     .accesses{
         grid-area: accesses;
+        margin-top: 12px;
 
         .user{
-            width: 32px;
             border:none;
             background-color: white;
             margin-right: 5px;
@@ -234,5 +243,62 @@ main{
     height: 100vh;
 
 }
+
+footer{
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "box-footer"
+    "footer-nav"
+    "hr";
+
+    .box-footer{
+        grid-area: box-footer;
+        display: grid;
+        width: 80vw;
+        margin: auto;
+        padding: 40px 0;
+        grid-template-columns: 2fr repeat(4, 1fr);
+        grid-template-areas:
+        "first-box second-box third-box fourth-box fifth-box"
+    }
+    .footer-nav{
+        grid-area: footer-nav;
+        width: 80vw;
+        margin: auto;
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-reference{
+
+            img{
+                margin: 0px 10px;
+            }
+        }
+        .change-country{
+            display: flex;
+            column-gap: 3px;
+            min-width: 100px;
+            padding: 5px 10px;
+            border-radius: 50px;
+
+            img{
+                width: 24px;
+            }
+            h4{
+                align-self: center;
+                color: #484848;
+            }
+        }
+    }
+    .footer-hr{
+        grid-area: hr;
+        border: 5px solid red;
+    }
+}
+
 
 

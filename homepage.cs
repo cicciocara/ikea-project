@@ -217,46 +217,19 @@ footer {
   background-color: lightgrey;
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "box-footer" "footer-nav" "hr";
+  grid-template-areas: "box-footer" "footer-nav";
 }
 footer .box-footer {
+  margin: 20px 0;
   grid-area: box-footer;
   display: grid;
   width: 80vw;
   margin: auto;
-  padding: 40px 0;
   grid-template-columns: 2fr repeat(4, 1fr);
   grid-template-areas: "first-box second-box third-box fourth-box fifth-box";
 }
 footer .footer-nav {
   grid-area: footer-nav;
-  width: 80vw;
-  margin: auto;
-  padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-footer .footer-nav .footer-reference img {
-  margin: 0px 10px;
-}
-footer .footer-nav .change-country {
-  display: flex;
-  column-gap: 3px;
-  min-width: 100px;
-  padding: 5px 10px;
-  border-radius: 50px;
-}
-footer .footer-nav .change-country img {
-  width: 24px;
-}
-footer .footer-nav .change-country h4 {
-  align-self: center;
-  color: #484848;
-}
-footer .footer-hr {
-  grid-area: hr;
-  border: 5px solid red;
 }
 
-/*# sourceMappingURL=homepage.css.map */
+/*# sourceMappingURL=homepage.cs.map */
