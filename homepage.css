@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .upper-nav {
   min-width: 100vw;
   background-color: black;
@@ -41,10 +45,20 @@
   grid-area: menu;
   border: none;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lower-nav .menu:hover {
+  background-color: whitesmoke;
+  border-radius: 50px;
 }
 .lower-nav .menu img {
-  width: 24px;
+  width: 42px;
   background-color: inherit;
+  padding: 10px;
+  border-radius: 50px;
+  position: fixed;
 }
 .lower-nav .logo {
   grid-area: logo;
@@ -94,6 +108,7 @@
 }
 .lower-nav .information-box .code-insert {
   display: flex;
+  column-gap: 5px;
 }
 .lower-nav .information-box .code-insert img {
   grid-area: img;
@@ -105,6 +120,7 @@
 }
 .lower-nav .information-box .time-view {
   display: flex;
+  column-gap: 5px;
 }
 .lower-nav .information-box .time-view img {
   align-self: end;
@@ -182,6 +198,13 @@
 }
 .sub-nav li:last-child a:hover {
   text-decoration: underline;
+}
+
+main {
+  margin: auto;
+  margin-top: 20px;
+  width: 80vw;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=homepage.css.map */
