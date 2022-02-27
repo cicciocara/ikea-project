@@ -40,7 +40,7 @@ body {
   row-gap: 40px;
   column-gap: 20px;
   place-items: center;
-  grid-template-areas: "menu logo search-bar information-box accesses" ". sub-nav . . .";
+  grid-template-areas: "menu logo search-bar information-box accesses" ". sub-nav . . ." ". hr hr hr hr";
 }
 .lower-nav .menu {
   grid-area: menu;
@@ -135,128 +135,137 @@ body {
 .lower-nav .information-box .time-view .view a:hover {
   text-decoration: undeline;
 }
-
-.accesses {
+.lower-nav .accesses {
   grid-area: accesses;
   margin-top: 12px;
 }
-.accesses .user {
+.lower-nav .accesses .user {
   border: none;
   background-color: white;
   margin-right: 5px;
 }
-.accesses .user:hover {
+.lower-nav .accesses .user:hover {
   background-color: whitesmoke;
   border-radius: 50px;
 }
-.accesses .user img {
+.lower-nav .accesses .user img {
   width: 24px;
 }
-.accesses .heart {
+.lower-nav .accesses .heart {
   width: 32px;
   border: none;
   background-color: white;
   margin-right: 5px;
 }
-.accesses .heart:hover {
+.lower-nav .accesses .heart:hover {
   background-color: whitesmoke;
   border-radius: 50px;
 }
-.accesses .heart img {
+.lower-nav .accesses .heart img {
   width: 24px;
 }
-.accesses .basket {
+.lower-nav .accesses .basket {
   width: 32px;
   border: none;
   background-color: white;
   margin-right: 5px;
 }
-.accesses .basket:hover {
+.lower-nav .accesses .basket:hover {
   background-color: whitesmoke;
   border-radius: 50px;
 }
-.accesses .basket img {
+.lower-nav .accesses .basket img {
   width: 24px;
 }
-
-.sub-nav {
+.lower-nav .sub-nav {
   grid-area: sub-nav;
   display: flex;
   margin-left: 60px;
 }
-.sub-nav li:first-child {
+.lower-nav .sub-nav li:first-child {
   list-style: none;
 }
-.sub-nav li:first-child a {
+.lower-nav .sub-nav li:first-child a {
   text-decoration: none;
   color: black;
 }
-.sub-nav li:first-child a:hover {
+.lower-nav .sub-nav li:first-child a:hover {
   text-decoration: underline;
 }
-.sub-nav li:last-child {
+.lower-nav .sub-nav li:last-child {
   list-style: none;
 }
-.sub-nav li:last-child a {
+.lower-nav .sub-nav li:last-child a {
   text-decoration: none;
   color: black;
   padding-left: 30px;
 }
-.sub-nav li:last-child a:hover {
+.lower-nav .sub-nav li:last-child a:hover {
   text-decoration: underline;
+}
+.lower-nav hr {
+  grid-area: hr;
+  width: 100%;
 }
 
 main {
   margin: auto;
   margin-top: 20px;
-  width: 80vw;
+  width: 90vw;
   height: 100vh;
 }
 
 footer {
-  background-color: lightgrey;
+  display: grid;
+  background-color: whitesmoke;
+  margin-top: 20px;
+  grid-template-columns: 8vw 7vw 35vw 33vw 10vw;
+  row-gap: 40px;
+  column-gap: 20px;
+  grid-template-areas: ". footer-container footer-container footer-container footer-container";
+}
+footer .footer-container {
+  grid-area: footer-container;
+  background-color: inherit;
+  margin: 65px 0;
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "box-footer" "footer-nav" "hr";
+  grid-template-areas: "box-footer" "footer-nav";
+  /*  .footer-hr{
+        grid-area: hr;
+        width: 100%;
+        border: 5px solid red;
+    }*/
 }
-footer .box-footer {
+footer .footer-container .box-footer {
   grid-area: box-footer;
   display: grid;
-  width: 80vw;
-  margin: auto;
-  padding: 40px 0;
   grid-template-columns: 2fr repeat(4, 1fr);
   grid-template-areas: "first-box second-box third-box fourth-box fifth-box";
 }
-footer .footer-nav {
+footer .footer-container .footer-nav {
   grid-area: footer-nav;
-  width: 80vw;
-  margin: auto;
-  padding: 40px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-footer .footer-nav .footer-reference img {
+footer .footer-container .footer-nav .footer-reference img {
   margin: 0px 10px;
 }
-footer .footer-nav .change-country {
+footer .footer-container .footer-nav .change-country {
   display: flex;
+  margin-right: 10px;
   column-gap: 3px;
   min-width: 100px;
   padding: 5px 10px;
   border-radius: 50px;
 }
-footer .footer-nav .change-country img {
+footer .footer-container .footer-nav .change-country img {
   width: 24px;
 }
-footer .footer-nav .change-country h4 {
+footer .footer-container .footer-nav .change-country h4 {
   align-self: center;
   color: #484848;
-}
-footer .footer-hr {
-  grid-area: hr;
-  border: 5px solid red;
 }
 
 /*# sourceMappingURL=homepage.css.map */

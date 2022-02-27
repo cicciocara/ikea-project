@@ -44,7 +44,8 @@ body{
     place-items: center;
     grid-template-areas: 
     "menu logo search-bar information-box accesses"
-    ". sub-nav . . .";
+    ". sub-nav . . ."
+    ". hr hr hr hr";
 
     .menu{
         grid-area: menu;
@@ -153,7 +154,6 @@ body{
         }
     }
         
-   }
     .accesses{
         grid-area: accesses;
         margin-top: 12px;
@@ -236,69 +236,84 @@ body{
         }
     }
 
+    hr{
+        grid-area: hr;
+        width: 100%;
+    }
+}
+
 main{
     margin: auto;
     margin-top: 20px;
-    width: 80vw;
+    width: 90vw;
     height: 100vh;
 
 }
 
 footer{
-    background-color: lightgrey;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: 
-    "box-footer"
-    "footer-nav"
-    "hr";
+    background-color: rgb(245, 245, 245);
+    margin-top: 20px;
+    grid-template-columns: 8vw 7vw 35vw 33vw 10vw;
+    row-gap: 40px;
+    column-gap: 20px;
+    grid-template-areas:
+    ". footer-container footer-container footer-container footer-container";
 
-    .box-footer{
-        grid-area: box-footer;
+    .footer-container{
+        grid-area: footer-container;
+        background-color: inherit;
+        margin: 65px 0;
         display: grid;
-        width: 80vw;
-        margin: auto;
-        padding: 40px 0;
-        grid-template-columns: 2fr repeat(4, 1fr);
-        grid-template-areas:
-        "first-box second-box third-box fourth-box fifth-box"
-    }
-    .footer-nav{
-        grid-area: footer-nav;
-        width: 80vw;
-        margin: auto;
-        padding: 40px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "box-footer"
+        "footer-nav";
+        //"hr";
 
-        .footer-reference{
-
-            img{
-                margin: 0px 10px;
-            }
+        .box-footer{
+            grid-area: box-footer;
+            display: grid;
+            grid-template-columns: 2fr repeat(4, 1fr);
+            grid-template-areas:
+            "first-box second-box third-box fourth-box fifth-box"
         }
-        .change-country{
+        .footer-nav{
+            grid-area: footer-nav;
             display: flex;
-            column-gap: 3px;
-            min-width: 100px;
-            padding: 5px 10px;
-            border-radius: 50px;
+            justify-content: space-between;
+            align-items: center;
 
-            img{
-                width: 24px;
+            .footer-reference{
+                img{
+                    margin: 0px 10px;
+                }
             }
-            h4{
-                align-self: center;
-                color: #484848;
+            .change-country{
+                display: flex;
+                margin-right: 10px;
+                column-gap: 3px;
+                min-width: 100px;
+                padding: 5px 10px;
+                border-radius: 50px;
+
+                img{
+                    width: 24px;
+                }
+                h4{
+                    align-self: center;
+                    color: #484848;
+                }
             }
         }
-    }
-    .footer-hr{
-        grid-area: hr;
-        border: 5px solid red;
+      /*  .footer-hr{
+            grid-area: hr;
+            width: 100%;
+            border: 5px solid red;
+        }*/
     }
 }
 
+     
 
 
