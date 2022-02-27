@@ -255,7 +255,6 @@ footer{
     background-color: rgb(245, 245, 245);
     margin-top: 20px;
     grid-template-columns: 8vw 7vw 35vw 33vw 10vw;
-    row-gap: 40px;
     column-gap: 20px;
     grid-template-areas:
     ". footer-container footer-container footer-container footer-container";
@@ -266,6 +265,7 @@ footer{
         margin: 65px 0;
         display: grid;
         grid-template-columns: auto;
+        row-gap: 50px;
         grid-template-areas: 
         "box-footer"
         "footer-nav";
@@ -275,8 +275,74 @@ footer{
             grid-area: box-footer;
             display: grid;
             grid-template-columns: 2fr repeat(4, 1fr);
+            column-gap: 20px;
             grid-template-areas:
-            "first-box second-box third-box fourth-box fifth-box"
+            "first-box second-box third-box fourth-box fifth-box";
+
+            .first-box{
+                display: flex;
+                flex-direction: column;
+                row-gap: 18px;
+
+                h3{
+                    margin: 10px 0;
+                }
+
+                p{
+                    color: rgb(72,72,72);
+                    padding: 10px 0;
+                    line-height: 1.5rem;
+                }
+
+                .footer-information{
+                    display: flex;
+                    flex-direction: column;
+
+                    a{
+                        color: rgb(72,72,72);
+    
+                        &:hover{
+                            color: rgb(45,45,45);
+                        }
+                    }
+
+                    button{
+                        max-width: fit-content;
+                        margin: 15px 0;
+                        background-color: black;
+                        color: white;
+                        padding: 12px 24px;
+                        border: none;
+                        border-radius: 50px;
+                    }
+                }
+            }
+
+            .second-box,
+            .third-box,
+            .fourth-box,
+            .fifth-box{
+
+                h4{
+                    padding: 10px 0;
+                    font-size: 1.05rem;
+                }
+
+                li{
+                    list-style: none;
+                    padding: 10px 0;
+      
+                      a{
+                          text-decoration: none;
+                          color: rgb(72,72,72);
+      
+                          &:hover{
+                              color: rgb(45,45,45);
+                              text-decoration: underline;
+                          }
+                      }
+                  }
+            }
         }
         .footer-nav{
             grid-area: footer-nav;
@@ -285,17 +351,24 @@ footer{
             align-items: center;
 
             .footer-reference{
+
                 img{
                     margin: 0px 10px;
                 }
             }
+
             .change-country{
                 display: flex;
+                border:1px solid lightgrey;
                 margin-right: 10px;
                 column-gap: 3px;
                 min-width: 100px;
                 padding: 5px 10px;
                 border-radius: 50px;
+
+                &:hover{
+                    border: 1px solid #484848;
+                }
 
                 img{
                     width: 24px;
