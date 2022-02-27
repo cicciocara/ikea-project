@@ -272,6 +272,10 @@ footer .footer-container .box-footer .first-box .footer-information button {
   border: none;
   border-radius: 50px;
 }
+footer .footer-container .box-footer .first-box .footer-information button:hover {
+  background-color: #333333;
+  cursor: pointer;
+}
 footer .footer-container .box-footer .second-box h4,
 footer .footer-container .box-footer .third-box h4,
 footer .footer-container .box-footer .fourth-box h4,
@@ -360,6 +364,7 @@ footer .footer-container .footer-nav .change-country {
 }
 footer .footer-container .footer-nav .change-country:hover {
   border: 1px solid #484848;
+  cursor: pointer;
 }
 footer .footer-container .footer-nav .change-country img {
   width: 24px;

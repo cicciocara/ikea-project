@@ -316,6 +316,11 @@ footer{
                         padding: 12px 24px;
                         border: none;
                         border-radius: 50px;
+
+                        &:hover{
+                            background-color: rgb(51,51,51);
+                            cursor: pointer;
+                        }
                     }
                 }
             }
@@ -411,6 +416,7 @@ footer{
 
                 &:hover{
                     border: 1px solid #484848;
+                    cursor: pointer;
                 }
 
                 img{
