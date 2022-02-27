@@ -238,6 +238,7 @@ body{
 
     hr{
         grid-area: hr;
+        border: 1px solid lightgrey;
         width: 100%;
     }
 }
@@ -268,8 +269,9 @@ footer{
         row-gap: 50px;
         grid-template-areas: 
         "box-footer"
-        "footer-nav";
-        //"hr";
+        "footer-nav"
+        "footer-hr"
+        "footer-copyright";
 
         .box-footer{
             grid-area: box-footer;
@@ -351,15 +353,56 @@ footer{
             align-items: center;
 
             .footer-reference{
+                
 
-                img{
+                img:nth-child(1),
+                img:nth-child(2),
+                img:nth-child(3),
+                img:nth-child(4),
+                img:nth-child(5){
                     margin: 0px 10px;
+                    height: 34px;
+                    border: 1px solid lightgrey;
+                    padding: 5px;
+                    border-radius: 50px;
+                }
+                img:nth-child(6),
+                img:nth-child(7),
+                img:nth-child(8),
+                img:nth-child(9),
+                img:nth-child(10){
+                    margin: 0px 10px;
+                    height: 34px;
+                    border: 1px solid lightgrey;
+                    padding: 5px;
+                }
+                img:nth-child(11){
+                    width: 64.75px;
+                    height: 34px;
+                    margin: 0px 10px;
+                    border: 1px solid lightgrey;
+                    padding: 5px;
+                }
+                img:nth-child(12){
+                    width: 34px;
+                    height: 34px;
+                    margin: 0px 10px;
+                    border: 1px solid lightgrey;
+                    padding: 5px;
+                }
+                img:nth-child(13){
+                    width: 72.25px;
+                    height: 34px;
+                    margin: 0px 10px;
+                    border: 1px solid lightgrey;
+                    padding: 5px;
                 }
             }
 
             .change-country{
                 display: flex;
                 border:1px solid lightgrey;
+                background-color: rgb(245, 245, 245);
                 margin-right: 10px;
                 column-gap: 3px;
                 min-width: 100px;
@@ -379,11 +422,41 @@ footer{
                 }
             }
         }
-      /*  .footer-hr{
-            grid-area: hr;
+        .footer-hr{
+            grid-area: footer-hr;
+            background-color: lightgrey;
             width: 100%;
-            border: 5px solid red;
-        }*/
+        }
+        .footer-copyright{
+            display: flex;
+            justify-content: space-between;
+            
+            p{
+                color: #484848;
+                font-size: 0.8rem;
+            }
+            
+            ul{
+                display: flex;
+
+                li{
+                    list-style: none;
+                    color:#484848;
+                    margin: 0 10px;
+
+                    a{
+                        text-decoration: none;
+                        color: #484848;
+                        font-size: 0.9rem;
+
+                        &:hover{
+                            text-decoration: underline;
+                            color: #727272;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
