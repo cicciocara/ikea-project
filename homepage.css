@@ -45,7 +45,7 @@ body {
 .lower-nav .menu {
   grid-area: menu;
   border: none;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,11 +85,23 @@ body {
   background-color: #dedede;
 }
 .lower-nav .search-bar:hover input {
-  background-color: #dedede;
+  background-color: inherit;
 }
 .lower-nav .search-bar img {
   width: 24px;
   height: 24px;
+}
+.lower-nav .search-bar picture {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lower-nav .search-bar picture:hover {
+  background-color: lightgrey;
 }
 .lower-nav .search-bar input {
   width: 100%;
@@ -111,11 +123,13 @@ body {
   column-gap: 5px;
 }
 .lower-nav .information-box .code-insert img {
-  grid-area: img;
   align-self: end;
   width: 24px;
 }
-.lower-nav .information-box .code-insert .insert {
+.lower-nav .information-box .code-insert .insert p {
+  font-size: 0.9rem;
+}
+.lower-nav .information-box .code-insert .insert a {
   font-size: 0.9rem;
 }
 .lower-nav .information-box .code-insert .insert a:hover {
@@ -125,21 +139,29 @@ body {
   display: flex;
   column-gap: 5px;
 }
-.lower-nav .information-box .time-view img {
+.lower-nav .information-box .time-view a {
+  display: flex;
+}
+.lower-nav .information-box .time-view a img {
   align-self: end;
   width: 24px;
 }
-.lower-nav .information-box .time-view .view {
+.lower-nav .information-box .time-view .view p {
   font-size: 0.9rem;
 }
-.lower-nav .information-box .time-view .view a:hover {
-  text-decoration: undeline;
+.lower-nav .information-box .time-view .view .select-market {
+  font-size: 0.9rem;
+}
+.lower-nav .information-box .time-view .view .select-market:hover {
+  text-decoration: underline;
 }
 .lower-nav .accesses {
   grid-area: accesses;
   margin-top: 12px;
 }
 .lower-nav .accesses .user {
+  width: 32px;
+  height: 32px;
   border: none;
   background-color: white;
   margin-right: 5px;
@@ -153,6 +175,7 @@ body {
 }
 .lower-nav .accesses .heart {
   width: 32px;
+  height: 32px;
   border: none;
   background-color: white;
   margin-right: 5px;
@@ -166,6 +189,7 @@ body {
 }
 .lower-nav .accesses .basket {
   width: 32px;
+  height: 32px;
   border: none;
   background-color: white;
   margin-right: 5px;
@@ -209,6 +233,30 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+  .lower-nav {
+    display: grid;
+    grid-template-areas: "logo search-bar accesses menu" "information-box information-box information-box information-box" "hr hr hr hr";
+  }
+  .lower-nav .logo {
+    grid-area: logo;
+  }
+  .lower-nav .search-bar {
+    grid-area: search-bar;
+  }
+  .lower-nav .accesses {
+    grid-area: accesses;
+  }
+  .lower-nav .menu {
+    grid-area: accesses;
+  }
+  .lower-nav .information-box {
+    grid-area: information-box;
+  }
+  .lower-nav .hr {
+    grid-area: hr;
+  }
+}
 main {
   margin: auto;
   margin-top: 20px;

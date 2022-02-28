@@ -50,7 +50,7 @@ body{
     .menu{
         grid-area: menu;
         border: none;
-        background-color: white;
+        background-color: rgba($color: #000000, $alpha: 0);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -93,15 +93,29 @@ body{
             background-color: #dedede;
 
             input{
-                background-color: #dedede;
+                background-color: inherit;
             }
         }
 
         img{
             width: 24px;
-            height: 24px;
-            
+            height: 24px;  
         }
+
+        picture{
+            min-width: 32px;
+            height: 32px;
+            border-radius: 25px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+                &:hover{
+                    background-color: lightgrey;
+                }
+        }
+
         input{
             width: 100%;
             margin-left: 5px;
@@ -124,34 +138,48 @@ body{
             column-gap: 5px;
 
             img{
-                grid-area: img;
                 align-self: end;
                 width: 24px;
             }
             .insert{
-                font-size: 0.9rem;
+                
+                p{
+                    font-size: 0.9rem
+                }
+                a{
+                    font-size: 0.9rem;
 
-                a:hover{
-                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
             }
         }
-        .time-view{
+       .time-view{
             display: flex;
             column-gap: 5px;
 
-            img{
-                align-self: end;
-                width: 24px;
-            }
-            .view{
-                font-size: 0.9rem;
-
-                a:hover{
-                    text-decoration: undeline;
+            a{  // ho "debuggato" una situazione strana, ho capito ciò dai devtools
+                display: flex;
+                img{
+                    align-self: end;
+                    width: 24px;
                 }
             }
-        }
+            .view{
+                
+                p{
+                    font-size: 0.9rem
+                }
+                .select-market{ // stesso motivo per cui ho dovuto assegnare una classe alla a
+                    font-size: 0.9rem;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+       } 
     }
         
     .accesses{
@@ -159,6 +187,8 @@ body{
         margin-top: 12px;
 
         .user{
+            width: 32px;
+            height: 32px;
             border:none;
             background-color: white;
             margin-right: 5px;
@@ -175,6 +205,7 @@ body{
 
         .heart{
             width: 32px;
+            height: 32px;
             border:none;
             background-color: white;
             margin-right: 5px;
@@ -191,6 +222,7 @@ body{
 
         .basket{
             width: 32px;
+            height: 32px;
             border:none;
             background-color: white;
             margin-right: 5px;
