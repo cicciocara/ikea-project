@@ -349,13 +349,29 @@
 }
 
 @media screen and (max-width: 700px){
+    .upper-nav{
+        padding: 0px 20px;
+
+        img{
+            min-width: 18px;
+        }
+
+        a{
+            white-space: nowrap; 
+            width: fit-content; 
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
+    }
     .lower-nav{
         display: grid;
+        margin: 20px 20px 0 20px;
         grid-template-columns: auto auto 2fr;
         grid-template-areas: 
         "logo . accesses"
         "search-bar search-bar search-bar"
-        "information-box information-box information-box";
+        "information-box information-box information-box"
+        "hr hr hr";
 
         .logo{
             grid-area: logo;
@@ -369,10 +385,56 @@
         }
         .information-box{
             grid-area: information-box;
+
+            .code-insert,
+            .time-view{
+                
+                p,
+                a{
+                    padding-right: 10px;
+                    white-space: nowrap; 
+                    width: fit-content; 
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                }
+                img{
+                    min-width: 24px;
+                }
+            }
+        }
+        hr{
+            grid-area: hr;
         }
     }
 }
 
+@media screen and (max-width: 290px){
+    .lower-nav{
+        display: grid;
+        grid-template-areas: 
+        "logo"
+        "accesses"
+        "search-bar"
+        "information-box"
+        "hr";
+
+        .logo{
+            grid-area: logo;
+        }
+        .accesses{
+            grid-area: accesses;
+        }
+        .search-bar{
+            grid-area: search-bar;
+        }
+        .information-box{
+            grid-area: information-box;
+        }
+        .hr{
+            grid-area: hr;
+        }
+    }
+}
 
 
 footer{
