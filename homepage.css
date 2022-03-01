@@ -2,10 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -36,11 +32,10 @@ body {
 .lower-nav {
   display: grid;
   margin-top: 20px;
-  grid-template-columns: 8vw 7vw 35vw 33vw 10vw;
+  grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
   row-gap: 40px;
-  column-gap: 20px;
   place-items: center;
-  grid-template-areas: "menu logo search-bar information-box accesses" ". sub-nav . . ." ". hr hr hr hr";
+  grid-template-areas: "menu logo search-bar information-box accesses" ". sub-nav sub-nav . ." ". hr hr hr hr";
 }
 .lower-nav .menu {
   grid-area: menu;
@@ -62,6 +57,7 @@ body {
 }
 .lower-nav .logo {
   grid-area: logo;
+  justify-self: start;
   border: none;
   background-color: white;
 }
@@ -71,6 +67,7 @@ body {
 }
 .lower-nav .search-bar {
   grid-area: search-bar;
+  justify-self: start;
   width: 100%;
   height: 50px;
   display: flex;
@@ -116,7 +113,7 @@ body {
 .lower-nav .information-box {
   grid-area: information-box;
   display: flex;
-  column-gap: 20px;
+  column-gap: 10px;
 }
 .lower-nav .information-box .code-insert {
   display: flex;
@@ -157,6 +154,7 @@ body {
 }
 .lower-nav .accesses {
   grid-area: accesses;
+  justify-self: start;
   margin-top: 12px;
 }
 .lower-nav .accesses .user {
@@ -201,42 +199,56 @@ body {
 .lower-nav .accesses .basket img {
   width: 24px;
 }
+.lower-nav .accesses .media-query-menu {
+  display: none;
+}
 .lower-nav .sub-nav {
   grid-area: sub-nav;
-  display: flex;
-  margin-left: 60px;
+  display: grid;
+  width: 100%;
+  justify-content: start;
+  grid-template-areas: "product enviroment";
 }
-.lower-nav .sub-nav li:first-child {
+.lower-nav .sub-nav .product {
+  grid-area: product;
   list-style: none;
 }
-.lower-nav .sub-nav li:first-child a {
+.lower-nav .sub-nav .product a {
   text-decoration: none;
   color: black;
 }
-.lower-nav .sub-nav li:first-child a:hover {
+.lower-nav .sub-nav .product a:hover {
   text-decoration: underline;
 }
-.lower-nav .sub-nav li:last-child {
+.lower-nav .sub-nav .enviroment {
+  grid-area: enviroment;
   list-style: none;
 }
-.lower-nav .sub-nav li:last-child a {
+.lower-nav .sub-nav .enviroment a {
   text-decoration: none;
   color: black;
   padding-left: 30px;
 }
-.lower-nav .sub-nav li:last-child a:hover {
+.lower-nav .sub-nav .enviroment a:hover {
   text-decoration: underline;
 }
 .lower-nav hr {
   grid-area: hr;
   border: 1px solid lightgrey;
-  width: 100%;
+  justify-self: start;
+  width: 97%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1225px) {
   .lower-nav {
     display: grid;
-    grid-template-areas: "logo search-bar accesses menu" "information-box information-box information-box information-box" "hr hr hr hr";
+    margin: 20px 50px 0 50px;
+    grid-template-columns: 14vw 5fr 23vw;
+    grid-template-areas: "logo search-bar accesses" "information-box information-box information-box" "hr hr hr";
+  }
+  .lower-nav .sub-nav,
+.lower-nav .menu {
+    display: none;
   }
   .lower-nav .logo {
     grid-area: logo;
@@ -246,30 +258,65 @@ body {
   }
   .lower-nav .accesses {
     grid-area: accesses;
+    justify-self: center;
   }
-  .lower-nav .menu {
-    grid-area: accesses;
+  .lower-nav .accesses .media-query-menu {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: white;
+    margin-right: 5px;
+  }
+  .lower-nav .accesses .media-query-menu:hover {
+    background-color: whitesmoke;
+    border-radius: 50px;
+  }
+  .lower-nav .accesses .media-query-menu img {
+    width: 24px;
   }
   .lower-nav .information-box {
     grid-area: information-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "code-insert time-view";
+  }
+  .lower-nav .information-box .code-insert {
+    grid-area: code-insert;
+  }
+  .lower-nav .information-box .time-view {
+    grid-area: time-view;
   }
   .lower-nav .hr {
     grid-area: hr;
   }
 }
-main {
-  margin: auto;
-  margin-top: 20px;
-  width: 90vw;
-  height: 100vh;
+@media screen and (max-width: 700px) {
+  .lower-nav {
+    display: grid;
+    grid-template-columns: auto auto 2fr;
+    grid-template-areas: "logo . accesses" "search-bar search-bar search-bar" "information-box information-box information-box";
+  }
+  .lower-nav .logo {
+    grid-area: logo;
+  }
+  .lower-nav .accesses {
+    grid-area: accesses;
+    justify-self: end;
+  }
+  .lower-nav .search-bar {
+    grid-area: search-bar;
+  }
+  .lower-nav .information-box {
+    grid-area: information-box;
+  }
 }
-
 footer {
   display: grid;
   background-color: whitesmoke;
   margin-top: 20px;
-  grid-template-columns: 8vw 7vw 35vw 33vw 10vw;
-  column-gap: 20px;
+  grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
   grid-template-areas: ". footer-container footer-container footer-container footer-container";
 }
 footer .footer-container {

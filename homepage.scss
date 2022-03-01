@@ -2,10 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -38,13 +34,12 @@ body{
 .lower-nav{
     display: grid;
     margin-top: 20px;
-    grid-template-columns: 8vw 7vw 35vw 33vw 10vw;
+    grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
     row-gap: 40px;
-    column-gap: 20px;
     place-items: center;
     grid-template-areas: 
     "menu logo search-bar information-box accesses"
-    ". sub-nav . . ."
+    ". sub-nav sub-nav . ."
     ". hr hr hr hr";
 
     .menu{
@@ -69,6 +64,7 @@ body{
     }
     .logo{
         grid-area: logo;
+        justify-self: start;
         border: none;
         background-color: white;
 
@@ -79,6 +75,7 @@ body{
     }
     .search-bar{
         grid-area: search-bar;
+        justify-self: start;
         width: 100%;
         height: 50px;
         display: flex;
@@ -131,7 +128,7 @@ body{
     .information-box{
         grid-area: information-box;
         display: flex;
-        column-gap: 20px;
+        column-gap: 10px;
 
         .code-insert{
             display: flex;
@@ -184,6 +181,7 @@ body{
         
     .accesses{
         grid-area: accesses;
+        justify-self: start;
         margin-top: 12px;
 
         .user{
@@ -236,13 +234,21 @@ body{
                 width: 24px;
             }
         }
+
+        .media-query-menu{
+            display: none;
+        }
     }
     .sub-nav{
         grid-area: sub-nav;
-        display: flex;
-        margin-left: 60px;
+        display: grid;
+        width: 100%;
+        justify-content: start;
+        grid-template-areas: 
+        "product enviroment";
 
-        li:first-child{
+        .product{
+            grid-area: product;
             list-style: none; 
 
             a{
@@ -254,7 +260,8 @@ body{
                 }
             }
         }
-        li:last-child{
+        .enviroment{
+            grid-area: enviroment;
             list-style: none;           
             a{
                 text-decoration: none;
@@ -271,24 +278,109 @@ body{
     hr{
         grid-area: hr;
         border: 1px solid lightgrey;
-        width: 100%;
+        justify-self: start;
+        width: 97%;
     }
 }
 
-main{
-    margin: auto;
-    margin-top: 20px;
-    width: 90vw;
-    height: 100vh;
+@media screen and (max-width: 1225px){
+    .lower-nav{
+        display: grid;
+        margin: 20px 50px 0 50px ;
+        grid-template-columns: 14vw 5fr 23vw;
+        grid-template-areas: 
+        "logo search-bar accesses"
+        "information-box information-box information-box"
+        "hr hr hr";
 
+        .sub-nav,
+        .menu{
+            display: none;
+        }
+
+        .logo{
+            grid-area: logo;
+        }
+        .search-bar{
+            grid-area: search-bar;
+        }
+        .accesses{
+            grid-area: accesses;
+            justify-self: center;
+
+            .media-query-menu{
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                border:none;
+                background-color: white;
+                margin-right: 5px;
+    
+                &:hover{
+                    background-color: rgb(245, 245, 245);
+                    border-radius: 50px;
+                }
+    
+                img{
+                    width: 24px;
+                }
+            }
+        }
+        .information-box{
+            grid-area: information-box;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "code-insert time-view";
+
+            .code-insert{
+                grid-area: code-insert;
+            }
+            .time-view{
+                grid-area: time-view;
+            }
+            
+        }
+        .hr{
+            grid-area: hr;
+        }
+    }
 }
+
+@media screen and (max-width: 700px){
+    .lower-nav{
+        display: grid;
+        grid-template-columns: auto auto 2fr;
+        grid-template-areas: 
+        "logo . accesses"
+        "search-bar search-bar search-bar"
+        "information-box information-box information-box";
+
+        .logo{
+            grid-area: logo;
+        }
+        .accesses{
+            grid-area: accesses;
+            justify-self: end;
+        }
+        .search-bar{
+            grid-area: search-bar;
+        }
+        .information-box{
+            grid-area: information-box;
+        }
+    }
+}
+
+
 
 footer{
     display: grid;
     background-color: rgb(245, 245, 245);
     margin-top: 20px;
-    grid-template-columns: 8vw 7vw 35vw 33vw 10vw;
-    column-gap: 20px;
+    grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
+    //column-gap: 20px;
     grid-template-areas:
     ". footer-container footer-container footer-container footer-container";
 
@@ -496,8 +588,7 @@ footer{
             }
         }
     }
-}
-
+} 
      
 
 
