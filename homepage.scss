@@ -279,7 +279,7 @@
         grid-area: hr;
         border: 1px solid lightgrey;
         justify-self: start;
-        width: 97%;
+        width: 100%;
     }
 }
 
@@ -434,6 +434,111 @@
             grid-area: hr;
         }
     }
+}
+
+main{
+    display: grid;
+    background-color: white;
+    margin-top: 20px;
+    grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
+    grid-template-areas: 
+    ". product-box-1 product-box-1 product-box-1 product-box-1";
+
+    .product-box-1{
+        grid-area: product-box-1;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "first-info"
+        "first-product";
+
+        .first-info{
+            grid-area: first-info;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .first-left-info{
+                
+                h2,
+                p{
+                    margin: 10px 0;
+                }
+            }
+
+            .first-right-info{
+                
+                button{
+                    padding: 12px 18px;
+                    border: 1px solid lightgrey;
+                    background-color: white;
+                    border-radius: 25px;
+                    min-width: fit-content;
+
+                    &:hover{
+                        border: 1px solid #727272;
+                    }
+                }
+            }
+        }
+
+        .first-product-content{
+            grid-area: first-product;
+            margin-top: 20px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, 23vw) 1fr 1fr;
+            grid-auto-rows: repeat(7, 100px);
+
+            .scaffale{
+                grid-column: 1 / 3;
+                grid-row: 1 / 8;
+                max-width: 100%;
+                height: 100%;
+            }
+            .mensola{
+                grid-column: 3 / 4;
+                grid-row: 1 / 4; 
+                max-width: 100%;
+                height: 100%;
+            }
+            .scarpiera{
+                grid-column: 3 / 4;
+                grid-row: 4 / 8;
+                max-width: 100%;
+                height: 100%;
+            }
+            .portalibri{
+                grid-column: 4 / 5;
+                grid-row: 1 / 5;
+                max-width: 100%;
+                height: 100%;
+            }
+           .vestiario{
+                grid-column: 4 / 5;
+                grid-row: 5 / 8;
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1225px){
+    
+    main{
+        display: grid;
+        padding: 20px 50px 0 50px;
+        grid-template-columns: 14vw 5fr 23vw;
+        grid-template-areas: 
+        "prod-1 prod-1 prod-1 prod-1";
+
+        .product-box-1{
+            grid-area: prod-1;
+        }
+    }
+
 }
 
 
