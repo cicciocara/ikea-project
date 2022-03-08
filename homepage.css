@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +32,7 @@
 
 .lower-nav {
   display: grid;
-  margin-top: 20px;
+  margin: 20px 20px 0 0;
   grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
   row-gap: 40px;
   place-items: center;
@@ -367,9 +368,9 @@
 main {
   display: grid;
   background-color: white;
-  margin-top: 20px;
+  margin: 20px 20px 0 0;
   grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
-  grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1";
+  grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slider first-slider first-slider first-slider" ". second-slider second-slider second-slider second-slider" ". third-slider third-slider third-slider third-slider" ". availability-info availability-info availability-info availability-info" ". fourth-slider fourth-slider fourth-slider fourth-slider";
 }
 main .product-box-1 {
   grid-area: product-box-1;
@@ -435,16 +436,518 @@ main .product-box-1 .first-product-content .vestiario {
   max-width: 100%;
   height: 100%;
 }
+main .product-box-2 {
+  grid-area: product-box-2;
+  margin-top: 60px;
+  display: flex;
+}
+main .product-box-2 img {
+  flex: 2.5;
+}
+main .product-box-2 div {
+  background-color: #00853e;
+  flex: 1;
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+main .first-slider-container {
+  grid-area: first-slider;
+  height: 450px;
+  margin-top: 70px;
+}
+main .first-slider-container h2 {
+  margin: 30px 0 30px 0;
+}
+main .first-slider-container .slider {
+  width: 100%;
+}
+main .first-slider-container .slider .slides {
+  display: flex;
+  column-gap: 20px;
+  overflow-x: scroll;
+  height: 340px;
+}
+main .first-slider-container .slider .slides div {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 230px;
+  margin-right: 0px;
+  background: white;
+}
+main .first-slider-container .slider .slides div:hover {
+  cursor: pointer;
+}
+main .first-slider-container .slider .slides div button {
+  margin-top: 180px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+}
+main .first-slider-container .slider .slides div button:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+main .first-slider-container .slider .slides .slide-1 {
+  background-image: url("assets-images/riporta-rivendi.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .first-slider-container .slider .slides .slide-2 {
+  background-image: url("assets-images/circular-hub.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .first-slider-container .slider .slides .slide-3 {
+  background-image: url("assets-images/pannelli-solari.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .first-slider-container .slider .slides .slide-4 {
+  background-image: url("assets-images/risparmiare-acqua.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .first-slider-container .slider .slides .slide-5 {
+  background-image: url("assets-images/una-casa-più-sana.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .first-slider-container .slider .slides .slide-6 {
+  background-image: url("assets-images/ridurre-i-rifiuti.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .first-slider-container .slider .slides .slide-7 {
+  background-image: url("assets-images/mobili-più-sostenibili.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .first-slider-container .slider .slides .slide-8 {
+  background-image: url("assets-images/materiali-più-sostenibili.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .first-slider-container .slider .slides .slide-9 {
+  background-image: url("assets-images/alimentari-più-sostenibili.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .second-slider-container {
+  grid-area: second-slider;
+  margin-top: 60px;
+}
+main .second-slider-container h2 {
+  margin: 30px 0 30px 0;
+}
+main .second-slider-container .slider {
+  width: 100%;
+}
+main .second-slider-container .slider .slides {
+  display: flex;
+  column-gap: 20px;
+  overflow-x: scroll;
+  height: 800px;
+}
+main .second-slider-container .slider .slides div {
+  flex: 1.5;
+  min-width: 425px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+}
+main .second-slider-container .slider .slides div .description {
+  flex: 1;
+  display: grid;
+  padding: 50px 70px 30px 20px;
+}
+main .second-slider-container .slider .slides div .description:hover > a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+main .second-slider-container .slider .slides div .description a {
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+main .second-slider-container .slider .slides div .description p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+main .second-slider-container .slider .slides div .description button {
+  margin-top: 50px;
+  align-self: end;
+  justify-self: start;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-content: center;
+  background-color: black;
+  border-radius: 25px;
+  border: none;
+}
+main .second-slider-container .slider .slides div .description button img {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+}
+main .second-slider-container .slider .slides .slide-1 .img {
+  background-image: url("assets-images/rinnova-con-decorazioni.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .second-slider-container .slider .slides .slide-1 .description {
+  background-color: #ffd6d6;
+}
+main .second-slider-container .slider .slides .slide-2 .img {
+  background-image: url("assets-images/novità.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .second-slider-container .slider .slides .slide-2 .description {
+  background-color: #a3bbc3;
+}
+main .second-slider-container .slider .slides .slide-3 .img {
+  background-image: url("assets-images/hembjuden-edizione-limitata.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .second-slider-container .slider .slides .slide-3 .description {
+  background-color: #b0a1c9;
+}
+main .second-slider-container .slider .slides .slide-4 .img {
+  background-image: url("assets-images/prezzo-più-basso.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .second-slider-container .slider .slides .slide-4 .description {
+  background-color: #c1b1b6;
+}
+main .third-slider-container {
+  grid-area: third-slider;
+  height: 450px;
+  margin-top: 60px;
+}
+main .third-slider-container h2 {
+  margin: 30px 0 30px 0;
+}
+main .third-slider-container .slider {
+  width: 100%;
+}
+main .third-slider-container .slider .slides {
+  display: flex;
+  column-gap: 20px;
+  overflow-x: scroll;
+  height: 340px;
+}
+main .third-slider-container .slider .slides div {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 230px;
+  margin-right: 0px;
+  background: white;
+}
+main .third-slider-container .slider .slides div:hover {
+  cursor: pointer;
+}
+main .third-slider-container .slider .slides div button {
+  margin-top: 180px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+}
+main .third-slider-container .slider .slides div button:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+main .third-slider-container .slider .slides .slide-1 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #002952;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 0 10px 33px;
+}
+main .third-slider-container .slider .slides .slide-1:hover > a {
+  text-decoration: underline;
+}
+main .third-slider-container .slider .slides .slide-1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main .third-slider-container .slider .slides .slide-1 button {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  display: grid;
+  place-content: center;
+}
+main .third-slider-container .slider .slides .slide-1 button img {
+  width: 24px;
+  height: 24px;
+}
+main .third-slider-container .slider .slides .slide-2 {
+  background-image: url("assets-images/punti-ritiro-uffici-postali.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .third-slider-container .slider .slides .slide-3 {
+  background-image: url("assets-images/clicca-e-ritira.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .third-slider-container .slider .slides .slide-4 {
+  background-image: url("assets-images/servizio-di-progettazione.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .third-slider-container .slider .slides .slide-5 {
+  background-image: url("assets-images/app-ikea.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .third-slider-container .slider .slides .slide-6 {
+  background-image: url("assets-images/finanziamenti-su-misura.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .third-slider-container .slider .slides .slide-7 {
+  background-image: url("assets-images/carta-regalo-ikea.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .availability-information {
+  grid-area: availability-info;
+  margin-top: 60px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: start;
+}
+main .availability-information div {
+  padding: 48px;
+}
+main .availability-information div h2 {
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+main .availability-information div button {
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background-color: black;
+}
+main .availability-information div button:hover {
+  cursor: pointer;
+  background-color: #484848;
+}
+main .fourth-slider-container {
+  grid-area: fourth-slider;
+  height: 450px;
+  margin-top: 60px;
+}
+main .fourth-slider-container h2 {
+  margin: 30px 0 30px 0;
+}
+main .fourth-slider-container .slider {
+  width: 100%;
+}
+main .fourth-slider-container .slider .slides {
+  display: flex;
+  column-gap: 20px;
+  overflow-x: scroll;
+  height: 340px;
+}
+main .fourth-slider-container .slider .slides div {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 230px;
+  margin-right: 0px;
+  background: white;
+}
+main .fourth-slider-container .slider .slides div:hover {
+  cursor: pointer;
+}
+main .fourth-slider-container .slider .slides div button {
+  margin-top: 180px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+}
+main .fourth-slider-container .slider .slides div button:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+main .fourth-slider-container .slider .slides .slide-1 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #e00751;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 0 10px 33px;
+}
+main .fourth-slider-container .slider .slides .slide-1:hover > a {
+  text-decoration: underline;
+}
+main .fourth-slider-container .slider .slides .slide-1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main .fourth-slider-container .slider .slides .slide-1 button {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  display: grid;
+  place-content: center;
+}
+main .fourth-slider-container .slider .slides .slide-1 button img {
+  width: 24px;
+  height: 24px;
+}
+main .fourth-slider-container .slider .slides .slide-2 {
+  background-image: url("assets-images/accessori.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .fourth-slider-container .slider .slides .slide-3 {
+  background-image: url("assets-images/organizzare.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .fourth-slider-container .slider .slides .slide-4 {
+  background-image: url("assets-images/tessili.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .fourth-slider-container .slider .slides .slide-5 {
+  background-image: url("assets-images/sala-da-pranzo.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .fourth-slider-container .slider .slides .slide-6 {
+  background-image: url("assets-images/camere-da-letto.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .fourth-slider-container .slider .slides .slide-7 {
+  background-image: url("assets-images/studio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .fourth-slider-container .slider .slides .slide-8 {
+  background-image: url("assets-images/cucine-mobili.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .fourth-slider-container .slider .slides .slide-9 {
+  background-image: url("assets-images/librerie-scaffali.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .fourth-slider-container .slider .slides .slide-10 {
+  background-image: url("assets-images/tutti-i-prodotti.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+@media screen and (max-width: 1250px) {
+  main {
+    display: grid;
+    background-color: white;
+    margin: 20px 20px 0 0;
+    grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
+    grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slide first-slide first-slide first-slide" ". second-slide second-slide second-slide second-slide" ". third-slide third-slide third-slide third-slide" ". info info info info" ". fourth-slide fourth-slide fourth-slide fourth-slide";
+  }
+  main .product-box-1 {
+    grid-area: product-box-1;
+  }
+  main .product-box-2 {
+    grid-area: product-box-2;
+    display: flex;
+    flex-direction: column;
+  }
+  main .first-slider-container {
+    grid-area: first-slide;
+  }
+  main .second-slider-container {
+    grid-area: second-slide;
+  }
+  main .third-slider-container {
+    grid-area: third-slide;
+  }
+  main .availability-information {
+    grid-area: info;
+  }
+  main .fourth-slider-container {
+    grid-area: fourth-slide;
+  }
+}
 @media screen and (max-width: 1225px) {
   main {
     display: grid;
-    padding: 20px 50px 0 50px;
+    margin: 20px 50px 0 50px;
     grid-template-columns: 14vw 5fr 23vw;
-    grid-template-areas: "prod-1 prod-1 prod-1 prod-1";
+    grid-template-areas: "prod-1 prod-1 prod-1" "prod-2 prod-2 prod-2" "first-slide first-slide first-slide" "second-slide second-slide second-slide" "third-slide third-slide third-slide" "info info info" "fourth-slide fourth-slide fourth-slide";
   }
   main .product-box-1 {
     grid-area: prod-1;
+  }
+  main .product-box-2 {
+    grid-area: prod-2;
+  }
+  main .first-slider-container {
+    grid-area: first-slide;
+  }
+  main .second-slider-container {
+    grid-area: second-slide;
+  }
+  main .third-slider-container {
+    grid-area: third-slide;
+  }
+  main .availability-information {
+    grid-area: info;
+  }
+  main .fourth-slider-container {
+    grid-area: fourth-slide;
   }
 }
 footer {
@@ -457,7 +960,7 @@ footer {
 footer .footer-container {
   grid-area: footer-container;
   background-color: inherit;
-  margin: 65px 0;
+  margin: 65px 20px 65px 0;
   display: grid;
   grid-template-columns: auto;
   row-gap: 50px;
