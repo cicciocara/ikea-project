@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    border: 1px solid black;
 }
 
 .upper-nav{
@@ -448,7 +449,8 @@ main{
     ". second-slider second-slider second-slider second-slider"
     ". third-slider third-slider third-slider third-slider"
     ". availability-info availability-info availability-info availability-info"
-    ". fourth-slider fourth-slider fourth-slider fourth-slider";
+    ". fourth-slider fourth-slider fourth-slider fourth-slider"
+    ". fifth-slider fifth-slider fifth-slider fifth-slider";
 
     .product-box-1{
         grid-area: product-box-1;
@@ -1067,6 +1069,108 @@ main{
             }
         }
     }
+    //FIFTH-SLIDER-CONTAINER
+    .fifth-slider-container{
+        grid-area: fifth-slider;
+        height: 700px;
+        margin-top: 60px;
+
+        h2{
+            margin: 30px 0 30px 0;
+        }
+
+        .slider{
+            width: 100%;
+
+            .slides{
+                display: flex;
+                column-gap: 20px;
+                overflow-x: scroll;
+                height: 100%;
+
+                .slide-1{
+
+                    &:hover{
+
+                        button > img{
+                            visibility: visible;
+                        }
+                        .img-product{
+                            transition: 0.3s ease;
+                            background-image: url("assets-images/kallax-furnished.avif");
+                        }
+                    }
+
+                    button{
+                        width: 100%;
+                        padding: 6px 0;
+                        display: flex;
+                        justify-content: end;
+
+                        img{
+                            margin: 10px;
+                            width: 24px;
+                            height: 24px;
+                            visibility: collapse;
+                        }
+                    }
+                    
+                    .img-product-furnished{
+                        width: 240px;
+                        height: 240px;
+                        background-image: url("assets-images/kallax-product.avif");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+
+                        &:hover{
+                            background-image: url("assets-images/kallax-furnished.avif");
+                            transition: 0.3s ease;
+                        }
+                    }
+
+                    .product-info{
+                        display: flex;
+                        height: 250px;
+                        
+                        .info{
+                            flex: 1.1;
+
+                            .price{
+                                display: flex;
+
+                                h4{
+                                    align-self: center;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                        }
+                        .shop{
+                            flex: 1;
+                            display: grid;
+                            place-content: end;
+                            
+                            button{
+                                width: 48px;
+                                height: 48px;
+                                border-radius: 25px;
+                                background-color: #0058a3;
+                                display: grid;
+                                place-content: center;
+                                overflow: hidden;
+
+                                img{
+                                    overflow: hidden;
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 1250px){
     main{
@@ -1081,7 +1185,8 @@ main{
         ". second-slide second-slide second-slide second-slide"
         ". third-slide third-slide third-slide third-slide"
         ". info info info info"
-        ". fourth-slide fourth-slide fourth-slide fourth-slide";
+        ". fourth-slide fourth-slide fourth-slide fourth-slide"
+        ". fifth-slide fifth-slide fifth-slide fifth-slide";
 
         .product-box-1{
             grid-area: product-box-1;
@@ -1106,6 +1211,9 @@ main{
         .fourth-slider-container{
             grid-area: fourth-slide;
         }
+        .fifth-slider-container{
+            grid-area: fifth-slide;
+        }
     }
 }
 
@@ -1122,7 +1230,8 @@ main{
         "second-slide second-slide second-slide"
         "third-slide third-slide third-slide"
         "info info info"
-        "fourth-slide fourth-slide fourth-slide";
+        "fourth-slide fourth-slide fourth-slide"
+        "fifth-slide fifth-slide fifth-slide";
 
         .product-box-1{
             grid-area: prod-1;
@@ -1144,6 +1253,9 @@ main{
         }
         .fourth-slider-container{
             grid-area: fourth-slide;
+        }
+        .fifth-slider-container{
+            grid-area: fifth-slide;
         }
     }
 }

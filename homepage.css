@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  border: 1px solid black;
 }
 
 .upper-nav {
@@ -370,7 +371,7 @@ main {
   background-color: white;
   margin: 20px 20px 0 0;
   grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
-  grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slider first-slider first-slider first-slider" ". second-slider second-slider second-slider second-slider" ". third-slider third-slider third-slider third-slider" ". availability-info availability-info availability-info availability-info" ". fourth-slider fourth-slider fourth-slider fourth-slider";
+  grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slider first-slider first-slider first-slider" ". second-slider second-slider second-slider second-slider" ". third-slider third-slider third-slider third-slider" ". availability-info availability-info availability-info availability-info" ". fourth-slider fourth-slider fourth-slider fourth-slider" ". fifth-slider fifth-slider fifth-slider fifth-slider";
 }
 main .product-box-1 {
   grid-area: product-box-1;
@@ -888,6 +889,87 @@ main .fourth-slider-container .slider .slides .slide-10 {
   background-size: cover;
   background-repeat: no-repeat;
 }
+main .fifth-slider-container {
+  grid-area: fifth-slider;
+  height: 700px;
+  margin-top: 60px;
+}
+main .fifth-slider-container h2 {
+  margin: 30px 0 30px 0;
+}
+main .fifth-slider-container .slider {
+  width: 100%;
+}
+main .fifth-slider-container .slider .slides {
+  display: flex;
+  column-gap: 20px;
+  overflow-x: scroll;
+  height: 100%;
+}
+main .fifth-slider-container .slider .slides .slide-1:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-1:hover .img-product {
+  transition: 0.3s ease;
+  background-image: url("assets-images/kallax-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-1 button {
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  justify-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-1 button img {
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-1 .img-product-furnished {
+  width: 240px;
+  height: 240px;
+  background-image: url("assets-images/kallax-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-1 .img-product-furnished:hover {
+  background-image: url("assets-images/kallax-furnished.avif");
+  transition: 0.3s ease;
+}
+main .fifth-slider-container .slider .slides .slide-1 .product-info {
+  display: flex;
+  height: 250px;
+}
+main .fifth-slider-container .slider .slides .slide-1 .product-info .info {
+  flex: 1.1;
+}
+main .fifth-slider-container .slider .slides .slide-1 .product-info .info .price {
+  display: flex;
+}
+main .fifth-slider-container .slider .slides .slide-1 .product-info .info .price h4 {
+  align-self: center;
+  margin-bottom: 20px;
+}
+main .fifth-slider-container .slider .slides .slide-1 .product-info .shop {
+  flex: 1;
+  display: grid;
+  place-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-1 .product-info .shop button {
+  width: 48px;
+  height: 48px;
+  border-radius: 25px;
+  background-color: #0058a3;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+}
+main .fifth-slider-container .slider .slides .slide-1 .product-info .shop button img {
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+}
 
 @media screen and (max-width: 1250px) {
   main {
@@ -895,7 +977,7 @@ main .fourth-slider-container .slider .slides .slide-10 {
     background-color: white;
     margin: 20px 20px 0 0;
     grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
-    grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slide first-slide first-slide first-slide" ". second-slide second-slide second-slide second-slide" ". third-slide third-slide third-slide third-slide" ". info info info info" ". fourth-slide fourth-slide fourth-slide fourth-slide";
+    grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slide first-slide first-slide first-slide" ". second-slide second-slide second-slide second-slide" ". third-slide third-slide third-slide third-slide" ". info info info info" ". fourth-slide fourth-slide fourth-slide fourth-slide" ". fifth-slide fifth-slide fifth-slide fifth-slide";
   }
   main .product-box-1 {
     grid-area: product-box-1;
@@ -920,13 +1002,16 @@ main .fourth-slider-container .slider .slides .slide-10 {
   main .fourth-slider-container {
     grid-area: fourth-slide;
   }
+  main .fifth-slider-container {
+    grid-area: fifth-slide;
+  }
 }
 @media screen and (max-width: 1225px) {
   main {
     display: grid;
     margin: 20px 50px 0 50px;
     grid-template-columns: 14vw 5fr 23vw;
-    grid-template-areas: "prod-1 prod-1 prod-1" "prod-2 prod-2 prod-2" "first-slide first-slide first-slide" "second-slide second-slide second-slide" "third-slide third-slide third-slide" "info info info" "fourth-slide fourth-slide fourth-slide";
+    grid-template-areas: "prod-1 prod-1 prod-1" "prod-2 prod-2 prod-2" "first-slide first-slide first-slide" "second-slide second-slide second-slide" "third-slide third-slide third-slide" "info info info" "fourth-slide fourth-slide fourth-slide" "fifth-slide fifth-slide fifth-slide";
   }
   main .product-box-1 {
     grid-area: prod-1;
@@ -948,6 +1033,9 @@ main .fourth-slider-container .slider .slides .slide-10 {
   }
   main .fourth-slider-container {
     grid-area: fourth-slide;
+  }
+  main .fifth-slider-container {
+    grid-area: fifth-slide;
   }
 }
 footer {
