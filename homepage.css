@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  border: 1px solid black;
 }
 
 .upper-nav {
@@ -891,7 +890,7 @@ main .fourth-slider-container .slider .slides .slide-10 {
 }
 main .fifth-slider-container {
   grid-area: fifth-slider;
-  height: 700px;
+  height: 800px;
   margin-top: 60px;
 }
 main .fifth-slider-container h2 {
@@ -899,6 +898,7 @@ main .fifth-slider-container h2 {
 }
 main .fifth-slider-container .slider {
   width: 100%;
+  height: 570px;
 }
 main .fifth-slider-container .slider .slides {
   display: flex;
@@ -906,14 +906,79 @@ main .fifth-slider-container .slider .slides {
   overflow-x: scroll;
   height: 100%;
 }
+main .fifth-slider-container .slider .slides div {
+  flex-shrink: 0;
+  width: 320px;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info, main .fifth-slider-container .slider .slides .slide-9 .product-info, main .fifth-slider-container .slider .slides .slide-8 .product-info, main .fifth-slider-container .slider .slides .slide-7 .product-info, main .fifth-slider-container .slider .slides .slide-6 .product-info, main .fifth-slider-container .slider .slides .slide-5 .product-info, main .fifth-slider-container .slider .slides .slide-4 .product-info, main .fifth-slider-container .slider .slides .slide-3 .product-info, main .fifth-slider-container .slider .slides .slide-2 .product-info, main .fifth-slider-container .slider .slides .slide-1 .product-info {
+  display: flex;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info .info, main .fifth-slider-container .slider .slides .slide-9 .product-info .info, main .fifth-slider-container .slider .slides .slide-8 .product-info .info, main .fifth-slider-container .slider .slides .slide-7 .product-info .info, main .fifth-slider-container .slider .slides .slide-6 .product-info .info, main .fifth-slider-container .slider .slides .slide-5 .product-info .info, main .fifth-slider-container .slider .slides .slide-4 .product-info .info, main .fifth-slider-container .slider .slides .slide-3 .product-info .info, main .fifth-slider-container .slider .slides .slide-2 .product-info .info, main .fifth-slider-container .slider .slides .slide-1 .product-info .info {
+  flex: 5;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info .info a, main .fifth-slider-container .slider .slides .slide-9 .product-info .info a, main .fifth-slider-container .slider .slides .slide-8 .product-info .info a, main .fifth-slider-container .slider .slides .slide-7 .product-info .info a, main .fifth-slider-container .slider .slides .slide-6 .product-info .info a, main .fifth-slider-container .slider .slides .slide-5 .product-info .info a, main .fifth-slider-container .slider .slides .slide-4 .product-info .info a, main .fifth-slider-container .slider .slides .slide-3 .product-info .info a, main .fifth-slider-container .slider .slides .slide-2 .product-info .info a, main .fifth-slider-container .slider .slides .slide-1 .product-info .info a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info .info .price, main .fifth-slider-container .slider .slides .slide-9 .product-info .info .price, main .fifth-slider-container .slider .slides .slide-8 .product-info .info .price, main .fifth-slider-container .slider .slides .slide-7 .product-info .info .price, main .fifth-slider-container .slider .slides .slide-6 .product-info .info .price, main .fifth-slider-container .slider .slides .slide-5 .product-info .info .price, main .fifth-slider-container .slider .slides .slide-4 .product-info .info .price, main .fifth-slider-container .slider .slides .slide-3 .product-info .info .price, main .fifth-slider-container .slider .slides .slide-2 .product-info .info .price, main .fifth-slider-container .slider .slides .slide-1 .product-info .info .price {
+  width: 50%;
+  display: flex;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info .info .price h4, main .fifth-slider-container .slider .slides .slide-9 .product-info .info .price h4, main .fifth-slider-container .slider .slides .slide-8 .product-info .info .price h4, main .fifth-slider-container .slider .slides .slide-7 .product-info .info .price h4, main .fifth-slider-container .slider .slides .slide-6 .product-info .info .price h4, main .fifth-slider-container .slider .slides .slide-5 .product-info .info .price h4, main .fifth-slider-container .slider .slides .slide-4 .product-info .info .price h4, main .fifth-slider-container .slider .slides .slide-3 .product-info .info .price h4, main .fifth-slider-container .slider .slides .slide-2 .product-info .info .price h4, main .fifth-slider-container .slider .slides .slide-1 .product-info .info .price h4 {
+  align-self: center;
+  margin-bottom: 20px;
+  height: fit-content;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info .info .price h2, main .fifth-slider-container .slider .slides .slide-9 .product-info .info .price h2, main .fifth-slider-container .slider .slides .slide-8 .product-info .info .price h2, main .fifth-slider-container .slider .slides .slide-7 .product-info .info .price h2, main .fifth-slider-container .slider .slides .slide-6 .product-info .info .price h2, main .fifth-slider-container .slider .slides .slide-5 .product-info .info .price h2, main .fifth-slider-container .slider .slides .slide-4 .product-info .info .price h2, main .fifth-slider-container .slider .slides .slide-3 .product-info .info .price h2, main .fifth-slider-container .slider .slides .slide-2 .product-info .info .price h2, main .fifth-slider-container .slider .slides .slide-1 .product-info .info .price h2 {
+  margin: 0;
+  height: fit-content;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info .info .star, main .fifth-slider-container .slider .slides .slide-9 .product-info .info .star, main .fifth-slider-container .slider .slides .slide-8 .product-info .info .star, main .fifth-slider-container .slider .slides .slide-7 .product-info .info .star, main .fifth-slider-container .slider .slides .slide-6 .product-info .info .star, main .fifth-slider-container .slider .slides .slide-5 .product-info .info .star, main .fifth-slider-container .slider .slides .slide-4 .product-info .info .star, main .fifth-slider-container .slider .slides .slide-3 .product-info .info .star, main .fifth-slider-container .slider .slides .slide-2 .product-info .info .star, main .fifth-slider-container .slider .slides .slide-1 .product-info .info .star,
+main .fifth-slider-container .slider .slides .slide-10 .product-info .info .option,
+main .fifth-slider-container .slider .slides .slide-9 .product-info .info .option,
+main .fifth-slider-container .slider .slides .slide-8 .product-info .info .option,
+main .fifth-slider-container .slider .slides .slide-7 .product-info .info .option,
+main .fifth-slider-container .slider .slides .slide-6 .product-info .info .option,
+main .fifth-slider-container .slider .slides .slide-5 .product-info .info .option,
+main .fifth-slider-container .slider .slides .slide-4 .product-info .info .option,
+main .fifth-slider-container .slider .slides .slide-3 .product-info .info .option,
+main .fifth-slider-container .slider .slides .slide-2 .product-info .info .option,
+main .fifth-slider-container .slider .slides .slide-1 .product-info .info .option {
+  margin-top: 5px;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info .shop, main .fifth-slider-container .slider .slides .slide-9 .product-info .shop, main .fifth-slider-container .slider .slides .slide-8 .product-info .shop, main .fifth-slider-container .slider .slides .slide-7 .product-info .shop, main .fifth-slider-container .slider .slides .slide-6 .product-info .shop, main .fifth-slider-container .slider .slides .slide-5 .product-info .shop, main .fifth-slider-container .slider .slides .slide-4 .product-info .shop, main .fifth-slider-container .slider .slides .slide-3 .product-info .shop, main .fifth-slider-container .slider .slides .slide-2 .product-info .shop, main .fifth-slider-container .slider .slides .slide-1 .product-info .shop {
+  flex: 1;
+  display: grid;
+  place-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info .shop button, main .fifth-slider-container .slider .slides .slide-9 .product-info .shop button, main .fifth-slider-container .slider .slides .slide-8 .product-info .shop button, main .fifth-slider-container .slider .slides .slide-7 .product-info .shop button, main .fifth-slider-container .slider .slides .slide-6 .product-info .shop button, main .fifth-slider-container .slider .slides .slide-5 .product-info .shop button, main .fifth-slider-container .slider .slides .slide-4 .product-info .shop button, main .fifth-slider-container .slider .slides .slide-3 .product-info .shop button, main .fifth-slider-container .slider .slides .slide-2 .product-info .shop button, main .fifth-slider-container .slider .slides .slide-1 .product-info .shop button {
+  width: 48px;
+  height: 48px;
+  border-radius: 25px;
+  background-color: #0058a3;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+}
+main .fifth-slider-container .slider .slides .slide-10 .product-info .shop button img, main .fifth-slider-container .slider .slides .slide-9 .product-info .shop button img, main .fifth-slider-container .slider .slides .slide-8 .product-info .shop button img, main .fifth-slider-container .slider .slides .slide-7 .product-info .shop button img, main .fifth-slider-container .slider .slides .slide-6 .product-info .shop button img, main .fifth-slider-container .slider .slides .slide-5 .product-info .shop button img, main .fifth-slider-container .slider .slides .slide-4 .product-info .shop button img, main .fifth-slider-container .slider .slides .slide-3 .product-info .shop button img, main .fifth-slider-container .slider .slides .slide-2 .product-info .shop button img, main .fifth-slider-container .slider .slides .slide-1 .product-info .shop button img {
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+}
+main .fifth-slider-container .slider .slides .slide-1:hover a {
+  text-decoration: underline;
+}
 main .fifth-slider-container .slider .slides .slide-1:hover button > img {
   visibility: visible;
 }
-main .fifth-slider-container .slider .slides .slide-1:hover .img-product {
+main .fifth-slider-container .slider .slides .slide-1:hover .img-product-furnished {
   transition: 0.3s ease;
   background-image: url("assets-images/kallax-furnished.avif");
 }
 main .fifth-slider-container .slider .slides .slide-1 button {
+  background-color: white;
+  border: none;
   width: 100%;
   padding: 6px 0;
   display: flex;
@@ -926,8 +991,8 @@ main .fifth-slider-container .slider .slides .slide-1 button img {
   visibility: collapse;
 }
 main .fifth-slider-container .slider .slides .slide-1 .img-product-furnished {
-  width: 240px;
-  height: 240px;
+  width: 320px;
+  height: 320px;
   background-image: url("assets-images/kallax-product.avif");
   background-position: center;
   background-repeat: no-repeat;
@@ -937,38 +1002,329 @@ main .fifth-slider-container .slider .slides .slide-1 .img-product-furnished:hov
   background-image: url("assets-images/kallax-furnished.avif");
   transition: 0.3s ease;
 }
-main .fifth-slider-container .slider .slides .slide-1 .product-info {
+main .fifth-slider-container .slider .slides .slide-2:hover a {
+  text-decoration: underline;
+}
+main .fifth-slider-container .slider .slides .slide-2:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-2:hover .img-product-furnished {
+  transition: 0.3s ease;
+  background-image: url("assets-images/kleppstad-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-2 button {
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 6px 0;
   display: flex;
-  height: 250px;
+  justify-content: end;
 }
-main .fifth-slider-container .slider .slides .slide-1 .product-info .info {
-  flex: 1.1;
-}
-main .fifth-slider-container .slider .slides .slide-1 .product-info .info .price {
-  display: flex;
-}
-main .fifth-slider-container .slider .slides .slide-1 .product-info .info .price h4 {
-  align-self: center;
-  margin-bottom: 20px;
-}
-main .fifth-slider-container .slider .slides .slide-1 .product-info .shop {
-  flex: 1;
-  display: grid;
-  place-content: end;
-}
-main .fifth-slider-container .slider .slides .slide-1 .product-info .shop button {
-  width: 48px;
-  height: 48px;
-  border-radius: 25px;
-  background-color: #0058a3;
-  display: grid;
-  place-content: center;
-  overflow: hidden;
-}
-main .fifth-slider-container .slider .slides .slide-1 .product-info .shop button img {
-  overflow: hidden;
+main .fifth-slider-container .slider .slides .slide-2 button img {
+  margin: 10px;
   width: 24px;
   height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-2 .img-product-furnished {
+  width: 320px;
+  height: 320px;
+  background-image: url("assets-images/kleppstad-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-2 .img-product-furnished:hover {
+  background-image: url("assets-images/kleppstad-furnished.avif");
+  transition: 0.3s ease;
+}
+main .fifth-slider-container .slider .slides .slide-3:hover a {
+  text-decoration: underline;
+}
+main .fifth-slider-container .slider .slides .slide-3:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-3:hover .img-product-furnished {
+  transition: 0.3s ease;
+  background-image: url("assets-images/tradfri-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-3 button {
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  justify-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-3 button img {
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-3 .img-product-furnished {
+  width: 320px;
+  height: 320px;
+  background-image: url("assets-images/tradfri-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-3 .img-product-furnished:hover {
+  background-image: url("assets-images/tradfri-furnished.avif");
+  transition: 0.3s ease;
+}
+main .fifth-slider-container .slider .slides .slide-4:hover a {
+  text-decoration: underline;
+}
+main .fifth-slider-container .slider .slides .slide-4:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-4:hover .img-product-furnished {
+  transition: 0.3s ease;
+  background-image: url("assets-images/updatera-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-4 button {
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  justify-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-4 button img {
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-4 .img-product-furnished {
+  width: 320px;
+  height: 320px;
+  background-image: url("assets-images/uppdatera-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-4 .img-product-furnished:hover {
+  background-image: url("assets-images/updatera-furnished.avif");
+  transition: 0.3s ease;
+}
+main .fifth-slider-container .slider .slides .slide-5:hover a {
+  text-decoration: underline;
+}
+main .fifth-slider-container .slider .slides .slide-5:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-5:hover .img-product-furnished {
+  transition: 0.3s ease;
+  background-image: url("assets-images/pax-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-5 button {
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  justify-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-5 button img {
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-5 .img-product-furnished {
+  width: 320px;
+  height: 320px;
+  background-image: url("assets-images/pax-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-5 .img-product-furnished:hover {
+  background-image: url("assets-images/pax-furnished.avif");
+  transition: 0.3s ease;
+}
+main .fifth-slider-container .slider .slides .slide-6:hover a {
+  text-decoration: underline;
+}
+main .fifth-slider-container .slider .slides .slide-6:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-6:hover .img-product-furnished {
+  transition: 0.3s ease;
+  background-image: url("assets-images/kallax1-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-6 button {
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  justify-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-6 button img {
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-6 .img-product-furnished {
+  width: 320px;
+  height: 320px;
+  background-image: url("assets-images/kallax1-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-6 .img-product-furnished:hover {
+  background-image: url("assets-images/kallax1-furnished.avif");
+  transition: 0.3s ease;
+}
+main .fifth-slider-container .slider .slides .slide-7:hover a {
+  text-decoration: underline;
+}
+main .fifth-slider-container .slider .slides .slide-7:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-7:hover .img-product-furnished {
+  transition: 0.3s ease;
+  background-image: url("assets-images/friheten-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-7 button {
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  justify-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-7 button img {
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-7 .img-product-furnished {
+  width: 320px;
+  height: 320px;
+  background-image: url("assets-images/friheten-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-7 .img-product-furnished:hover {
+  background-image: url("assets-images/friheten-furnished.avif");
+  transition: 0.3s ease;
+}
+main .fifth-slider-container .slider .slides .slide-8:hover a {
+  text-decoration: underline;
+}
+main .fifth-slider-container .slider .slides .slide-8:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-8:hover .img-product-furnished {
+  transition: 0.3s ease;
+  background-image: url("assets-images/lack-furnished.webp");
+}
+main .fifth-slider-container .slider .slides .slide-8 button {
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  justify-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-8 button img {
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-8 .img-product-furnished {
+  width: 320px;
+  height: 320px;
+  background-image: url("assets-images/lack-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-8 .img-product-furnished:hover {
+  background-image: url("assets-images/lack-furnished.webp");
+  transition: 0.3s ease;
+}
+main .fifth-slider-container .slider .slides .slide-9:hover a {
+  text-decoration: underline;
+}
+main .fifth-slider-container .slider .slides .slide-9:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-9:hover .img-product-furnished {
+  transition: 0.3s ease;
+  background-image: url("assets-images/malm1-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-9 button {
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  justify-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-9 button img {
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-9 .img-product-furnished {
+  width: 320px;
+  height: 320px;
+  background-image: url("assets-images//malm1-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-9 .img-product-furnished:hover {
+  background-image: url("assets-images/malm1-furnished.avif");
+  transition: 0.3s ease;
+}
+main .fifth-slider-container .slider .slides .slide-10:hover a {
+  text-decoration: underline;
+}
+main .fifth-slider-container .slider .slides .slide-10:hover button > img {
+  visibility: visible;
+}
+main .fifth-slider-container .slider .slides .slide-10:hover .img-product-furnished {
+  transition: 0.3s ease;
+  background-image: url("assets-images/variera-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-10 button {
+  background-color: white;
+  border: none;
+  width: 100%;
+  padding: 6px 0;
+  display: flex;
+  justify-content: end;
+}
+main .fifth-slider-container .slider .slides .slide-10 button img {
+  margin: 10px;
+  width: 24px;
+  height: 24px;
+  visibility: collapse;
+}
+main .fifth-slider-container .slider .slides .slide-10 .img-product-furnished {
+  width: 320px;
+  height: 320px;
+  background-image: url("assets-images/variera-product.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .fifth-slider-container .slider .slides .slide-10 .img-product-furnished:hover {
+  background-image: url("assets-images/variera-furnished.avif");
+  transition: 0.3s ease;
 }
 
 @media screen and (max-width: 1250px) {
