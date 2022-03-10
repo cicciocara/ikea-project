@@ -1,48 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
 
-.upper-nav{
+.upper-nav {
     min-width: 100vw;
     background-color: black;
     padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    img{
+
+    img {
         width: 18px;
         height: 100%;
         margin-right: 10px;
         color: white;
         fill: white;
     }
-    .promo{
+
+    .promo {
         color: white;
         font-size: 1rem;
         text-decoration: none;
 
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }
 }
 
-.lower-nav{
+.lower-nav {
     display: grid;
     margin: 20px 20px 0 0;
     grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
     row-gap: 40px;
     place-items: center;
-    grid-template-areas: 
-    "menu logo search-bar information-box accesses"
-    ". sub-nav sub-nav . ."
-    ". hr hr hr hr";
+    grid-template-areas:
+        "menu logo search-bar information-box accesses"
+        ". sub-nav sub-nav . ."
+        ". hr hr hr hr";
 
-    .menu{
+    .menu {
         grid-area: menu;
         border: none;
         background-color: rgba($color: #000000, $alpha: 0);
@@ -50,11 +51,11 @@
         justify-content: center;
         align-items: center;
 
-        &:hover{
+        &:hover {
             background-color: rgb(245, 245, 245);
         }
 
-        img{
+        img {
             width: 42px;
             background-color: inherit;
             padding: 10px;
@@ -62,18 +63,20 @@
             position: fixed;
         }
     }
-    .logo{
+
+    .logo {
         grid-area: logo;
         justify-self: start;
         border: none;
         background-color: white;
 
-        img{
+        img {
             width: 90px;
             height: 36px;
         }
     }
-    .search-bar{
+
+    .search-bar {
         grid-area: search-bar;
         justify-self: start;
         width: 100%;
@@ -86,20 +89,20 @@
         padding: 0 10px;
         background-color: rgb(245, 245, 245);
 
-        &:hover{
+        &:hover {
             background-color: #dedede;
 
-            input{
+            input {
                 background-color: inherit;
             }
         }
 
-        img{
+        img {
             width: 24px;
-            height: 24px;  
+            height: 24px;
         }
 
-        picture{
+        picture {
             min-width: 32px;
             height: 32px;
             border-radius: 25px;
@@ -108,174 +111,186 @@
             justify-content: center;
             align-items: center;
 
-                &:hover{
-                    background-color: lightgrey;
-                }
+            &:hover {
+                background-color: lightgrey;
+            }
         }
 
-        input{
+        input {
             width: 100%;
             margin-left: 5px;
             font-size: 1.1rem;
             background-color: rgb(245, 245, 245);
             border: none;
 
-            &:hover{
+            &:hover {
                 background-color: #dedede;
             }
         }
     }
-    .information-box{
+
+    .information-box {
         grid-area: information-box;
         display: flex;
         column-gap: 10px;
 
-        .code-insert{
+        .code-insert {
             display: flex;
             column-gap: 5px;
 
-            img{
+            img {
                 align-self: end;
                 width: 24px;
             }
-            .insert{
-                
-                p{
+
+            .insert {
+
+                p {
                     font-size: 0.9rem
                 }
-                a{
+
+                a {
                     font-size: 0.9rem;
 
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
             }
         }
-       .time-view{
+
+        .time-view {
             display: flex;
             column-gap: 5px;
 
-            a{  // ho "debuggato" una situazione strana, ho capito ciò dai devtools
+            a {
+                // ho "debuggato" una situazione strana, ho capito ciò dai devtools
                 display: flex;
-                img{
+
+                img {
                     align-self: end;
                     width: 24px;
                 }
             }
-            .view{
-                
-                p{
+
+            .view {
+
+                p {
                     font-size: 0.9rem
                 }
-                .select-market{ // stesso motivo per cui ho dovuto assegnare una classe alla a
+
+                .select-market {
+                    // stesso motivo per cui ho dovuto assegnare una classe alla a
                     font-size: 0.9rem;
 
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
             }
-       } 
+        }
     }
-        
-    .accesses{
+
+    .accesses {
         grid-area: accesses;
         justify-self: start;
         margin-top: 12px;
 
-        .user{
+        .user {
             width: 32px;
             height: 32px;
-            border:none;
+            border: none;
             background-color: white;
             margin-right: 5px;
 
-            &:hover{
+            &:hover {
                 background-color: rgb(245, 245, 245);
                 border-radius: 50px;
             }
 
-            img{
+            img {
                 width: 24px;
             }
         }
 
-        .heart{
+        .heart {
             width: 32px;
             height: 32px;
-            border:none;
+            border: none;
             background-color: white;
             margin-right: 5px;
 
-            &:hover{
+            &:hover {
                 background-color: rgb(245, 245, 245);
                 border-radius: 50px;
             }
 
-            img{
+            img {
                 width: 24px;
             }
         }
 
-        .basket{
+        .basket {
             width: 32px;
             height: 32px;
-            border:none;
+            border: none;
             background-color: white;
             margin-right: 5px;
 
-            &:hover{
+            &:hover {
                 background-color: rgb(245, 245, 245);
                 border-radius: 50px;
             }
 
-            img{
+            img {
                 width: 24px;
             }
         }
 
-        .media-query-menu{
+        .media-query-menu {
             display: none;
         }
     }
-    .sub-nav{
+
+    .sub-nav {
         grid-area: sub-nav;
         display: grid;
         width: 100%;
         justify-content: start;
-        grid-template-areas: 
-        "product enviroment";
+        grid-template-areas:
+            "product enviroment";
 
-        .product{
+        .product {
             grid-area: product;
-            list-style: none; 
+            list-style: none;
 
-            a{
+            a {
                 text-decoration: none;
                 color: black;
 
-                &:hover{
+                &:hover {
                     text-decoration: underline;
                 }
             }
         }
-        .enviroment{
+
+        .enviroment {
             grid-area: enviroment;
-            list-style: none;           
-            a{
+            list-style: none;
+
+            a {
                 text-decoration: none;
                 color: black;
                 padding-left: 30px;
 
-                &:hover{
+                &:hover {
                     text-decoration: underline;
                 }
             }
         }
     }
 
-    hr{
+    hr {
         grid-area: hr;
         border: 1px solid lightgrey;
         justify-self: start;
@@ -283,213 +298,231 @@
     }
 }
 
-@media screen and (max-width: 1225px){
-    .lower-nav{
+@media screen and (max-width: 1225px) {
+    .lower-nav {
         display: grid;
-        margin: 20px 50px 0 50px ;
+        margin: 20px 50px 0 50px;
         grid-template-columns: 14vw 5fr 23vw;
-        grid-template-areas: 
-        "logo search-bar accesses"
-        "information-box information-box information-box"
-        "hr hr hr";
+        grid-template-areas:
+            "logo search-bar accesses"
+            "information-box information-box information-box"
+            "hr hr hr";
 
         .sub-nav,
-        .menu{
+        .menu {
             display: none;
         }
 
-        .logo{
+        .logo {
             grid-area: logo;
         }
-        .search-bar{
+
+        .search-bar {
             grid-area: search-bar;
         }
-        .accesses{
+
+        .accesses {
             grid-area: accesses;
             justify-self: center;
 
-            .media-query-menu{
+            .media-query-menu {
                 display: inline-block;
                 width: 32px;
                 height: 32px;
-                border:none;
+                border: none;
                 background-color: white;
                 margin-right: 5px;
-    
-                &:hover{
+
+                &:hover {
                     background-color: rgb(245, 245, 245);
                     border-radius: 50px;
                 }
-    
-                img{
+
+                img {
                     width: 24px;
                 }
             }
         }
-        .information-box{
+
+        .information-box {
             grid-area: information-box;
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-areas: 
-            "code-insert time-view";
+            grid-template-areas:
+                "code-insert time-view";
 
-            .code-insert{
+            .code-insert {
                 grid-area: code-insert;
             }
-            .time-view{
+
+            .time-view {
                 grid-area: time-view;
             }
-            
+
         }
-        .hr{
+
+        .hr {
             grid-area: hr;
         }
     }
 }
 
-@media screen and (max-width: 700px){
-    .upper-nav{
+@media screen and (max-width: 700px) {
+    .upper-nav {
         padding: 0px 20px;
 
-        img{
+        img {
             min-width: 18px;
         }
 
-        a{
-            white-space: nowrap; 
-            width: fit-content; 
+        a {
+            white-space: nowrap;
+            width: fit-content;
             overflow: hidden;
-            text-overflow: ellipsis; 
+            text-overflow: ellipsis;
         }
     }
-    .lower-nav{
+
+    .lower-nav {
         display: grid;
         margin: 20px 20px 0 20px;
         grid-template-columns: auto auto 2fr;
-        grid-template-areas: 
-        "logo . accesses"
-        "search-bar search-bar search-bar"
-        "information-box information-box information-box"
-        "hr hr hr";
+        grid-template-areas:
+            "logo . accesses"
+            "search-bar search-bar search-bar"
+            "information-box information-box information-box"
+            "hr hr hr";
 
-        .logo{
+        .logo {
             grid-area: logo;
         }
-        .accesses{
+
+        .accesses {
             grid-area: accesses;
             justify-self: end;
         }
-        .search-bar{
+
+        .search-bar {
             grid-area: search-bar;
         }
-        .information-box{
+
+        .information-box {
             grid-area: information-box;
 
             .code-insert,
-            .time-view{
-                
+            .time-view {
+
                 p,
-                a{
+                a {
                     padding-right: 10px;
-                    white-space: nowrap; 
-                    width: fit-content; 
+                    white-space: nowrap;
+                    width: fit-content;
                     overflow: hidden;
-                    text-overflow: ellipsis; 
+                    text-overflow: ellipsis;
                 }
-                img{
+
+                img {
                     min-width: 24px;
                 }
             }
         }
-        hr{
+
+        hr {
             grid-area: hr;
         }
     }
 }
 
-@media screen and (max-width: 290px){
-    .lower-nav{
+@media screen and (max-width: 290px) {
+    .lower-nav {
         display: grid;
-        grid-template-areas: 
-        "logo"
-        "accesses"
-        "search-bar"
-        "information-box"
-        "hr";
+        grid-template-areas:
+            "logo"
+            "accesses"
+            "search-bar"
+            "information-box"
+            "hr";
 
-        .logo{
+        .logo {
             grid-area: logo;
         }
-        .accesses{
+
+        .accesses {
             grid-area: accesses;
         }
-        .search-bar{
+
+        .search-bar {
             grid-area: search-bar;
         }
-        .information-box{
+
+        .information-box {
             grid-area: information-box;
         }
-        .hr{
+
+        .hr {
             grid-area: hr;
         }
     }
 }
 
-main{
+main {
     display: grid;
     background-color: white;
     margin: 20px 20px 0 0;
     grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
-    grid-template-areas: 
-    ". product-box-1 product-box-1 product-box-1 product-box-1"
-    ". product-box-2 product-box-2 product-box-2 product-box-2"
-    ". first-slider first-slider first-slider first-slider"
-    ". second-slider second-slider second-slider second-slider"
-    ". third-slider third-slider third-slider third-slider"
-    ". availability-info availability-info availability-info availability-info"
-    ". fourth-slider fourth-slider fourth-slider fourth-slider"
-    ". fifth-slider fifth-slider fifth-slider fifth-slider";
+    grid-template-areas:
+        ". product-box-1 product-box-1 product-box-1 product-box-1"
+        ". product-box-2 product-box-2 product-box-2 product-box-2"
+        ". first-slider first-slider first-slider first-slider"
+        ". second-slider second-slider second-slider second-slider"
+        ". third-slider third-slider third-slider third-slider"
+        ". availability-info availability-info availability-info availability-info"
+        ". fourth-slider fourth-slider fourth-slider fourth-slider"
+        ". fifth-slider fifth-slider fifth-slider fifth-slider"
+        ". product-box-3 product-box-3 product-box-3 product-box-3"
+        ". six-slider six-slider six-slider six-slider"
+        ". advice advice advice advice";
 
-    .product-box-1{
+    .product-box-1 {
         grid-area: product-box-1;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "first-info"
-        "first-product";
+        grid-template-areas:
+            "first-info"
+            "first-product";
 
-        .first-info{
+        .first-info {
             grid-area: first-info;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .first-left-info{
-                
+            .first-left-info {
+
                 h2,
-                p{
+                p {
                     margin: 10px 0;
                 }
             }
 
-            .first-right-info{
-                
-                button{
+            .first-right-info {
+
+                button {
                     padding: 12px 18px;
                     border: 1px solid lightgrey;
                     background-color: white;
                     border-radius: 25px;
                     min-width: fit-content;
 
-                    &:hover{
+                    &:hover {
                         border: 1px solid #727272;
                     }
                 }
             }
         }
 
-        .first-product-content{
+        .first-product-content {
             grid-area: first-product;
             margin-top: 20px;
             display: grid;
@@ -497,51 +530,56 @@ main{
             grid-template-columns: repeat(2, 23vw) 1fr 1fr;
             grid-auto-rows: repeat(7, 100px);
 
-            .scaffale{
+            .scaffale {
                 grid-column: 1 / 3;
                 grid-row: 1 / 8;
                 max-width: 100%;
                 height: 100%;
             }
-            .mensola{
+
+            .mensola {
                 grid-column: 3 / 4;
-                grid-row: 1 / 4; 
+                grid-row: 1 / 4;
                 max-width: 100%;
                 height: 100%;
             }
-            .scarpiera{
+
+            .scarpiera {
                 grid-column: 3 / 4;
                 grid-row: 4 / 8;
                 max-width: 100%;
                 height: 100%;
             }
-            .portalibri{
+
+            .portalibri {
                 grid-column: 4 / 5;
                 grid-row: 1 / 5;
                 max-width: 100%;
                 height: 100%;
             }
-           .vestiario{
+
+            .vestiario {
                 grid-column: 4 / 5;
                 grid-row: 5 / 8;
                 max-width: 100%;
                 height: 100%;
             }
         }
-        
+
     }
+
     //PRODUCT BOX 2
-    .product-box-2{
+    .product-box-2 {
         grid-area: product-box-2;
         margin-top: 60px;
         display: flex;
 
-        img{
+        img {
             flex: 2.5;
         }
 
 
-        div{
+        div {
             background-color: rgb(0, 133, 62);
             flex: 1;
             padding: 50px 50px;
@@ -549,118 +587,126 @@ main{
             flex-direction: column;
             align-items: center;
             justify-content: start;
-        } 
+        }
     }
 
     //FIRST SLIDER
-    .first-slider-container{
+    .first-slider-container {
         grid-area: first-slider;
-       // display: flex;
-       // align-items: center;
+        // display: flex;
+        // align-items: center;
         //justify-content: center;
         height: 450px;
         margin-top: 70px;
 
-        h2{
+        h2 {
             margin: 30px 0 30px 0;
         }
 
-        .slider{
+        .slider {
             width: 100%;
-          //  max-width: 600px;
-          //  height: 400px;
-           // margin: 20px;
-           // text-align: center;
-           // border-radius: 20px;
-           // position: relative;
+            //  max-width: 600px;
+            //  height: 400px;
+            // margin: 20px;
+            // text-align: center;
+            // border-radius: 20px;
+            // position: relative;
 
-            .slides{
+            .slides {
                 display: flex;
                 column-gap: 20px;
                 overflow-x: scroll;
                 height: 340px;
-               // position: relative;
-              //  scroll-behavior: smooth;
-              //  scroll-snap-type: x mandatory;
+                // position: relative;
+                //  scroll-behavior: smooth;
+                //  scroll-snap-type: x mandatory;
 
-                
-                div{
+
+                div {
                     height: 300px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    flex-shrink: 0;       // vedere il comportamento di shrink
+                    flex-shrink: 0; // vedere il comportamento di shrink
                     width: 230px;
                     margin-right: 0px;
-                   // box-sizing: border-box;
+                    // box-sizing: border-box;
                     background: white;
-                   // transform-origin: center center;
-                   // transform: scale(1);
-                   // scroll-snap-align: center;
+                    // transform-origin: center center;
+                    // transform: scale(1);
+                    // scroll-snap-align: center;
 
-                   &:hover{
-                       cursor: pointer;
-                   }
+                    &:hover {
+                        cursor: pointer;
+                    }
 
-                   button{
-                       margin-top: 180px;
-                       padding: 10px 20px;
-                       border-radius: 25px;
-                       background-color: white;
-                       border: none;
-                       font-weight: bold;
+                    button {
+                        margin-top: 180px;
+                        padding: 10px 20px;
+                        border-radius: 25px;
+                        background-color: white;
+                        border: none;
+                        font-weight: bold;
 
-                       &:hover{
-                           cursor: pointer;
-                           background-color: rgb(245, 245, 245);
-                       }
-                   }
+                        &:hover {
+                            cursor: pointer;
+                            background-color: rgb(245, 245, 245);
+                        }
+                    }
                 }
 
-                .slide-1{
+                .slide-1 {
                     background-image: url("assets-images/riporta-rivendi.avif");
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-2{
+
+                .slide-2 {
                     background-image: url("assets-images/circular-hub.webp");
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-3{
+
+                .slide-3 {
                     background-image: url("assets-images/pannelli-solari.avif");
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-4{
+
+                .slide-4 {
                     background-image: url("assets-images/risparmiare-acqua.avif");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-5{
+
+                .slide-5 {
                     background-image: url("assets-images/una-casa-più-sana.avif");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-6{
+
+                .slide-6 {
                     background-image: url("assets-images/ridurre-i-rifiuti.avif");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-7{
+
+                .slide-7 {
                     background-image: url("assets-images/mobili-più-sostenibili.avif");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-8{
+
+                .slide-8 {
                     background-image: url("assets-images/materiali-più-sostenibili.avif");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-9{
+
+                .slide-9 {
                     background-image: url("assets-images/alimentari-più-sostenibili.avif");
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -668,55 +714,56 @@ main{
             }
         }
     }
-   //SECOND SLIDE CONTAINER
-    .second-slider-container{
+
+    //SECOND SLIDE CONTAINER
+    .second-slider-container {
         grid-area: second-slider;
         margin-top: 60px;
 
-        h2{
+        h2 {
             margin: 30px 0 30px 0;
         }
 
-        .slider{
+        .slider {
             width: 100%;
 
-            .slides{
+            .slides {
                 display: flex;
                 column-gap: 20px;
                 overflow-x: scroll;
                 height: 800px;
 
-                div{
+                div {
                     flex: 1.5;
                     min-width: 425px;
                     height: 750px;
                     display: flex;
                     flex-direction: column;
 
-                    .description{
+                    .description {
                         flex: 1;
                         display: grid;
-                       // flex-wrap: wrap;
+                        // flex-wrap: wrap;
                         padding: 50px 70px 30px 20px;
 
-                        &:hover > a{
+                        &:hover>a {
                             cursor: pointer;
                             text-decoration: underline;
                         }
 
-                        a{
+                        a {
                             font-size: 30px;
                             color: black;
                             text-decoration: none;
                             font-weight: bold;
                         }
 
-                        p{
+                        p {
                             margin-top: 10px;
                             font-size: 1.3rem;
                         }
 
-                        button{
+                        button {
                             margin-top: 50px;
                             align-self: end;
                             justify-self: start;
@@ -728,7 +775,7 @@ main{
                             border-radius: 25px;
                             border: none;
 
-                            img{
+                            img {
                                 fill: currentColor;
                                 width: 24px;
                                 height: 24px;
@@ -737,106 +784,114 @@ main{
                     }
                 }
 
-                .slide-1{
+                .slide-1 {
 
-                    .img{
+                    .img {
                         background-image: url("assets-images/rinnova-con-decorazioni.avif");
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
                     }
-                    .description{
+
+                    .description {
                         background-color: #ffd6d6;
                     }
                 }
-                .slide-2{
 
-                    .img{
+                .slide-2 {
+
+                    .img {
                         background-image: url("assets-images/novità.avif");
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
                     }
-                    .description{
+
+                    .description {
                         background-color: #a3bbc3;
                     }
                 }
-                .slide-3{
 
-                    .img{
+                .slide-3 {
+
+                    .img {
                         background-image: url("assets-images/hembjuden-edizione-limitata.avif");
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
                     }
-                    .description{
+
+                    .description {
                         background-color: #b0a1c9;
                     }
                 }
-                .slide-4{
 
-                    .img{
+                .slide-4 {
+
+                    .img {
                         background-image: url("assets-images/prezzo-più-basso.avif");
                         background-position: center;
                         background-size: cover;
                         background-repeat: no-repeat;
                     }
-                    .description{
+
+                    .description {
                         background-color: #c1b1b6;
                     }
                 }
             }
         }
     }
+
     //THIRD SLIDER CONTAINER
-    .third-slider-container{
+    .third-slider-container {
         grid-area: third-slider;
         height: 450px;
         margin-top: 60px;
 
-        h2{
+        h2 {
             margin: 30px 0 30px 0;
         }
 
-        .slider{
+        .slider {
             width: 100%;
 
-            .slides{
+            .slides {
                 display: flex;
                 column-gap: 20px;
                 overflow-x: scroll;
                 height: 340px;
-                
-                div{
+
+                div {
                     height: 300px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    flex-shrink: 0;       // vedere il comportamento di shrink
+                    flex-shrink: 0; // vedere il comportamento di shrink
                     width: 230px;
                     margin-right: 0px;
                     background: white;
 
-                   &:hover{
-                       cursor: pointer;
-                   }
+                    &:hover {
+                        cursor: pointer;
+                    }
 
-                   button{
-                       margin-top: 180px;
-                       padding: 10px 20px;
-                       border-radius: 25px;
-                       background-color: white;
-                       border: none;
-                       font-weight: bold;
+                    button {
+                        margin-top: 180px;
+                        padding: 10px 20px;
+                        border-radius: 25px;
+                        background-color: white;
+                        border: none;
+                        font-weight: bold;
 
-                       &:hover{
-                           cursor: pointer;
-                           background-color: rgb(245, 245, 245);
-                       }
-                   }
+                        &:hover {
+                            cursor: pointer;
+                            background-color: rgb(245, 245, 245);
+                        }
+                    }
                 }
 
-                .slide-1{
+                .slide-1 {
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -846,58 +901,64 @@ main{
                     align-items: start;
                     padding: 10px 0 10px 33px;
 
-                    &:hover > a{
+                    &:hover>a {
                         text-decoration: underline;
                     }
-                    
-                    a{
+
+                    a {
                         color: white;
                         text-decoration: none;
                         font-size: 1.2rem;
                         font-weight: bold;
                     }
 
-                    button{
+                    button {
                         width: 48px;
                         height: 48px;
                         background-color: white;
                         display: grid;
                         place-content: center;
 
-                        img{
+                        img {
                             width: 24px;
                             height: 24px;
                         }
                     }
                 }
-                .slide-2{
+
+                .slide-2 {
                     background-image: url("assets-images/punti-ritiro-uffici-postali.jpg");
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-3{
+
+                .slide-3 {
                     background-image: url("assets-images/clicca-e-ritira.webp");
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-4{
+
+                .slide-4 {
                     background-image: url("assets-images/servizio-di-progettazione.webp");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-5{
+
+                .slide-5 {
                     background-image: url("assets-images/app-ikea.webp");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-6{
+
+                .slide-6 {
                     background-image: url("assets-images/finanziamenti-su-misura.jpg");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-7{
+
+                .slide-7 {
                     background-image: url("assets-images/carta-regalo-ikea.jpg");
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -905,22 +966,24 @@ main{
             }
         }
     }
+
     //AVAILABILITY-INFORMATION
-    .availability-information{
+    .availability-information {
         grid-area: availability-info;
         margin-top: 60px;
         background-color: rgb(245, 245, 245);
         display: flex;
         justify-content: start;
 
-        div{
+        div {
             padding: 48px;
 
-            h2{
+            h2 {
                 margin-bottom: 18px;
                 font-weight: bold;
             }
-            button{
+
+            button {
                 font-weight: bold;
                 margin-top: 10px;
                 padding: 12px 20px;
@@ -929,62 +992,63 @@ main{
                 color: white;
                 background-color: black;
 
-                &:hover{
+                &:hover {
                     cursor: pointer;
                     background-color: #484848;
                 }
             }
         }
     }
+
     //FOURTH-SLIDER-CONTAINER
-    .fourth-slider-container{
+    .fourth-slider-container {
         grid-area: fourth-slider;
         height: 450px;
         margin-top: 60px;
 
-        h2{
+        h2 {
             margin: 30px 0 30px 0;
         }
 
-        .slider{
+        .slider {
             width: 100%;
 
-            .slides{
+            .slides {
                 display: flex;
                 column-gap: 20px;
                 overflow-x: scroll;
                 height: 340px;
-                
-                div{
+
+                div {
                     height: 300px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    flex-shrink: 0;       // vedere il comportamento di shrink
+                    flex-shrink: 0; // vedere il comportamento di shrink
                     width: 230px;
                     margin-right: 0px;
                     background: white;
 
-                   &:hover{
-                       cursor: pointer;
-                   }
+                    &:hover {
+                        cursor: pointer;
+                    }
 
-                   button{
-                       margin-top: 180px;
-                       padding: 10px 20px;
-                       border-radius: 25px;
-                       background-color: white;
-                       border: none;
-                       font-weight: bold;
+                    button {
+                        margin-top: 180px;
+                        padding: 10px 20px;
+                        border-radius: 25px;
+                        background-color: white;
+                        border: none;
+                        font-weight: bold;
 
-                       &:hover{
-                           cursor: pointer;
-                           background-color: rgb(245, 245, 245);
-                       }
-                   }
+                        &:hover {
+                            cursor: pointer;
+                            background-color: rgb(245, 245, 245);
+                        }
+                    }
                 }
 
-                .slide-1{
+                .slide-1 {
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -994,73 +1058,82 @@ main{
                     align-items: start;
                     padding: 10px 0 10px 33px;
 
-                    &:hover > a{
+                    &:hover>a {
                         text-decoration: underline;
                     }
-                    
-                    a{
+
+                    a {
                         color: white;
                         text-decoration: none;
                         font-size: 1.2rem;
                         font-weight: bold;
                     }
 
-                    button{
+                    button {
                         width: 48px;
                         height: 48px;
                         background-color: white;
                         display: grid;
                         place-content: center;
 
-                        img{
+                        img {
                             width: 24px;
                             height: 24px;
                         }
                     }
                 }
-                .slide-2{
+
+                .slide-2 {
                     background-image: url("assets-images/accessori.webp");
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-3{
+
+                .slide-3 {
                     background-image: url("assets-images/organizzare.jpg");
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-4{
+
+                .slide-4 {
                     background-image: url("assets-images/tessili.jpg");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-5{
+
+                .slide-5 {
                     background-image: url("assets-images/sala-da-pranzo.webp");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-6{
+
+                .slide-6 {
                     background-image: url("assets-images/camere-da-letto.webp");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-7{
+
+                .slide-7 {
                     background-image: url("assets-images/studio.jpg");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-8{
+
+                .slide-8 {
                     background-image: url("assets-images/cucine-mobili.webp");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-9{
+
+                .slide-9 {
                     background-image: url("assets-images/librerie-scaffali.jpg");
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
-                .slide-10{
+
+                .slide-10 {
                     background-image: url("assets-images/tutti-i-prodotti.jpg");
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -1068,80 +1141,86 @@ main{
             }
         }
     }
+
     //FIFTH-SLIDER-CONTAINER
-    .fifth-slider-container{
+    .fifth-slider-container {
         grid-area: fifth-slider;
         height: 800px;
         margin-top: 60px;
 
-        h2{
+        h2 {
             margin: 30px 0 30px 0;
         }
 
-        .slider{
+        .slider {
             width: 100%;
             height: 570px;
 
-            .slides{
+            .slides {
                 display: flex;
                 column-gap: 20px;
                 overflow-x: scroll;
                 height: 100%;
 
-                div{
+                div {
                     flex-shrink: 0;
-                     width: 320px;
+                    width: 320px;
 
                 }
+
                 //STYLE RIPETITION
 
-                %ripetition-fifth-slider{
-                    .product-info{
+                %ripetition-fifth-slider {
+                    .product-info {
                         display: flex;
-                        
-                        .info{
+
+                        .info {
                             flex: 5;
 
-                            a{
+                            a {
                                 color: black;
                                 text-decoration: none;
                                 font-size: 1.2rem;
                             }
 
-                            .price{
+                            .price {
                                 width: 50%;
                                 display: flex;
 
-                                h4{
+                                h4 {
                                     align-self: center;
                                     margin-bottom: 20px;
                                     height: fit-content;
                                 }
-                                h2{
+
+                                h2 {
                                     margin: 0;
                                     height: fit-content;
                                 }
                             }
+
                             .star,
-                            .option{
+                            .option {
                                 margin-top: 5px;
                             }
                         }
-                        .shop{
+
+                        .shop {
                             flex: 1;
                             display: grid;
                             place-content: end;
-                            
-                            button{
+
+                            button {
                                 width: 48px;
                                 height: 48px;
                                 border-radius: 25px;
                                 background-color: #0058a3;
+                                visibility: collapse;
                                 display: grid;
                                 place-content: center;
                                 overflow: hidden;
 
-                                img{
+                                img {
                                     overflow: hidden;
                                     width: 24px;
                                     height: 24px;
@@ -1150,26 +1229,34 @@ main{
                         }
                     }
                 }
-               
+
                 // SLIDE 1
-                .slide-1{
+                .slide-1 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/kallax-furnished.avif");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1177,15 +1264,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images/kallax-product.avif");
@@ -1193,33 +1280,42 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/kallax-furnished.avif");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
+
                 //SLIDE 2
-                .slide-2{
+                .slide-2 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/kleppstad-furnished.avif");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1227,15 +1323,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images/kleppstad-product.avif");
@@ -1243,33 +1339,42 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/kleppstad-furnished.avif");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
+
                 //SLIDE 3
-                .slide-3{
+                .slide-3 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/tradfri-furnished.avif");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1277,15 +1382,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images/tradfri-product.avif");
@@ -1293,33 +1398,42 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/tradfri-furnished.avif");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
+
                 //SLIDE 4
-                .slide-4{
+                .slide-4 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/updatera-furnished.avif");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1327,15 +1441,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images/uppdatera-product.avif");
@@ -1343,33 +1457,42 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/updatera-furnished.avif");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
+
                 //SLIDE 5
-                .slide-5{
+                .slide-5 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/pax-furnished.avif");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1377,15 +1500,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images/pax-product.avif");
@@ -1393,33 +1516,42 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/pax-furnished.avif");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
+
                 //SLIDE 6
-                .slide-6{
+                .slide-6 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/kallax1-furnished.avif");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1427,15 +1559,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images/kallax1-product.avif");
@@ -1443,33 +1575,42 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/kallax1-furnished.avif");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
+
                 //SLIDE 7
-                .slide-7{
+                .slide-7 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/friheten-furnished.avif");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1477,15 +1618,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images/friheten-product.avif");
@@ -1493,33 +1634,42 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/friheten-furnished.avif");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
+
                 //SLIDE 8
-                .slide-8{
+                .slide-8 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/lack-furnished.webp");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1527,15 +1677,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images/lack-product.avif");
@@ -1543,33 +1693,42 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/lack-furnished.webp");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
+
                 //SLIDE 9
-                .slide-9{
+                .slide-9 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/malm1-furnished.avif");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1577,15 +1736,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images//malm1-product.avif");
@@ -1593,33 +1752,42 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/malm1-furnished.avif");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
+
                 //SLIDE 10
-                .slide-10{
+                .slide-10 {
 
-                    &:hover{
+                    &:hover {
 
-                        a{
+                        a {
                             text-decoration: underline;
                         }
 
-                        button > img{
+                        button>img {
                             visibility: visible;
                         }
-                        .img-product-furnished{
+
+                        .img-product-furnished {
                             transition: 0.3s ease;
                             background-image: url("assets-images/variera-furnished.avif");
                         }
+
+                        .shop {
+
+                            button {
+                                visibility: visible;
+                            }
+                        }
                     }
 
-                    button{
+                    button {
                         background-color: white;
                         border: none;
                         width: 100%;
@@ -1627,15 +1795,15 @@ main{
                         display: flex;
                         justify-content: end;
 
-                        img{
+                        img {
                             margin: 10px;
                             width: 24px;
                             height: 24px;
                             visibility: collapse;
                         }
                     }
-                    
-                    .img-product-furnished{
+
+                    .img-product-furnished {
                         width: 320px;
                         height: 320px;
                         background-image: url("assets-images/variera-product.avif");
@@ -1643,164 +1811,746 @@ main{
                         background-repeat: no-repeat;
                         background-size: cover;
 
-                        &:hover{
+                        &:hover {
                             background-image: url("assets-images/variera-furnished.avif");
                             transition: 0.3s ease;
                         }
                     }
 
-                   @extend %ripetition-fifth-slider;
+                    @extend %ripetition-fifth-slider;
                 }
             }
         }
     }
+
+    //PRODUCT-BOX-3 
+    .product-box-3 {
+        grid-area: product-box-3;
+
+        h2 {
+            margin: 30px 0 30px 0;
+        }
+
+
+        .button-container {
+
+            /*
+            #checkbox-1,
+            #checkbox-2,
+            #checkbox-3,
+            #checkbox-4,
+            #checkbox-5,
+            #checkbox-6,
+            #checkbox-7,
+            #checkbox-8,
+            #checkbox-9,
+            #checkbox-10,
+            #checkbox-11{
+                display: none;
+            }
+
+            #checkbox-1{
+
+                &:checked+#checkbox-label-1~.box-3-grid{
+
+                    .first{
+                        background-image: url("assets-images/tutti-1.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .second{
+                        background-image: url("assets-images/tutti-2.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .third{
+                        background-image: url("assets-images/tutti-3.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .fourth{
+                        background-image: url("assets-images/tutti-4.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .fifth{
+                        background-image: url("assets-images/tutti-5.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .six{
+                        background-image: url("assets-images/tutti-6.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .seven{
+                        background-image: url("assets-images/tutti-7.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .eight{
+                        background-image: url("assets-images/tutti-8.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .nine{
+                        background-image: url("assets-images/tutti-9.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .ten{
+                        background-image: url("assets-images/tutti-10.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .eleven{
+                        background-image: url("assets-images/tutti-11.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            #checkbox-2{
+
+                &:checked+#checkbox-label-2~.box-3-grid{
+
+                    .first{
+                        background-image: url("assets-images/camera-letto-1.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .second{
+                        background-image: url("assets-images/camera-letto-2.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .third{
+                        background-image: url("assets-images/camera-letto-3.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .fourth{
+                        background-image: url("assets-images/camera-letto-4.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .fifth{
+                        background-image: url("assets-images/camera-letto-5.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .six{
+                        background-image: url("assets-images/camera-letto-6.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .seven{
+                        background-image: url("assets-images/camera-letto-7.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .eight{
+                        background-image: url("assets-images/camera-letto-8.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .nine{
+                        background-image: url("assets-images/camera-letto-9.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .ten{
+                        background-image: url("assets-images/camera-letto-10.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .eleven{
+                        background-image: url("assets-images/camera-letto-11.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .twelve{
+                        background-image: url("assets-images/camera-letto-12.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            #checkbox-3{
+
+                &:checked+#checkbox-label-3~.box-3-grid{
+
+                    .first{
+                        background-image: url("assets-images/soggiorno-1.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .second{
+                        background-image: url("assets-images/soggiorno-2.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .third{
+                        background-image: url("assets-images/soggiorno-3.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .fourth{
+                        background-image: url("assets-images/soggiorno-4.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .fifth{
+                        background-image: url("assets-images/soggiorno-5.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .six{
+                        background-image: url("assets-images/soggiorno-6.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .seven{
+                        background-image: url("assets-images/soggiorno-7.webp");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .eight{
+                        background-image: url("assets-images/soggiorno-8.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .nine{
+                        background-image: url("assets-images/soggiorno-9.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .ten{
+                        background-image: url("assets-images/soggiorno-10.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .eleven{
+                        background-image: url("assets-images/soggiorno-11.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    .twelve{
+                        background-image: url("assets-images/soggiorno-12.avif");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            } */
+
+            .box-3-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                grid-template-areas:
+                    "first second third"
+                    "first fifth  third"
+                    "fourth fifth sixth"
+                    "fourth eight sixth"
+                    "seventh eight ninth"
+                    "seventh eleven ninth"
+                    "ten eleven twelve"
+                    "ten . twelve";
+
+                img {
+                    flex-grow: 1;
+                    height: 580px;
+                }
+
+
+                .first {
+                    grid-area: first;
+                }
+
+                .second {
+                    grid-area: second;
+                    height: 280px;
+                }
+
+                .third {
+                    grid-area: third;
+                }
+
+                .fourth {
+                    grid-area: fourth;
+                }
+
+                .fifth {
+                    grid-area: fifth;
+                }
+
+                .six {
+                    grid-area: sixth;
+                }
+
+                .seven {
+                    grid-area: seventh;
+                }
+
+                .eight {
+                    grid-area: eight;
+                }
+
+                .nine {
+                    grid-area: ninth;
+                }
+
+                .ten {
+                    grid-area: ten;
+                }
+
+                .eleven {
+                    grid-area: eleven;
+                }
+
+                .twelve {
+                    grid-area: twelve;
+                }
+            }
+        }
+    }
+
+    //SIX SLIDER CONTAINER
+    .six-slider-container {
+        grid-area: six-slider;
+        margin-top: 60px;
+
+        h2 {
+            margin: 30px 0 30px 0;
+        }
+
+        .slider {
+            //  width: 100%;
+
+            .slides {
+                display: flex;
+                column-gap: 20px;
+                // overflow-x: scroll;
+                // height: 800px;
+
+                div {
+                    flex: 1;
+                    //width: 425px;
+                    // min-width: 425px;
+                    height: 750px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .description {
+                        flex: 1;
+                        display: grid;
+                        // flex-wrap: wrap;
+                        padding: 50px 70px 30px 20px;
+
+                        &:hover>a {
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+
+                        a {
+                            font-size: 30px;
+                            color: black;
+                            text-decoration: none;
+                            font-weight: bold;
+                        }
+
+                        p {
+                            margin-top: 10px;
+                            font-size: 1.3rem;
+                        }
+
+                        button {
+                            margin-top: 50px;
+                            align-self: end;
+                            justify-self: start;
+                            width: 48px;
+                            height: 48px;
+                            display: grid;
+                            place-content: center;
+                            background-color: black;
+                            border-radius: 25px;
+                            border: none;
+
+                            img {
+                                fill: currentColor;
+                                width: 24px;
+                                height: 24px;
+                            }
+                        }
+                    }
+                }
+
+                .slide-1 {
+
+                    .img {
+                        background-image: url("assets-images/misure-sicurezza.avif");
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+
+                    .description {
+                        background-color: #f5f5f5;
+                    }
+                }
+
+                .slide-2 {
+
+                    .img {
+                        background-image: url("assets-images/richiamo-prodotti-mercato.avif");
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+
+                    .description {
+                        background-color: #f5f5f5;
+                    }
+                }
+
+                .slide-3 {
+
+                    .img {
+                        background-image: url("assets-images/fissa-mobili-parete.avif");
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+
+                    .description {
+                        background-color: #f5f5f5;
+                    }
+                }
+            }
+        }
+    }
+    //IMPORTANT-ADVICE
+    .important-advice{
+        grid-area: advice;
+
+        p{
+            max-width: 48%;
+            line-height: 1.6;
+            margin: 100px 0px;
+            color: #484848;
+        }
+    }
 }
-@media screen and (max-width: 1250px){
-    main{
+
+@media screen and (max-width: 1250px) {
+    main {
         display: grid;
         background-color: white;
         margin: 20px 20px 0 0;
         grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
-        grid-template-areas: 
-        ". product-box-1 product-box-1 product-box-1 product-box-1"
-        ". product-box-2 product-box-2 product-box-2 product-box-2"
-        ". first-slide first-slide first-slide first-slide"
-        ". second-slide second-slide second-slide second-slide"
-        ". third-slide third-slide third-slide third-slide"
-        ". info info info info"
-        ". fourth-slide fourth-slide fourth-slide fourth-slide"
-        ". fifth-slide fifth-slide fifth-slide fifth-slide";
+        grid-template-areas:
+            ". product-box-1 product-box-1 product-box-1 product-box-1"
+            ". product-box-2 product-box-2 product-box-2 product-box-2"
+            ". first-slide first-slide first-slide first-slide"
+            ". second-slide second-slide second-slide second-slide"
+            ". third-slide third-slide third-slide third-slide"
+            ". info info info info"
+            ". fourth-slide fourth-slide fourth-slide fourth-slide"
+            ". fifth-slide fifth-slide fifth-slide fifth-slide"
+            ". product-box-3 product-box-3 product-box-3 product-box-3"
+            ". six-slide six-slide six-slide six-slide"
+            ". advice advice advice advice";
 
-        .product-box-1{
+        .product-box-1 {
             grid-area: product-box-1;
         }
-        .product-box-2{
+
+        .product-box-2 {
             grid-area: product-box-2;
-            display: flex; 
+            display: flex;
             flex-direction: column;
         }
-        .first-slider-container{
+
+        .first-slider-container {
             grid-area: first-slide;
         }
-        .second-slider-container{
+
+        .second-slider-container {
             grid-area: second-slide;
         }
-        .third-slider-container{
+
+        .third-slider-container {
             grid-area: third-slide;
         }
-        .availability-information{
+
+        .availability-information {
             grid-area: info;
         }
-        .fourth-slider-container{
+
+        .fourth-slider-container {
             grid-area: fourth-slide;
         }
-        .fifth-slider-container{
+
+        .fifth-slider-container {
             grid-area: fifth-slide;
+        }
+
+        .product-box-3 {
+            grid-area: product-box-3;
+        }
+
+        .six-slider-container {
+            grid-area: six-slide;
+        }
+        .important-advice{
+            grid-area: advice;
         }
     }
 }
 
-@media screen and (max-width: 1225px){
-    
-    main{
+@media screen and (max-width: 1225px) {
+
+    main {
         display: grid;
         margin: 20px 50px 0 50px;
         grid-template-columns: 14vw 5fr 23vw;
-        grid-template-areas: 
-        "prod-1 prod-1 prod-1"
-        "prod-2 prod-2 prod-2"
-        "first-slide first-slide first-slide"
-        "second-slide second-slide second-slide"
-        "third-slide third-slide third-slide"
-        "info info info"
-        "fourth-slide fourth-slide fourth-slide"
-        "fifth-slide fifth-slide fifth-slide";
+        grid-template-areas:
+            "prod-1 prod-1 prod-1"
+            "prod-2 prod-2 prod-2"
+            "first-slide first-slide first-slide"
+            "second-slide second-slide second-slide"
+            "third-slide third-slide third-slide"
+            "info info info"
+            "fourth-slide fourth-slide fourth-slide"
+            "fifth-slide fifth-slide fifth-slide"
+            "prod-3 prod-3 prod-3"
+            "six-slide six-slide six-slide"
+            "advice advice advice";
 
-        .product-box-1{
+        .product-box-1 {
             grid-area: prod-1;
         }
-        .product-box-2{
+
+        .product-box-2 {
             grid-area: prod-2;
         }
-        .first-slider-container{
+
+        .first-slider-container {
             grid-area: first-slide;
         }
-        .second-slider-container{
+
+        .second-slider-container {
             grid-area: second-slide;
         }
-        .third-slider-container{
+
+        .third-slider-container {
             grid-area: third-slide;
         }
-        .availability-information{
+
+        .availability-information {
             grid-area: info;
         }
-        .fourth-slider-container{
+
+        .fourth-slider-container {
             grid-area: fourth-slide;
         }
-        .fifth-slider-container{
+
+        .fifth-slider-container {
             grid-area: fifth-slide;
+        }
+
+        .product-box-3 {
+            grid-area: prod-3;
+        }
+
+        .six-slider-container {
+            grid-area: six-slide;
+        }
+        .important-advice{
+            grid-area: advice;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    main {
+        display: grid;
+        margin: 20px 50px 0 50px;
+        grid-template-columns: 14vw 5fr 23vw;
+        grid-template-areas:
+            "prod-1 prod-1 prod-1"
+            "prod-2 prod-2 prod-2"
+            "first-slide first-slide first-slide"
+            "second-slide second-slide second-slide"
+            "third-slide third-slide third-slide"
+            "info info info"
+            "fourth-slide fourth-slide fourth-slide"
+            "fifth-slide fifth-slide fifth-slide"
+            "prod-3 prod-3 prod-3"
+            "six-slide six-slide six-slide"
+            "advice advice advice";
+
+        .product-box-1 {
+            grid-area: prod-1;
+        }
+
+        .product-box-2 {
+            grid-area: prod-2;
+        }
+
+        .first-slider-container {
+            grid-area: first-slide;
+        }
+
+        .second-slider-container {
+            grid-area: second-slide;
+        }
+
+        .third-slider-container {
+            grid-area: third-slide;
+        }
+
+        .availability-information {
+            grid-area: info;
+        }
+
+        .fourth-slider-container {
+            grid-area: fourth-slide;
+        }
+
+        .fifth-slider-container {
+            grid-area: fifth-slide;
+        }
+
+        .product-box-3 {
+            grid-area: prod-3;
+        }
+
+        .six-slider-container {
+            grid-area: six-slide;
+            margin-top: 60px;
+
+            .slides {
+                display: flex;
+                column-gap: 20px;
+                overflow-x: scroll;
+
+                div {
+                    flex: 1;
+                    min-width: 425px;
+                    height: 750px;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+        }
+        .important-advice{
+            grid-area: advice;
+
+            p{
+                min-width: 100%;
+            }
         }
     }
 }
 
 
-footer{
+footer {
     display: grid;
     background-color: rgb(245, 245, 245);
     margin-top: 20px;
     grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
     grid-template-areas:
-    ". footer-container footer-container footer-container footer-container";
+        ". footer-container footer-container footer-container footer-container";
 
-    .footer-container{
+    .footer-container {
         grid-area: footer-container;
         background-color: inherit;
         margin: 65px 20px 65px 0;
         display: grid;
         grid-template-columns: auto;
         row-gap: 50px;
-        grid-template-areas: 
-        "box-footer"
-        "footer-nav"
-        "footer-hr"
-        "footer-copyright";
+        grid-template-areas:
+            "box-footer"
+            "footer-nav"
+            "footer-hr"
+            "footer-copyright";
 
-        .box-footer{
+        .box-footer {
             grid-area: box-footer;
             display: grid;
             grid-template-columns: 2fr repeat(4, 1fr);
             column-gap: 20px;
             grid-template-areas:
-            "first-box second-box third-box fourth-box fifth-box";
+                "first-box second-box third-box fourth-box fifth-box";
 
-            .first-box{
+            .first-box {
                 display: flex;
                 flex-direction: column;
                 row-gap: 18px;
 
-                h3{
+                h3 {
                     margin: 10px 0;
                 }
 
-                p{
-                    color: rgb(72,72,72);
+                p {
+                    color: rgb(72, 72, 72);
                     padding: 10px 0;
                     line-height: 1.5rem;
                 }
 
-                .footer-information{
+                .footer-information {
                     display: flex;
                     flex-direction: column;
 
-                    a{
-                        color: rgb(72,72,72);
-    
-                        &:hover{
-                            color: rgb(45,45,45);
+                    a {
+                        color: rgb(72, 72, 72);
+
+                        &:hover {
+                            color: rgb(45, 45, 45);
                         }
                     }
 
-                    button{
+                    button {
                         max-width: fit-content;
                         margin: 15px 0;
                         background-color: black;
@@ -1809,8 +2559,8 @@ footer{
                         border: none;
                         border-radius: 50px;
 
-                        &:hover{
-                            background-color: rgb(51,51,51);
+                        &:hover {
+                            background-color: rgb(51, 51, 51);
                             cursor: pointer;
                         }
                     }
@@ -1820,59 +2570,60 @@ footer{
             .second-box,
             .third-box,
             .fourth-box,
-            .fifth-box{
+            .fifth-box {
 
                 #checkbox-second,
                 #checkbox-third,
                 #checkbox-fourth,
-                #checkbox-fifth{
+                #checkbox-fifth {
                     display: none;
                 }
 
-                #expand-ul{
-                    
-                    img{
+                #expand-ul {
+
+                    img {
                         display: none;
                     }
                 }
 
-                h4{
+                h4 {
                     padding: 10px 0;
                     font-size: 1.05rem;
                 }
 
-                li{
+                li {
                     list-style: none;
                     padding: 10px 0;
-      
-                      a{
-                          text-decoration: none;
-                          color: rgb(72,72,72);
-      
-                          &:hover{
-                              color: rgb(45,45,45);
-                              text-decoration: underline;
-                          }
-                      }
-                  }
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(72, 72, 72);
+
+                        &:hover {
+                            color: rgb(45, 45, 45);
+                            text-decoration: underline;
+                        }
+                    }
+                }
             }
         }
-        .footer-nav{
+
+        .footer-nav {
             grid-area: footer-nav;
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            .footer-reference{
+            .footer-reference {
                 display: flex;
-                
-                .social-icon{
+
+                .social-icon {
 
                     img:nth-child(1),
                     img:nth-child(2),
                     img:nth-child(3),
                     img:nth-child(4),
-                    img:nth-child(5){
+                    img:nth-child(5) {
                         margin: 0px 10px;
                         height: 34px;
                         border: 1px solid lightgrey;
@@ -1881,45 +2632,48 @@ footer{
                     }
                 }
 
-                .card-images{
+                .card-images {
 
                     img:nth-child(1),
                     img:nth-child(2),
                     img:nth-child(3),
                     img:nth-child(4),
-                    img:nth-child(5){
+                    img:nth-child(5) {
                         margin: 0px 10px;
                         height: 34px;
                         border: 1px solid lightgrey;
                         padding: 5px;
                     }
-                    img:nth-child(6){
+
+                    img:nth-child(6) {
                         width: 64.75px;
                         height: 34px;
                         margin: 0px 10px;
                         border: 1px solid lightgrey;
                         padding: 5px;
                     }
-                    img:nth-child(7){
+
+                    img:nth-child(7) {
                         width: 34px;
                         height: 34px;
                         margin: 0px 10px;
                         border: 1px solid lightgrey;
                         padding: 5px;
                     }
-                    img:nth-child(8){
+
+                    img:nth-child(8) {
                         width: 72.25px;
                         height: 34px;
                         margin: 0px 10px;
                         border: 1px solid lightgrey;
                         padding: 5px;
-                    }   
+                    }
                 }
             }
 
-            .change-country{
+            .change-country {
                 display: flex;
-                border:1px solid lightgrey;
+                border: 1px solid lightgrey;
                 background-color: rgb(245, 245, 245);
                 margin-right: 10px;
                 column-gap: 3px;
@@ -1927,52 +2681,55 @@ footer{
                 padding: 5px 10px;
                 border-radius: 50px;
 
-                &:hover{
+                &:hover {
                     border: 1px solid #484848;
                     cursor: pointer;
                 }
 
-                img{
+                img {
                     width: 24px;
                 }
-                h4{
+
+                h4 {
                     align-self: center;
                     color: #484848;
                 }
             }
         }
-        .footer-hr{
+
+        .footer-hr {
             grid-area: footer-hr;
             background-color: lightgrey;
             width: 100%;
         }
-        .footer-copyright{
+
+        .footer-copyright {
             display: flex;
             justify-content: space-between;
-            
-            p{
+
+            p {
                 min-width: fit-content;
                 color: #484848;
                 font-size: 0.8rem;
             }
-            
-            ul{
+
+            ul {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: end;
 
-                li{
+                li {
                     min-width: fit-content;
                     list-style: none;
-                    color:#484848;
+                    color: #484848;
                     margin: 0 10px;
 
-                    a{
+                    a {
                         text-decoration: none;
                         color: #484848;
                         font-size: 0.9rem;
 
-                        &:hover{
+                        &:hover {
                             text-decoration: underline;
                             color: #727272;
                         }
@@ -1981,145 +2738,155 @@ footer{
             }
         }
     }
-} 
-@media screen and (max-width: 1225px){
+}
 
-    footer{
+@media screen and (max-width: 1225px) {
+
+    footer {
         display: grid;
         padding: 20px 50px 0 50px;
         grid-template-columns: 14vw 5fr 23vw;
-        grid-template-areas: 
-        "footer-container footer-container footer-container";
+        grid-template-areas:
+            "footer-container footer-container footer-container";
 
-        .footer-container{
+        .footer-container {
             grid-area: footer-container;
         }
     }
 }
 
-@media screen and (max-width: 1145px){
-    .footer-reference{
+@media screen and (max-width: 1145px) {
+    .footer-reference {
         display: flex;
         flex-wrap: wrap;
         row-gap: 10px;
     }
 }
 
-@media screen and (max-width: 900px){
-    
-    footer{
+@media screen and (max-width: 900px) {
+
+    footer {
         display: grid;
         background-color: rgb(245, 245, 245);
         padding: 20px 50px 0 50px;
         grid-template-columns: 14vw 5fr 23vw;
         grid-template-areas:
-        "footer-container footer-container footer-container";
-    
-        .footer-container{
+            "footer-container footer-container footer-container";
+
+        .footer-container {
             grid-area: footer-container;
             background-color: inherit;
             margin: 65px 0;
             display: grid;
             grid-template-columns: auto;
             row-gap: 50px;
-            grid-template-areas: 
-            "box-footer"
-            "footer-nav"
-            "footer-hr"
-            "footer-copyright";
+            grid-template-areas:
+                "box-footer"
+                "footer-nav"
+                "footer-hr"
+                "footer-copyright";
 
-            .box-footer{
+            .box-footer {
                 grid-area: box-footer;
                 display: grid;
                 grid-template-columns: 1fr;
                 column-gap: 20px;
                 grid-template-areas:
-                "first-box"
-                "second-box"
-                "third-box"
-                "fourth-box"
-                "fifth-box";
+                    "first-box"
+                    "second-box"
+                    "third-box"
+                    "fourth-box"
+                    "fifth-box";
 
-                %reveals-rotates{
-                    &:checked+#expand-ul>img{
-                        transform:rotate(180deg);
+                %reveals-rotates {
+                    &:checked+#expand-ul>img {
+                        transform: rotate(180deg);
                     }
 
-                    &:checked+#expand-ul+.expandable{
+                    &:checked+#expand-ul+.expandable {
                         visibility: visible;
                         display: block;
                     }
                 }
 
-                %hidden-links{
+                %hidden-links {
                     .expandable {
                         visibility: collapse;
                         display: none;
                     }
 
-                    #expand-ul{
+                    #expand-ul {
                         display: flex;
                         justify-content: space-between;
                         margin: 20px 0;
 
-                        img{
+                        img {
                             width: 32px;
                             display: block;
                         }
                     }
                 }
-        
-                .first-box{
+
+                .first-box {
                     grid-area: first-box;
                 }
-                .second-box{
+
+                .second-box {
                     grid-area: second-box;
                     border-top-style: solid;
                     border-top-color: lightgray;
 
-                    #checkbox-second{
+                    #checkbox-second {
                         display: none;
-                        @extend %reveals-rotates;                        
+                        @extend %reveals-rotates;
                     }
+
                     @extend %hidden-links;
                 }
-                .third-box{
+
+                .third-box {
                     grid-area: third-box;
                     border-top-style: solid;
                     border-top-color: lightgray;
 
-                    #checkbox-third{
+                    #checkbox-third {
                         display: none;
                         @extend %reveals-rotates;
                     }
+
                     @extend %hidden-links;
                 }
-                .fourth-box{
+
+                .fourth-box {
                     grid-area: fourth-box;
                     border-top-style: solid;
                     border-top-color: lightgray;
 
-                    #checkbox-fourth{
+                    #checkbox-fourth {
                         display: none;
                         @extend %reveals-rotates;
                     }
+
                     @extend %hidden-links;
                 }
-                .fifth-box{
+
+                .fifth-box {
                     grid-area: fifth-box;
                     border-top-style: solid;
                     border-bottom-style: solid;
                     border-top-color: lightgray;
                     border-bottom-color: lightgrey;
 
-                    #checkbox-fifth{
+                    #checkbox-fifth {
                         display: none;
                         @extend %reveals-rotates;
                     }
+
                     @extend %hidden-links;
                 }
             }
-            .footer-nav{
+
+            .footer-nav {
                 display: flex;
                 flex-wrap: wrap;
                 row-gap: 10px;

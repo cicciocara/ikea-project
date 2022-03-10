@@ -370,7 +370,7 @@ main {
   background-color: white;
   margin: 20px 20px 0 0;
   grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
-  grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slider first-slider first-slider first-slider" ". second-slider second-slider second-slider second-slider" ". third-slider third-slider third-slider third-slider" ". availability-info availability-info availability-info availability-info" ". fourth-slider fourth-slider fourth-slider fourth-slider" ". fifth-slider fifth-slider fifth-slider fifth-slider";
+  grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slider first-slider first-slider first-slider" ". second-slider second-slider second-slider second-slider" ". third-slider third-slider third-slider third-slider" ". availability-info availability-info availability-info availability-info" ". fourth-slider fourth-slider fourth-slider fourth-slider" ". fifth-slider fifth-slider fifth-slider fifth-slider" ". product-box-3 product-box-3 product-box-3 product-box-3" ". six-slider six-slider six-slider six-slider" ". advice advice advice advice";
 }
 main .product-box-1 {
   grid-area: product-box-1;
@@ -957,6 +957,7 @@ main .fifth-slider-container .slider .slides .slide-10 .product-info .shop butto
   height: 48px;
   border-radius: 25px;
   background-color: #0058a3;
+  visibility: collapse;
   display: grid;
   place-content: center;
   overflow: hidden;
@@ -975,6 +976,9 @@ main .fifth-slider-container .slider .slides .slide-1:hover button > img {
 main .fifth-slider-container .slider .slides .slide-1:hover .img-product-furnished {
   transition: 0.3s ease;
   background-image: url("assets-images/kallax-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-1:hover .shop button {
+  visibility: visible;
 }
 main .fifth-slider-container .slider .slides .slide-1 button {
   background-color: white;
@@ -1012,6 +1016,9 @@ main .fifth-slider-container .slider .slides .slide-2:hover .img-product-furnish
   transition: 0.3s ease;
   background-image: url("assets-images/kleppstad-furnished.avif");
 }
+main .fifth-slider-container .slider .slides .slide-2:hover .shop button {
+  visibility: visible;
+}
 main .fifth-slider-container .slider .slides .slide-2 button {
   background-color: white;
   border: none;
@@ -1047,6 +1054,9 @@ main .fifth-slider-container .slider .slides .slide-3:hover button > img {
 main .fifth-slider-container .slider .slides .slide-3:hover .img-product-furnished {
   transition: 0.3s ease;
   background-image: url("assets-images/tradfri-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-3:hover .shop button {
+  visibility: visible;
 }
 main .fifth-slider-container .slider .slides .slide-3 button {
   background-color: white;
@@ -1084,6 +1094,9 @@ main .fifth-slider-container .slider .slides .slide-4:hover .img-product-furnish
   transition: 0.3s ease;
   background-image: url("assets-images/updatera-furnished.avif");
 }
+main .fifth-slider-container .slider .slides .slide-4:hover .shop button {
+  visibility: visible;
+}
 main .fifth-slider-container .slider .slides .slide-4 button {
   background-color: white;
   border: none;
@@ -1119,6 +1132,9 @@ main .fifth-slider-container .slider .slides .slide-5:hover button > img {
 main .fifth-slider-container .slider .slides .slide-5:hover .img-product-furnished {
   transition: 0.3s ease;
   background-image: url("assets-images/pax-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-5:hover .shop button {
+  visibility: visible;
 }
 main .fifth-slider-container .slider .slides .slide-5 button {
   background-color: white;
@@ -1156,6 +1172,9 @@ main .fifth-slider-container .slider .slides .slide-6:hover .img-product-furnish
   transition: 0.3s ease;
   background-image: url("assets-images/kallax1-furnished.avif");
 }
+main .fifth-slider-container .slider .slides .slide-6:hover .shop button {
+  visibility: visible;
+}
 main .fifth-slider-container .slider .slides .slide-6 button {
   background-color: white;
   border: none;
@@ -1191,6 +1210,9 @@ main .fifth-slider-container .slider .slides .slide-7:hover button > img {
 main .fifth-slider-container .slider .slides .slide-7:hover .img-product-furnished {
   transition: 0.3s ease;
   background-image: url("assets-images/friheten-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-7:hover .shop button {
+  visibility: visible;
 }
 main .fifth-slider-container .slider .slides .slide-7 button {
   background-color: white;
@@ -1228,6 +1250,9 @@ main .fifth-slider-container .slider .slides .slide-8:hover .img-product-furnish
   transition: 0.3s ease;
   background-image: url("assets-images/lack-furnished.webp");
 }
+main .fifth-slider-container .slider .slides .slide-8:hover .shop button {
+  visibility: visible;
+}
 main .fifth-slider-container .slider .slides .slide-8 button {
   background-color: white;
   border: none;
@@ -1263,6 +1288,9 @@ main .fifth-slider-container .slider .slides .slide-9:hover button > img {
 main .fifth-slider-container .slider .slides .slide-9:hover .img-product-furnished {
   transition: 0.3s ease;
   background-image: url("assets-images/malm1-furnished.avif");
+}
+main .fifth-slider-container .slider .slides .slide-9:hover .shop button {
+  visibility: visible;
 }
 main .fifth-slider-container .slider .slides .slide-9 button {
   background-color: white;
@@ -1300,6 +1328,9 @@ main .fifth-slider-container .slider .slides .slide-10:hover .img-product-furnis
   transition: 0.3s ease;
   background-image: url("assets-images/variera-furnished.avif");
 }
+main .fifth-slider-container .slider .slides .slide-10:hover .shop button {
+  visibility: visible;
+}
 main .fifth-slider-container .slider .slides .slide-10 button {
   background-color: white;
   border: none;
@@ -1326,6 +1357,395 @@ main .fifth-slider-container .slider .slides .slide-10 .img-product-furnished:ho
   background-image: url("assets-images/variera-furnished.avif");
   transition: 0.3s ease;
 }
+main .product-box-3 {
+  grid-area: product-box-3;
+}
+main .product-box-3 h2 {
+  margin: 30px 0 30px 0;
+}
+main .product-box-3 .button-container {
+  /*
+  #checkbox-1,
+  #checkbox-2,
+  #checkbox-3,
+  #checkbox-4,
+  #checkbox-5,
+  #checkbox-6,
+  #checkbox-7,
+  #checkbox-8,
+  #checkbox-9,
+  #checkbox-10,
+  #checkbox-11{
+      display: none;
+  }
+
+  #checkbox-1{
+
+      &:checked+#checkbox-label-1~.box-3-grid{
+
+          .first{
+              background-image: url("assets-images/tutti-1.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .second{
+              background-image: url("assets-images/tutti-2.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .third{
+              background-image: url("assets-images/tutti-3.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .fourth{
+              background-image: url("assets-images/tutti-4.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .fifth{
+              background-image: url("assets-images/tutti-5.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .six{
+              background-image: url("assets-images/tutti-6.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .seven{
+              background-image: url("assets-images/tutti-7.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .eight{
+              background-image: url("assets-images/tutti-8.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .nine{
+              background-image: url("assets-images/tutti-9.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .ten{
+              background-image: url("assets-images/tutti-10.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .eleven{
+              background-image: url("assets-images/tutti-11.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+      }
+  }
+
+  #checkbox-2{
+
+      &:checked+#checkbox-label-2~.box-3-grid{
+
+          .first{
+              background-image: url("assets-images/camera-letto-1.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .second{
+              background-image: url("assets-images/camera-letto-2.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .third{
+              background-image: url("assets-images/camera-letto-3.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .fourth{
+              background-image: url("assets-images/camera-letto-4.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .fifth{
+              background-image: url("assets-images/camera-letto-5.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .six{
+              background-image: url("assets-images/camera-letto-6.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .seven{
+              background-image: url("assets-images/camera-letto-7.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .eight{
+              background-image: url("assets-images/camera-letto-8.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .nine{
+              background-image: url("assets-images/camera-letto-9.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .ten{
+              background-image: url("assets-images/camera-letto-10.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .eleven{
+              background-image: url("assets-images/camera-letto-11.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .twelve{
+              background-image: url("assets-images/camera-letto-12.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+      }
+  }
+
+  #checkbox-3{
+
+      &:checked+#checkbox-label-3~.box-3-grid{
+
+          .first{
+              background-image: url("assets-images/soggiorno-1.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .second{
+              background-image: url("assets-images/soggiorno-2.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .third{
+              background-image: url("assets-images/soggiorno-3.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .fourth{
+              background-image: url("assets-images/soggiorno-4.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .fifth{
+              background-image: url("assets-images/soggiorno-5.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .six{
+              background-image: url("assets-images/soggiorno-6.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .seven{
+              background-image: url("assets-images/soggiorno-7.webp");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .eight{
+              background-image: url("assets-images/soggiorno-8.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .nine{
+              background-image: url("assets-images/soggiorno-9.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .ten{
+              background-image: url("assets-images/soggiorno-10.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .eleven{
+              background-image: url("assets-images/soggiorno-11.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+          .twelve{
+              background-image: url("assets-images/soggiorno-12.avif");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+          }
+      }
+  } */
+}
+main .product-box-3 .button-container .box-3-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-areas: "first second third" "first fifth  third" "fourth fifth sixth" "fourth eight sixth" "seventh eight ninth" "seventh eleven ninth" "ten eleven twelve" "ten . twelve";
+}
+main .product-box-3 .button-container .box-3-grid img {
+  flex-grow: 1;
+  height: 580px;
+}
+main .product-box-3 .button-container .box-3-grid .first {
+  grid-area: first;
+}
+main .product-box-3 .button-container .box-3-grid .second {
+  grid-area: second;
+  height: 280px;
+}
+main .product-box-3 .button-container .box-3-grid .third {
+  grid-area: third;
+}
+main .product-box-3 .button-container .box-3-grid .fourth {
+  grid-area: fourth;
+}
+main .product-box-3 .button-container .box-3-grid .fifth {
+  grid-area: fifth;
+}
+main .product-box-3 .button-container .box-3-grid .six {
+  grid-area: sixth;
+}
+main .product-box-3 .button-container .box-3-grid .seven {
+  grid-area: seventh;
+}
+main .product-box-3 .button-container .box-3-grid .eight {
+  grid-area: eight;
+}
+main .product-box-3 .button-container .box-3-grid .nine {
+  grid-area: ninth;
+}
+main .product-box-3 .button-container .box-3-grid .ten {
+  grid-area: ten;
+}
+main .product-box-3 .button-container .box-3-grid .eleven {
+  grid-area: eleven;
+}
+main .product-box-3 .button-container .box-3-grid .twelve {
+  grid-area: twelve;
+}
+main .six-slider-container {
+  grid-area: six-slider;
+  margin-top: 60px;
+}
+main .six-slider-container h2 {
+  margin: 30px 0 30px 0;
+}
+main .six-slider-container .slider .slides {
+  display: flex;
+  column-gap: 20px;
+}
+main .six-slider-container .slider .slides div {
+  flex: 1;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+}
+main .six-slider-container .slider .slides div .description {
+  flex: 1;
+  display: grid;
+  padding: 50px 70px 30px 20px;
+}
+main .six-slider-container .slider .slides div .description:hover > a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+main .six-slider-container .slider .slides div .description a {
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+main .six-slider-container .slider .slides div .description p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+main .six-slider-container .slider .slides div .description button {
+  margin-top: 50px;
+  align-self: end;
+  justify-self: start;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-content: center;
+  background-color: black;
+  border-radius: 25px;
+  border: none;
+}
+main .six-slider-container .slider .slides div .description button img {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+}
+main .six-slider-container .slider .slides .slide-1 .img {
+  background-image: url("assets-images/misure-sicurezza.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .six-slider-container .slider .slides .slide-1 .description {
+  background-color: #f5f5f5;
+}
+main .six-slider-container .slider .slides .slide-2 .img {
+  background-image: url("assets-images/richiamo-prodotti-mercato.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .six-slider-container .slider .slides .slide-2 .description {
+  background-color: #f5f5f5;
+}
+main .six-slider-container .slider .slides .slide-3 .img {
+  background-image: url("assets-images/fissa-mobili-parete.avif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .six-slider-container .slider .slides .slide-3 .description {
+  background-color: #f5f5f5;
+}
+main .important-advice {
+  grid-area: advice;
+}
+main .important-advice p {
+  max-width: 48%;
+  line-height: 1.6;
+  margin: 100px 0px;
+  color: #484848;
+}
 
 @media screen and (max-width: 1250px) {
   main {
@@ -1333,7 +1753,7 @@ main .fifth-slider-container .slider .slides .slide-10 .img-product-furnished:ho
     background-color: white;
     margin: 20px 20px 0 0;
     grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
-    grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slide first-slide first-slide first-slide" ". second-slide second-slide second-slide second-slide" ". third-slide third-slide third-slide third-slide" ". info info info info" ". fourth-slide fourth-slide fourth-slide fourth-slide" ". fifth-slide fifth-slide fifth-slide fifth-slide";
+    grid-template-areas: ". product-box-1 product-box-1 product-box-1 product-box-1" ". product-box-2 product-box-2 product-box-2 product-box-2" ". first-slide first-slide first-slide first-slide" ". second-slide second-slide second-slide second-slide" ". third-slide third-slide third-slide third-slide" ". info info info info" ". fourth-slide fourth-slide fourth-slide fourth-slide" ". fifth-slide fifth-slide fifth-slide fifth-slide" ". product-box-3 product-box-3 product-box-3 product-box-3" ". six-slide six-slide six-slide six-slide" ". advice advice advice advice";
   }
   main .product-box-1 {
     grid-area: product-box-1;
@@ -1361,13 +1781,22 @@ main .fifth-slider-container .slider .slides .slide-10 .img-product-furnished:ho
   main .fifth-slider-container {
     grid-area: fifth-slide;
   }
+  main .product-box-3 {
+    grid-area: product-box-3;
+  }
+  main .six-slider-container {
+    grid-area: six-slide;
+  }
+  main .important-advice {
+    grid-area: advice;
+  }
 }
 @media screen and (max-width: 1225px) {
   main {
     display: grid;
     margin: 20px 50px 0 50px;
     grid-template-columns: 14vw 5fr 23vw;
-    grid-template-areas: "prod-1 prod-1 prod-1" "prod-2 prod-2 prod-2" "first-slide first-slide first-slide" "second-slide second-slide second-slide" "third-slide third-slide third-slide" "info info info" "fourth-slide fourth-slide fourth-slide" "fifth-slide fifth-slide fifth-slide";
+    grid-template-areas: "prod-1 prod-1 prod-1" "prod-2 prod-2 prod-2" "first-slide first-slide first-slide" "second-slide second-slide second-slide" "third-slide third-slide third-slide" "info info info" "fourth-slide fourth-slide fourth-slide" "fifth-slide fifth-slide fifth-slide" "prod-3 prod-3 prod-3" "six-slide six-slide six-slide" "advice advice advice";
   }
   main .product-box-1 {
     grid-area: prod-1;
@@ -1392,6 +1821,72 @@ main .fifth-slider-container .slider .slides .slide-10 .img-product-furnished:ho
   }
   main .fifth-slider-container {
     grid-area: fifth-slide;
+  }
+  main .product-box-3 {
+    grid-area: prod-3;
+  }
+  main .six-slider-container {
+    grid-area: six-slide;
+  }
+  main .important-advice {
+    grid-area: advice;
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    display: grid;
+    margin: 20px 50px 0 50px;
+    grid-template-columns: 14vw 5fr 23vw;
+    grid-template-areas: "prod-1 prod-1 prod-1" "prod-2 prod-2 prod-2" "first-slide first-slide first-slide" "second-slide second-slide second-slide" "third-slide third-slide third-slide" "info info info" "fourth-slide fourth-slide fourth-slide" "fifth-slide fifth-slide fifth-slide" "prod-3 prod-3 prod-3" "six-slide six-slide six-slide" "advice advice advice";
+  }
+  main .product-box-1 {
+    grid-area: prod-1;
+  }
+  main .product-box-2 {
+    grid-area: prod-2;
+  }
+  main .first-slider-container {
+    grid-area: first-slide;
+  }
+  main .second-slider-container {
+    grid-area: second-slide;
+  }
+  main .third-slider-container {
+    grid-area: third-slide;
+  }
+  main .availability-information {
+    grid-area: info;
+  }
+  main .fourth-slider-container {
+    grid-area: fourth-slide;
+  }
+  main .fifth-slider-container {
+    grid-area: fifth-slide;
+  }
+  main .product-box-3 {
+    grid-area: prod-3;
+  }
+  main .six-slider-container {
+    grid-area: six-slide;
+    margin-top: 60px;
+  }
+  main .six-slider-container .slides {
+    display: flex;
+    column-gap: 20px;
+    overflow-x: scroll;
+  }
+  main .six-slider-container .slides div {
+    flex: 1;
+    min-width: 425px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+  }
+  main .important-advice {
+    grid-area: advice;
+  }
+  main .important-advice p {
+    min-width: 100%;
   }
 }
 footer {
