@@ -1,0 +1,520 @@
+header {
+  width: 81vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-areas: "logo search  search info menu" "product . . . ." "path path path path path";
+  row-gap: 0.7rem;
+}
+
+.logo-container {
+  grid-area: logo;
+  width: 150px;
+  height: 50px;
+}
+
+header .logo-container {
+  grid-area: logo;
+  width: 150px;
+  height: 50px;
+}
+header .search-bar-container {
+  grid-area: search;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #efefef;
+  border-radius: 30px;
+  padding-right: 1rem;
+}
+header .search-bar-container input {
+  width: 100%;
+  line-height: 2.8rem;
+  font-size: 1rem;
+  padding-left: 3rem;
+  border-radius: 30px;
+  border-style: none;
+  background-color: transparent;
+}
+header .search-bar-container img {
+  position: absolute;
+  width: 15px;
+  padding-left: 1rem;
+}
+header .search-bar-container button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-style: none;
+  background-color: transparent;
+}
+header .search-bar-container button img {
+  width: 20px;
+  height: 20px;
+}
+header .info-container {
+  grid-area: info;
+  width: fit-content;
+  margin-left: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+header .info-container div {
+  display: flex;
+  align-items: flex-end;
+}
+header .info-element img {
+  width: 20px;
+}
+header .info-element div {
+  font-size: 0.9rem;
+  padding-left: 0.6rem;
+}
+header .info-element div p {
+  margin: 0;
+}
+header .info-element div a {
+  text-decoration: none;
+  color: #111;
+  font-size: 1rem;
+  font-weight: 600;
+}
+header .info-element div a:hover {
+  text-decoration: underline;
+}
+header nav {
+  grid-area: menu;
+  white-space: nowrap;
+}
+header nav button {
+  height: 40px;
+  width: 40px;
+  margin: 0.4rem;
+  border-radius: 50%;
+  border-style: none;
+  background-color: transparent;
+}
+header nav button a img {
+  height: 24px;
+  width: 24px;
+}
+header nav button a:hover {
+  background-color: #dfdfdf;
+}
+header nav .btn-menu {
+  visibility: collapse;
+}
+header .product-container {
+  grid-area: product;
+}
+header .product-container a {
+  color: #111;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: 2rem;
+}
+header .product-container a:hover {
+  text-decoration: underline;
+}
+header .path-container {
+  grid-area: path;
+}
+header .path-container hr {
+  margin: 0;
+  border-top: 0;
+  border-color: #dfdfdf;
+}
+
+@media (max-width: 1200px) {
+  .product-container {
+    display: none;
+  }
+
+  header {
+    grid-template-areas: "logo search search menu" "info info info info" "path path path path";
+  }
+
+  .btn-menu {
+    visibility: visible;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    grid-template-areas: "logo menu" "search search" "info info" "path path";
+  }
+}
+footer {
+  padding: 2rem 3rem 3rem 3rem;
+  background-color: #f1f1f1;
+  display: grid;
+  justify-content: space-between;
+  grid-template-areas: "family contact buy acount about" "business contact buy acount about" "pay pay pay pay pay" "info info info info info";
+  row-gap: 2rem;
+  column-gap: 2.5rem;
+}
+footer .footer-list {
+  list-style: none;
+  padding-left: 0;
+}
+footer .footer-list li {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+footer .footer-list li a {
+  text-decoration: none;
+  color: #111;
+}
+footer .footer-list li a:hover {
+  text-decoration: underline;
+}
+footer .ikea-family {
+  grid-area: family;
+  font-size: 0.9rem;
+}
+footer .ikea-family h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+footer .ikea-family a {
+  color: #111;
+}
+footer .ikea-family a:hover {
+  font-weight: 600;
+}
+footer .ikea-business {
+  grid-area: business;
+  font-size: 0.9rem;
+}
+footer .ikea-business h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+footer .ikea-business a {
+  color: #111;
+}
+footer .ikea-business a:hover {
+  font-weight: bold;
+}
+footer .ikea-contact {
+  grid-area: contact;
+}
+footer .ikea-buy {
+  grid-area: buy;
+}
+footer .ikea-account {
+  grid-area: acount;
+}
+footer .ikea-about-us {
+  grid-area: about;
+}
+footer .logo-social {
+  width: 25px;
+  height: 25px;
+}
+footer .ikea-method-pay {
+  grid-area: pay;
+  padding-right: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .ikea-method-pay ul {
+  padding-left: 0;
+  list-style: none;
+}
+footer .ikea-method-pay ul li {
+  display: inline;
+  padding-left: 1rem;
+}
+footer .ikea-method-pay ul li a {
+  text-decoration: none;
+}
+footer .ikea-method-pay ul li img {
+  height: 25px;
+}
+footer .ikea-info {
+  grid-area: info;
+  font-size: 0.75rem;
+  line-height: 2;
+}
+footer .ikea-info section {
+  display: flex;
+  justify-content: space-between;
+}
+footer .ikea-info hr {
+  border-top: 0;
+  margin-bottom: 2rem;
+  color: #dfdfdf;
+}
+footer .footer-list-info {
+  list-style: none;
+  text-align: right;
+}
+footer .footer-list-info li {
+  display: inline;
+  padding-left: 1rem;
+}
+footer .footer-list-info li a {
+  text-decoration: none;
+  display: inline;
+  color: #111;
+}
+footer .footer-list-info li a:hover {
+  text-decoration: underline;
+}
+footer .btn-footer {
+  width: 140px;
+  cursor: pointer;
+  background-color: #111;
+  border-style: solid;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 30px;
+}
+footer .btn-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .btn-footer:hover {
+  background-color: #474747;
+}
+footer .btn-change-country {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 45px;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #dfdfdf;
+  border-radius: 30px;
+  padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+  margin-top: 0.5rem;
+}
+footer .btn-change-country img {
+  width: 20px;
+  height: 20px;
+}
+footer .btn-change-country a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+footer .btn-change-country:hover {
+  border-color: #111;
+}
+
+@media (max-width: 900px) {
+  footer {
+    padding: 2rem 2rem 2rem 2rem;
+    grid-template-areas: "family" "business" "contact" "buy" "acount" "about" "pay" "info";
+  }
+
+  .footer-list {
+    visibility: collapse;
+  }
+}
+html body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  color: #111;
+  font-family: "Roboto", "Open Sans", sans-serif;
+}
+
+main {
+  width: 81vw;
+  margin-left: 8vw;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .main-cont-1 {
+  display: flex;
+  margin-bottom: 2rem;
+}
+main .main-cont-1 article {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 3rem;
+}
+main .main-cont-1 article h1 {
+  margin-top: 5rem;
+  font-size: 2.2rem;
+}
+main .main-cont-1 article h1 p {
+  margin-top: 0rem;
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+main .main-cont-1 div {
+  width: 30%;
+  min-width: 280px;
+  min-height: 160px;
+}
+main .main-cont-1 div img {
+  width: 100%;
+}
+main .main-cont-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+main .main-cont-2 article a {
+  color: #111;
+  text-decoration: none;
+}
+main .main-cont-2 article a:hover {
+  text-decoration: underline;
+}
+main .main-cont-2 .img-container {
+  height: 260px;
+  min-width: 300px;
+  overflow: hidden;
+}
+main .main-cont-2 .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .main-cont-3 div {
+  width: 55%;
+  margin-bottom: 3rem;
+}
+main .main-cont-3 div p {
+  font-size: 0.88rem;
+  line-height: 1.5rem;
+}
+main .main-cont-3 section {
+  display: flex;
+  width: 100%;
+}
+main .main-cont-3 section div {
+  width: 50%;
+}
+main .main-cont-3 section div a img {
+  width: 100%;
+  object-fit: cover;
+}
+main .main-cont-3 section article {
+  width: 50%;
+  padding-left: 1.5rem;
+}
+main .main-cont-3 section article div h3 {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+}
+main .main-cont-3 section article div p {
+  font-size: 0.88rem;
+  line-height: 1.5rem;
+  margin-bottom: 3rem;
+}
+main .main-cont-3 .btn-message {
+  cursor: pointer;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #dfdfdf;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+  border-radius: 30px;
+}
+main .main-cont-3 .btn-message a {
+  text-decoration: none;
+  color: #111;
+}
+main .main-cont-3 .btn-message:hover {
+  border-color: #111;
+}
+main .main-cont-4 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1px;
+}
+main .main-cont-4 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 570px;
+  padding: 2rem;
+  background-color: #f1f1f1;
+}
+main .main-cont-4 div img {
+  width: 20px;
+  height: 20px;
+}
+main .main-cont-4 div h3 {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+main .main-cont-4 div p {
+  font-size: 0.88rem;
+}
+main .main-cont-4 div a {
+  font-size: 0.88rem;
+  color: #111;
+}
+main .main-cont-4 div a:hover {
+  font-weight: bold;
+}
+main .main-cont-5 {
+  display: flex;
+  margin-bottom: 3rem;
+}
+main .main-cont-5 div {
+  width: 70%;
+  background-color: #142b51;
+  display: flex;
+  justify-content: right;
+}
+main .main-cont-5 article {
+  width: 30%;
+  background-color: #142b51;
+  color: #fff;
+  padding: 3rem;
+  padding-top: 1rem;
+}
+main .main-cont-5 article h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main .main-cont-5 article p {
+  font-size: 0.88rem;
+  line-height: 1.5rem;
+}
+main .main-cont-5 article p a {
+  color: #fff;
+}
+main .main-cont-5 article p a:hover {
+  color: #111;
+}
+main .main-cont-5 article ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2.4rem;
+}
+main .main-cont-5 article ul li a {
+  font-weight: 400;
+  color: #fff;
+}
+main .main-cont-5 article ul li a:hover {
+  color: #111;
+}
+main .main-cont-5 .disclaimer {
+  font-size: 0.6rem;
+}
+
+/*# sourceMappingURL=style-gift.css.map */
