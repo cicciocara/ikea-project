@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: 'Roboto' , 'Open Sans' , sans-serif;
 }
 
 .upper-nav {
@@ -472,6 +473,7 @@ main {
     margin: 20px 20px 0 0;
     grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
     grid-template-areas:
+        ". consegna-ordini consegna-ordini consegna-ordini consegna-ordini"
         ". product-box-1 product-box-1 product-box-1 product-box-1"
         ". product-box-2 product-box-2 product-box-2 product-box-2"
         ". first-slider first-slider first-slider first-slider"
@@ -483,6 +485,69 @@ main {
         ". product-box-3 product-box-3 product-box-3 product-box-3"
         ". six-slider six-slider six-slider six-slider"
         ". advice advice advice advice";
+
+    .consegna-ordini {
+        margin: 100px 0;
+        grid-area: consegna-ordini;
+        display: flex;
+
+        img {
+            flex: 2.5;
+        }
+
+        div {
+            background-color: rgb(20, 43, 81);
+            color: white;
+            flex: 1;
+            height: auto;
+            padding: 40px 40px;
+
+            h1 {
+                font-size: 1.6rem;
+                line-height: 1.4;
+            }
+
+            p {
+                margin-top: 1.4rem;
+
+                a {
+                    color: white;
+
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            ul {
+                margin: 10px 0;
+                width: 100%;
+
+                li {
+                    width: 100%;
+                    list-style: none;
+                    padding: 5px 0;
+
+                    a {
+                        font-size: 1.1rem;
+                        color: white;
+
+
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            .advice {
+                color: white;
+                font-size: 0.6rem;
+                line-height: 1.6;
+            }
+        }
+    }
 
     .product-box-1 {
         grid-area: product-box-1;
@@ -566,6 +631,10 @@ main {
             }
         }
 
+        .first-right-inf-sub {
+            display: none;
+        }
+
     }
 
     //PRODUCT BOX 2
@@ -587,6 +656,25 @@ main {
             flex-direction: column;
             align-items: center;
             justify-content: start;
+            color: white;
+
+            p,
+            button{
+                margin-top: 20px;
+            }
+
+            button{
+                min-width: fit-content;
+                background-color: white;
+                padding: 12px 18px;
+                border-radius: 25px;
+                font-weight: bold;
+                border: none;
+
+                &:hover{
+                    background-color: rgb(245, 245, 245);
+                }
+            }
         }
     }
 
@@ -1832,7 +1920,31 @@ main {
         }
 
 
-        .button-container {
+        .box-container {
+
+            .button-container {
+                overflow-x: scroll;
+                display: flex;
+
+                button {
+                    margin: 15px 10px 15px 0;
+                    flex-shrink: 0;
+                    min-width: fit-content;
+                    padding: 12px 24px;
+                    border-radius: 25px;
+                    font-weight: bold;
+                    border: 1px solid #dedede;
+
+                    &:hover {
+                        background-color: #dedede;
+                        border: 1px solid #484848;
+                    }
+                }
+
+                button:first-child {
+                    border: 1px solid #484848;
+                }
+            }
 
             /*
             #checkbox-1,
@@ -2083,22 +2195,23 @@ main {
             .box-3-grid {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(8, 220px);
                 gap: 20px;
                 grid-template-areas:
                     "first second third"
-                    "first fifth  third"
-                    "fourth fifth sixth"
-                    "fourth eight sixth"
-                    "seventh eight ninth"
-                    "seventh eleven ninth"
+                    "first fifth third"
+                    "fourth fifth six"
+                    "fourth eight six"
+                    "seventh eight nine"
+                    "seventh eleven nine"
                     "ten eleven twelve"
                     "ten . twelve";
 
                 img {
-                    flex-grow: 1;
-                    height: 580px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
-
 
                 .first {
                     grid-area: first;
@@ -2106,7 +2219,6 @@ main {
 
                 .second {
                     grid-area: second;
-                    height: 280px;
                 }
 
                 .third {
@@ -2122,7 +2234,7 @@ main {
                 }
 
                 .six {
-                    grid-area: sixth;
+                    grid-area: six;
                 }
 
                 .seven {
@@ -2134,7 +2246,7 @@ main {
                 }
 
                 .nine {
-                    grid-area: ninth;
+                    grid-area: nine;
                 }
 
                 .ten {
@@ -2147,6 +2259,27 @@ main {
 
                 .twelve {
                     grid-area: twelve;
+                }
+
+            }
+        }
+
+        .other-product {
+            width: 100%;
+            height: 100px;
+            display: grid;
+            place-content: center;
+
+            a {
+                color: white;
+                background-color: black;
+                padding: 12px 24px;
+                border-radius: 25px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover{
+                    background-color: #484848;
                 }
             }
         }
@@ -2266,11 +2399,12 @@ main {
             }
         }
     }
+
     //IMPORTANT-ADVICE
-    .important-advice{
+    .important-advice {
         grid-area: advice;
 
-        p{
+        p {
             max-width: 48%;
             line-height: 1.6;
             margin: 100px 0px;
@@ -2286,6 +2420,7 @@ main {
         margin: 20px 20px 0 0;
         grid-template-columns: 1fr 8vw 4fr 3fr 10vw;
         grid-template-areas:
+            ". consegna-ordini consegna-ordini consegna-ordini consegna-ordini"
             ". product-box-1 product-box-1 product-box-1 product-box-1"
             ". product-box-2 product-box-2 product-box-2 product-box-2"
             ". first-slide first-slide first-slide first-slide"
@@ -2298,8 +2433,18 @@ main {
             ". six-slide six-slide six-slide six-slide"
             ". advice advice advice advice";
 
+        .consegna-ordini {
+            grid-area: consegna-ordini;
+            display: flex;
+            flex-direction: column;
+        }
+
         .product-box-1 {
             grid-area: product-box-1;
+
+            .first-right-inf-sub {
+                display: none;
+            }
         }
 
         .product-box-2 {
@@ -2339,7 +2484,8 @@ main {
         .six-slider-container {
             grid-area: six-slide;
         }
-        .important-advice{
+
+        .important-advice {
             grid-area: advice;
         }
     }
@@ -2352,6 +2498,7 @@ main {
         margin: 20px 50px 0 50px;
         grid-template-columns: 14vw 5fr 23vw;
         grid-template-areas:
+            "ordini ordini ordini"
             "prod-1 prod-1 prod-1"
             "prod-2 prod-2 prod-2"
             "first-slide first-slide first-slide"
@@ -2364,8 +2511,16 @@ main {
             "six-slide six-slide six-slide"
             "advice advice advice";
 
+        .consegna-ordini {
+            grid-area: ordini;
+        }
+
         .product-box-1 {
             grid-area: prod-1;
+
+            .first-right-inf-sub {
+                display: none;
+            }
         }
 
         .product-box-2 {
@@ -2403,7 +2558,8 @@ main {
         .six-slider-container {
             grid-area: six-slide;
         }
-        .important-advice{
+
+        .important-advice {
             grid-area: advice;
         }
     }
@@ -2413,9 +2569,10 @@ main {
 
     main {
         display: grid;
-        margin: 20px 50px 0 50px;
+        margin: 20px 20px 0 20px;
         grid-template-columns: 14vw 5fr 23vw;
         grid-template-areas:
+            "ordini ordini ordini"
             "prod-1 prod-1 prod-1"
             "prod-2 prod-2 prod-2"
             "first-slide first-slide first-slide"
@@ -2428,8 +2585,114 @@ main {
             "six-slide six-slide six-slide"
             "advice advice advice";
 
+        .consegna-ordini {
+            grid-area: ordini;
+        }
+
         .product-box-1 {
             grid-area: prod-1;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "first-info"
+                "first-product"
+                "sub-info";
+
+            .first-info {
+                grid-area: first-info;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .first-left-info {
+
+                    h2,
+                    p {
+                        margin: 10px 0;
+                    }
+                }
+
+                .first-right-info {
+                    display: none;
+
+                    button {
+                        padding: 12px 18px;
+                        border: 1px solid lightgrey;
+                        background-color: white;
+                        border-radius: 25px;
+                        min-width: fit-content;
+
+                        &:hover {
+                            border: 1px solid #727272;
+                        }
+                    }
+                }
+            }
+
+            .first-product-content {
+                grid-area: first-product;
+                margin-top: 20px;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: 1fr 1fr;
+                //  grid-auto-rows: repeat(7, 100px);
+                grid-template-areas:
+                    "scaffale scaffale"
+                    "mensola portalibri"
+                    "scarpiera portalibri"
+                    "scarpiera vestiario";
+
+                .scaffale {
+                    grid-area: scaffale;
+                }
+
+                .mensola {
+                    grid-area: mensola;
+                }
+
+                .portalibri {
+                    grid-area: portalibri;
+                }
+
+                .scarpiera {
+                    grid-area: scarpiera;
+                }
+
+                .vestiario {
+                    grid-area: vestiario;
+                }
+            }
+
+            .first-right-inf-sub {
+                grid-area: sub-info;
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    padding: 12px 18px;
+                    border: 1px solid lightgrey;
+                    background-color: white;
+                    border-radius: 25px;
+                    min-width: fit-content;
+
+                    &:hover {
+                        border: 1px solid #727272;
+                    }
+                }
+
+                div {
+                    display: grid;
+                    place-content: center;
+
+                    img {
+                        transform: rotate(180deg);
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+
         }
 
         .product-box-2 {
@@ -2483,13 +2746,120 @@ main {
             }
 
         }
-        .important-advice{
+
+        .important-advice {
             grid-area: advice;
 
-            p{
+            p {
                 min-width: 100%;
             }
         }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    main {
+        display: grid;
+        margin: 20px 20px 0 20px;
+        grid-template-columns: 14vw 5fr 23vw;
+        grid-template-areas:
+            "ordini ordini ordini"
+            "prod-1 prod-1 prod-1"
+            "prod-2 prod-2 prod-2"
+            "first-slide first-slide first-slide"
+            "second-slide second-slide second-slide"
+            "third-slide third-slide third-slide"
+            "info info info"
+            "fourth-slide fourth-slide fourth-slide"
+            "fifth-slide fifth-slide fifth-slide"
+            "prod-3 prod-3 prod-3"
+            "six-slide six-slide six-slide"
+            "advice advice advice";
+
+        .consegna-ordini {
+            grid-area: ordini;
+
+            img {
+                object-fit: cover;
+
+            }
+        }
+
+        .product-box-3 {
+            grid-area: prod-3;
+
+            .box-container {
+
+                .box-3-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 10px;
+                    grid-template-areas:
+                        "first second"
+                        "first fourth"
+                        "third fourth"
+                        "third six"
+                        "fifth six"
+                        "fifth eight"
+                        "seventh eight"
+                        "seventh ten"
+                        "nine ten"
+                        "nine twelve"
+                        "eleven twelve"
+                        "eleven .";
+
+                    .first {
+                        grid-area: first;
+                    }
+
+                    .second {
+                        grid-area: second;
+                    }
+
+                    .third {
+                        grid-area: third;
+                    }
+
+                    .fourth {
+                        grid-area: fourth;
+                    }
+
+                    .fifth {
+                        grid-area: fifth;
+                    }
+
+                    .six {
+                        grid-area: six;
+                    }
+
+                    .seven {
+                        grid-area: seventh;
+                    }
+
+                    .eight {
+                        grid-area: eight;
+                    }
+
+                    .nine {
+                        grid-area: nine;
+                    }
+
+                    .ten {
+                        grid-area: ten;
+                    }
+
+                    .eleven {
+                        grid-area: eleven;
+                    }
+
+                    .twelve {
+                        grid-area: twelve;
+                    }
+                }
+            }
+        }
+
     }
 }
 
