@@ -59,6 +59,161 @@ legend {
   font-weight: bold;
 }
 
+.layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+aside {
+  color: #111;
+  box-sizing: border-box;
+  height: 100%;
+  width: 0%;
+  visibility: hidden;
+  position: fixed;
+  z-index: 2;
+  overflow: hidden;
+  background-color: white;
+  transition: 0.1s ease;
+}
+aside .logo {
+  width: 100px;
+  margin-bottom: 1.5rem;
+}
+aside ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 2rem auto;
+}
+aside ul li {
+  margin: 1rem 0;
+}
+
+.sidenav-left {
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 25px 40px;
+}
+.sidenav-left .login {
+  padding: 10px 0;
+  border-bottom: 1px solid #dfdfdf;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.sidenav-left .login:hover {
+  background-color: #f5f5f5;
+}
+.sidenav-left .ul-big {
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+.sidenav-left .ul-bold {
+  font-weight: bold;
+}
+
+.sidenav-right {
+  top: 0;
+  right: 0;
+}
+.sidenav-right .close-btn {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+}
+.sidenav-right .menu-list {
+  padding-top: 100px;
+  background-color: #0058a3;
+}
+.sidenav-right .login {
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidenav-right .login span {
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: white;
+}
+.sidenav-right .utility {
+  margin-left: 40px;
+}
+.sidenav-right .utility li {
+  padding: 0.4rem 0;
+}
+.sidenav-right .ul-bold {
+  font-weight: bold;
+  color: white;
+}
+.sidenav-right .ul-bold li {
+  margin: 0;
+  border-top: 1px solid #3177b4;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidenav-right .ul-bold li a {
+  margin-left: 40px;
+}
+.sidenav-right .ul-bold li .btn-cnt-adaptive {
+  padding: 8px;
+  margin-right: 40px;
+}
+
+.sidenav-share {
+  top: 0;
+  right: 0;
+  padding: 0 40px;
+}
+.sidenav-share .close-btn {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+}
+.sidenav-share section {
+  padding-top: 100px;
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: 30% 70%;
+  gap: 20px;
+}
+.sidenav-share section h6 {
+  margin-top: 0;
+}
+.sidenav-share .socials-list li {
+  margin: 0;
+  border-top: 1px solid #dfdfdf;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.sidenav-share .socials-list li:last-child {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.share-btn,
+.top-btn {
+  z-index: 1;
+}
+
+.share-btn {
+  cursor: pointer;
+  visibility: hidden;
+  transition: 0.5 ease;
+}
+
 .info-box {
   display: flex;
   align-items: center;
@@ -92,6 +247,17 @@ legend {
 }
 .btn-cnt-dark a:hover {
   text-decoration: none !important;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+.close-btn .ico-cnt {
+  padding: 6px;
+}
+.close-btn .ico-cnt:hover {
+  background-color: #f5f5f5;
+  border-radius: 50px;
 }
 
 .btn-cnt-transparent {
@@ -354,16 +520,17 @@ button:hover {
   text-decoration: underline;
 }
 
-.hamburger-menu-fixed {
+.hamburger-menu.fixed {
+  cursor: pointer;
   position: absolute;
   top: 20px;
   left: 30px;
 }
-.hamburger-menu-fixed .ico-cnt {
+.hamburger-menu.fixed .ico-cnt {
   position: fixed;
   padding: 6px;
 }
-.hamburger-menu-fixed .ico-cnt:hover {
+.hamburger-menu.fixed .ico-cnt:hover {
   background-color: #f5f5f5;
   border-radius: 50px;
 }
@@ -566,7 +733,8 @@ footer ul {
 footer li {
   display: inline-block;
 }
-footer a, footer p {
+footer a,
+footer p {
   font-weight: normal;
   color: #484848;
 }
@@ -620,7 +788,8 @@ footer .top-footer .footer-icons-cnt {
   align-items: center;
   gap: 20px;
 }
-footer .top-footer .footer-icons-cnt .socials-cnt, footer .top-footer .footer-icons-cnt .payments-cnt {
+footer .top-footer .footer-icons-cnt .socials-cnt,
+footer .top-footer .footer-icons-cnt .payments-cnt {
   display: flex;
   gap: 20px;
 }
@@ -669,7 +838,8 @@ footer .bottom-footer span {
     gap: 15px;
   }
 
-  .top-btn, .share-btn {
+  .top-btn,
+.share-btn {
     display: none;
   }
 
@@ -681,7 +851,7 @@ footer .bottom-footer span {
   header .logo {
     min-width: initial;
   }
-  header .hamburger-menu-fixed {
+  header .hamburger-menu.fixed {
     display: none;
   }
   header .header-grid-cnt {
