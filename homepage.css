@@ -7,6 +7,10 @@
   font-family: "Roboto", "Open Sans", sans-serif;
 }
 
+body {
+  overflow-y: auto;
+}
+
 .upper-nav {
   min-width: 100vw;
   background-color: black;
@@ -39,7 +43,7 @@
   place-items: center;
   grid-template-areas: "menu logo search-bar information-box accesses" ". sub-nav sub-nav . ." ". hr hr hr hr";
 }
-.lower-nav .menu {
+.lower-nav #menu {
   grid-area: menu;
   border: none;
   background-color: rgba(0, 0, 0, 0);
@@ -47,10 +51,10 @@
   justify-content: center;
   align-items: center;
 }
-.lower-nav .menu:hover {
+.lower-nav #menu:hover {
   background-color: whitesmoke;
 }
-.lower-nav .menu img {
+.lower-nav #menu img {
   width: 42px;
   background-color: inherit;
   padding: 10px;
@@ -241,6 +245,431 @@
   width: 100%;
 }
 
+#left-onclick {
+  visibility: collapse;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100vh;
+  z-index: 200;
+}
+#left-onclick .quit-logo {
+  display: flex;
+  justify-content: start;
+  padding: 32px 0 0 54px;
+}
+#left-onclick .quit-logo #closeLeftAside {
+  display: grid;
+  place-items: center;
+  padding-right: 54px;
+}
+#left-onclick .left-bar-info {
+  flex-grow: 1;
+  padding-left: 131px;
+}
+#left-onclick .left-bar-info #ikea-logo {
+  visibility: collapse;
+}
+#left-onclick .left-bar-info .product-enviroment {
+  margin-top: 30px;
+}
+#left-onclick .left-bar-info .product-enviroment h2 {
+  margin-top: 30px;
+}
+#left-onclick .left-bar-info .product-enviroment h2 a {
+  font-size: 36px;
+  text-decoration: none;
+  color: black;
+}
+#left-onclick .left-bar-info .product-enviroment h2 a:hover {
+  text-decoration: underline;
+}
+#left-onclick .left-bar-info .upper-list > li {
+  margin-top: 24px;
+  list-style: none;
+}
+#left-onclick .left-bar-info .upper-list > li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+#left-onclick .left-bar-info .upper-list > li a:hover {
+  text-decoration: underline;
+}
+#left-onclick .left-bar-info .lower-list {
+  margin-top: 24px;
+}
+#left-onclick .left-bar-info .lower-list li {
+  margin-top: 18px;
+}
+#left-onclick .left-bar-info .lower-list li a {
+  text-decoration: none;
+  color: black;
+}
+#left-onclick .left-bar-info .lower-list li:hover {
+  text-decoration: underline;
+}
+#left-onclick .left-bar-info .change-country {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  border: 1px solid lightgrey;
+  background-color: whitesmoke;
+  column-gap: 3px;
+  min-width: fit-content;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+#left-onclick .left-bar-info .change-country:hover {
+  border: 1px solid #484848;
+  cursor: pointer;
+}
+#left-onclick .left-bar-info .change-country img {
+  width: 24px;
+}
+#left-onclick .left-bar-info .change-country h4 {
+  align-self: center;
+  color: #484848;
+}
+
+@media screen and (max-width: 900px) {
+  #left-onclick {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+  }
+  #left-onclick .quit-logo {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 32px 0 0 131px;
+  }
+  #left-onclick .quit-logo #closeLeftAside {
+    display: grid;
+    place-items: center;
+    padding-right: 54px;
+  }
+  #left-onclick .left-bar-info {
+    flex-grow: 1;
+    padding-left: 131px;
+  }
+  #left-onclick .left-bar-info #ikea-logo {
+    visibility: collapse;
+  }
+  #left-onclick .left-bar-info .product-enviroment {
+    margin-top: 30px;
+  }
+  #left-onclick .left-bar-info .product-enviroment h2 {
+    margin-top: 30px;
+  }
+  #left-onclick .left-bar-info .product-enviroment h2 a {
+    font-size: 36px;
+    text-decoration: none;
+    color: black;
+  }
+  #left-onclick .left-bar-info .product-enviroment h2 a:hover {
+    text-decoration: underline;
+  }
+  #left-onclick .left-bar-info .upper-list > li {
+    margin-top: 24px;
+    list-style: none;
+  }
+  #left-onclick .left-bar-info .upper-list > li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+  #left-onclick .left-bar-info .upper-list > li a:hover {
+    text-decoration: underline;
+  }
+  #left-onclick .left-bar-info .lower-list {
+    margin-top: 24px;
+  }
+  #left-onclick .left-bar-info .lower-list li {
+    margin-top: 18px;
+  }
+  #left-onclick .left-bar-info .lower-list li a {
+    text-decoration: none;
+    color: black;
+  }
+  #left-onclick .left-bar-info .lower-list li:hover {
+    text-decoration: underline;
+  }
+  #left-onclick .left-bar-info .change-country {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;
+    column-gap: 3px;
+    min-width: fit-content;
+    padding: 5px 10px;
+    border-radius: 50px;
+  }
+  #left-onclick .left-bar-info .change-country:hover {
+    border: 1px solid #484848;
+    cursor: pointer;
+  }
+  #left-onclick .left-bar-info .change-country img {
+    width: 24px;
+  }
+  #left-onclick .left-bar-info .change-country h4 {
+    align-self: center;
+    color: #484848;
+  }
+}
+@media screen and (max-width: 350px) {
+  #left-onclick {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+  }
+  #left-onclick .quit-logo {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 32px 24px 0 24px;
+  }
+  #left-onclick .quit-logo #closeLeftAside {
+    display: grid;
+    place-items: center;
+    padding: 0px;
+  }
+  #left-onclick .left-bar-info {
+    flex-grow: 1;
+    padding-left: 24px;
+  }
+  #left-onclick .left-bar-info #ikea-logo {
+    visibility: collapse;
+  }
+  #left-onclick .left-bar-info .product-enviroment {
+    margin-top: 30px;
+  }
+  #left-onclick .left-bar-info .product-enviroment h2 {
+    margin-top: 30px;
+  }
+  #left-onclick .left-bar-info .product-enviroment h2 a {
+    font-size: 36px;
+    text-decoration: none;
+    color: black;
+  }
+  #left-onclick .left-bar-info .product-enviroment h2 a:hover {
+    text-decoration: underline;
+  }
+  #left-onclick .left-bar-info .upper-list > li {
+    margin-top: 24px;
+    list-style: none;
+  }
+  #left-onclick .left-bar-info .upper-list > li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+  #left-onclick .left-bar-info .upper-list > li a:hover {
+    text-decoration: underline;
+  }
+  #left-onclick .left-bar-info .lower-list {
+    margin-top: 24px;
+  }
+  #left-onclick .left-bar-info .lower-list li {
+    margin-top: 18px;
+  }
+  #left-onclick .left-bar-info .lower-list li a {
+    text-decoration: none;
+    color: black;
+  }
+  #left-onclick .left-bar-info .lower-list li:hover {
+    text-decoration: underline;
+  }
+  #left-onclick .left-bar-info .change-country {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;
+    column-gap: 3px;
+    min-width: fit-content;
+    padding: 5px 10px;
+    border-radius: 50px;
+  }
+  #left-onclick .left-bar-info .change-country:hover {
+    border: 1px solid #484848;
+    cursor: pointer;
+  }
+  #left-onclick .left-bar-info .change-country img {
+    width: 24px;
+  }
+  #left-onclick .left-bar-info .change-country h4 {
+    align-self: center;
+    color: #484848;
+  }
+}
+#right-onclick {
+  visibility: collapse;
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  right: 0;
+  width: 450px;
+  height: 100vh;
+  z-index: 200;
+}
+#right-onclick .upper-aside {
+  background-color: #0058a3;
+}
+#right-onclick .upper-aside .quit-aside {
+  padding: 38px 38px 0 0;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+}
+#right-onclick .upper-aside .access {
+  margin: 42px 32px 0 32px;
+  display: flex;
+  justify-content: space-between;
+}
+#right-onclick .upper-aside .access h1 {
+  color: #ffffff;
+}
+#right-onclick .upper-aside .access button {
+  min-width: 100px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+}
+#right-onclick .upper-aside .access button:hover {
+  background-color: #dedede;
+}
+#right-onclick .upper-aside .ikea-family-registration {
+  margin-top: 32px;
+  padding: 32px;
+  border-top: 1px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+#right-onclick .upper-aside .ikea-family-registration h4 {
+  color: #ffffff;
+  padding-top: 8.5px;
+}
+#right-onclick .upper-aside .ikea-family-registration button {
+  width: 36px;
+  height: 36px;
+  border-radius: 25px;
+  display: grid;
+  border: none;
+  place-items: center;
+}
+#right-onclick .upper-aside .ikea-family-registration button img {
+  width: 24px;
+  transform: rotate(180deg);
+}
+#right-onclick .upper-aside .ikea-business-network-registration {
+  padding: 32px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+#right-onclick .upper-aside .ikea-business-network-registration h4 {
+  color: #ffffff;
+  padding-top: 8.5px;
+}
+#right-onclick .upper-aside .ikea-business-network-registration button {
+  width: 36px;
+  height: 36px;
+  border-radius: 25px;
+  display: grid;
+  border: none;
+  place-items: center;
+}
+#right-onclick .upper-aside .ikea-business-network-registration button img {
+  width: 24px;
+  transform: rotate(180deg);
+}
+#right-onclick .lower-aside {
+  color: black;
+}
+#right-onclick .lower-aside ul {
+  padding: 32px;
+}
+#right-onclick .lower-aside ul li {
+  list-style: none;
+  padding: 18px 0 18px 0;
+}
+#right-onclick .lower-aside ul li a {
+  color: black;
+  text-decoration: none;
+}
+#right-onclick .lower-aside ul li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  #right-onclick {
+    width: 100vw;
+  }
+  #right-onclick .upper-aside .ikea-family-registration button {
+    min-width: 36px;
+    padding: 10px;
+    height: 36px;
+    border-radius: 25px;
+  }
+  #right-onclick .upper-aside .ikea-business-network-registration button {
+    min-width: 36px;
+    padding: 10px;
+    height: 36px;
+    border-radius: 25px;
+  }
+}
+#person-form {
+  display: grid;
+  place-items: center;
+}
+#person-form .form {
+  border-top: 3px solid #002952;
+  border-bottom: 3px solid #002952;
+}
+#person-form .form h2 {
+  margin-top: 5px;
+  margin-bottom: 24px;
+}
+#person-form .form .info {
+  display: inline-block;
+  width: 200px;
+}
+#person-form .form input {
+  margin-left: 100px;
+}
+#person-form .form p {
+  margin-top: 24px;
+  text-align: center;
+}
+#person-form .form .button {
+  display: grid;
+  place-items: center;
+}
+#person-form .form .button #submit {
+  margin-bottom: 5px;
+  margin-top: 18px;
+  letter-spacing: 0.07rem;
+  border-radius: 7px;
+  border-color: #002952;
+  min-width: 100px;
+  padding: 10px;
+  background-image: linear-gradient(to right, #FFFFCC, #CCCCFF);
+}
+
 @media screen and (max-width: 1225px) {
   .lower-nav {
     display: grid;
@@ -249,7 +678,7 @@
     grid-template-areas: "logo search-bar accesses" "information-box information-box information-box" "hr hr hr";
   }
   .lower-nav .sub-nav,
-.lower-nav .menu {
+.lower-nav #menu {
     display: none;
   }
   .lower-nav .logo {
@@ -1431,253 +1860,6 @@ main .product-box-3 {
 }
 main .product-box-3 h2 {
   margin: 30px 0 30px 0;
-}
-main .product-box-3 .box-container {
-  /*
-  #checkbox-1,
-  #checkbox-2,
-  #checkbox-3,
-  #checkbox-4,
-  #checkbox-5,
-  #checkbox-6,
-  #checkbox-7,
-  #checkbox-8,
-  #checkbox-9,
-  #checkbox-10,
-  #checkbox-11{
-      display: none;
-  }
-
-  #checkbox-1{
-
-      &:checked+#checkbox-label-1~.box-3-grid{
-
-          .first{
-              background-image: url("assets-images/tutti-1.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .second{
-              background-image: url("assets-images/tutti-2.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .third{
-              background-image: url("assets-images/tutti-3.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .fourth{
-              background-image: url("assets-images/tutti-4.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .fifth{
-              background-image: url("assets-images/tutti-5.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .six{
-              background-image: url("assets-images/tutti-6.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .seven{
-              background-image: url("assets-images/tutti-7.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .eight{
-              background-image: url("assets-images/tutti-8.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .nine{
-              background-image: url("assets-images/tutti-9.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .ten{
-              background-image: url("assets-images/tutti-10.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .eleven{
-              background-image: url("assets-images/tutti-11.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-      }
-  }
-
-  #checkbox-2{
-
-      &:checked+#checkbox-label-2~.box-3-grid{
-
-          .first{
-              background-image: url("assets-images/camera-letto-1.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .second{
-              background-image: url("assets-images/camera-letto-2.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .third{
-              background-image: url("assets-images/camera-letto-3.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .fourth{
-              background-image: url("assets-images/camera-letto-4.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .fifth{
-              background-image: url("assets-images/camera-letto-5.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .six{
-              background-image: url("assets-images/camera-letto-6.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .seven{
-              background-image: url("assets-images/camera-letto-7.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .eight{
-              background-image: url("assets-images/camera-letto-8.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .nine{
-              background-image: url("assets-images/camera-letto-9.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .ten{
-              background-image: url("assets-images/camera-letto-10.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .eleven{
-              background-image: url("assets-images/camera-letto-11.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .twelve{
-              background-image: url("assets-images/camera-letto-12.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-      }
-  }
-
-  #checkbox-3{
-
-      &:checked+#checkbox-label-3~.box-3-grid{
-
-          .first{
-              background-image: url("assets-images/soggiorno-1.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .second{
-              background-image: url("assets-images/soggiorno-2.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .third{
-              background-image: url("assets-images/soggiorno-3.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .fourth{
-              background-image: url("assets-images/soggiorno-4.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .fifth{
-              background-image: url("assets-images/soggiorno-5.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .six{
-              background-image: url("assets-images/soggiorno-6.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .seven{
-              background-image: url("assets-images/soggiorno-7.webp");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .eight{
-              background-image: url("assets-images/soggiorno-8.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .nine{
-              background-image: url("assets-images/soggiorno-9.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .ten{
-              background-image: url("assets-images/soggiorno-10.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .eleven{
-              background-image: url("assets-images/soggiorno-11.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-          .twelve{
-              background-image: url("assets-images/soggiorno-12.avif");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: cover;
-          }
-      }
-  } */
 }
 main .product-box-3 .box-container .button-container {
   overflow-x: scroll;
