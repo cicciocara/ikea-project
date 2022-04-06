@@ -650,6 +650,160 @@
           </picture>
         </div>
       </section>
+
+      <form>
+        <h2>Richiedi informazioni</h2>
+        <label>
+          <input class="form-input" type="text" id="fname" required />
+          <span>Nome</span>
+        </label>
+        <label>
+          <input class="form-input" type="text" id="lname" required />
+          <span>Cognome</span>
+        </label>
+        <div>
+          <label>
+            <input class="form-input" type="text" id="city" required />
+            <span>Città</span>
+          </label>
+          <label>
+            <input class="form-input" list="prov" id="province" required />
+            <span>Provincia</span>
+            <datalist id="prov">
+              <option value="Agrigento"></option>
+              <option value="Alessandria"></option>
+              <option value="Ancona"></option>
+              <option value="Aosta"></option>
+              <option value="Arezzo"></option>
+              <option value="Ascoli Piceno"></option>
+              <option value="Asti"></option>
+              <option value="Avellino"></option>
+              <option value="Bari"></option>
+              <option value="Barletta-Andria-Trani"></option>
+              <option value="Belluno"></option>
+              <option value="Benevento"></option>
+              <option value="Bergamo"></option>
+              <option value="Biella"></option>
+              <option value="Bologna"></option>
+              <option value="Bolzano"></option>
+              <option value="Brescia"></option>
+              <option value="Brindisi"></option>
+              <option value="Cagliari"></option>
+              <option value="Caltanissetta"></option>
+              <option value="Campobasso"></option>
+              <option value="Caserta"></option>
+              <option value="Catania"></option>
+              <option value="Catanzaro"></option>
+              <option value="Chieti"></option>
+              <option value="Como"></option>
+              <option value="Cosenza"></option>
+              <option value="Cremona"></option>
+              <option value="Crotone"></option>
+              <option value="Cuneo"></option>
+              <option value="Enna"></option>
+              <option value="Fermo"></option>
+              <option value="Ferrara"></option>
+              <option value="Firenze"></option>
+              <option value="Foggia"></option>
+              <option value="Forlì-Cesena"></option>
+              <option value="Frosinone"></option>
+              <option value="Genova"></option>
+              <option value="Gorizia"></option>
+              <option value="Grosseto"></option>
+              <option value="Imperia"></option>
+              <option value="Isernia"></option>
+              <option value="L'aquila"></option>
+              <option value="La spezia"></option>
+              <option value="Latina"></option>
+              <option value="Lecce"></option>
+              <option value="Lecco"></option>
+              <option value="Livorno"></option>
+              <option value="Lodi"></option>
+              <option value="Lucca"></option>
+              <option value="Macerata"></option>
+              <option value="Mantova"></option>
+              <option value="Massa-Carrara"></option>
+              <option value="Matera"></option>
+              <option value="Messina"></option>
+              <option value="Milano"></option>
+              <option value="Modena"></option>
+              <option value="Monza e Brianza"></option>
+              <option value="Napoli"></option>
+              <option value="Novara"></option>
+              <option value="Nuoro"></option>
+              <option value="Oristano"></option>
+              <option value="Padova"></option>
+              <option value="Palermo"></option>
+              <option value="Parma"></option>
+              <option value="Pavia"></option>
+              <option value="Perugia"></option>
+              <option value="Pesaro e Urbino"></option>
+              <option value="Pescara"></option>
+              <option value="Piacenza"></option>
+              <option value="Pisa"></option>
+              <option value="Pistoia"></option>
+              <option value="Pordenone"></option>
+              <option value="Potenza"></option>
+              <option value="Prato"></option>
+              <option value="Ragusa"></option>
+              <option value="Ravenna"></option>
+              <option value="Reggio Calabria"></option>
+              <option value="Reggio Emilia"></option>
+              <option value="Rieti"></option>
+              <option value="Rimini"></option>
+              <option value="Roma"></option>
+              <option value="Rovigo"></option>
+              <option value="Salerno"></option>
+              <option value="Sassari"></option>
+              <option value="Savona"></option>
+              <option value="Siena"></option>
+              <option value="Siracusa"></option>
+              <option value="Sondrio"></option>
+              <option value="Sud Sardegna"></option>
+              <option value="Taranto"></option>
+              <option value="Teramo"></option>
+              <option value="Terni"></option>
+              <option value="Torino"></option>
+              <option value="Trapani"></option>
+              <option value="Trento"></option>
+              <option value="Treviso"></option>
+              <option value="Trieste"></option>
+              <option value="Udine"></option>
+              <option value="Varese"></option>
+              <option value="Venezia"></option>
+              <option value="Verbano-Cusio-Ossola"></option>
+              <option value="Vercelli"></option>
+              <option value="Verona"></option>
+              <option value="Vibo valentia"></option>
+              <option value="Vicenza"></option>
+              <option value="Viterbo"></option>
+            </datalist>
+          </label>
+          <label>
+            <input class="form-input" type="text" id="cap" required />
+            <span>CAP</span>
+          </label>
+        </div>
+        <label>
+          <input class="form-input" type="email" id="email" required />
+          <span>Email</span>
+        </label>
+        <label>
+          <input class="form-input" type="tel" id="phone" />
+          <span>Telefono</span>
+        </label>
+
+        <textarea id="info" cols="20" rows="5"></textarea>
+
+        <section>
+          <input type="checkbox" id="terms" required />
+          <label for="terms">
+            Ho letto e accetto i termini e le condizioni</label
+          >
+        </section>
+
+        <button>Invia</button>
+      </form>
     </main>
 
     <!--+++++++++++++++++++++++++++++++++++++++++ 
@@ -920,5 +1074,76 @@
         layer.style.display = "none";
       });
     });
+  </script>
+  <!-- Script Form -->
+  <script>
+    let form = document.querySelector("form");
+    let allFields = document.querySelectorAll(".form-input");
+    let phone = document.getElementById("phone");
+    let cap = document.getElementById("cap");
+    let checkbox = document.getElementById("terms");
+    let userData = {};
+
+    function getAndPrint() {
+      userData = {
+        fname: form.fname.value,
+        lname: form.lname.value,
+        city: form.city.value,
+        province: form.province.value,
+        cap: form.cap.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        text: form.info.value,
+      };
+
+      for (let item in userData) {
+        console.log(`${item}: ${userData[item]}`);
+      }
+    }
+
+    function checkInput(event) {
+      let currentField = event.target;
+      let span = currentField.nextElementSibling;
+      let keyPressed = event.charCode;
+
+      if (keyPressed < 48 || keyPressed > 57) {
+        event.preventDefault();
+        currentField.classList.add("errorInput");
+        span.classList.add("errorLabel");
+        let errMsg = document.createTextNode(" solo numeri!");
+        span.appendChild(errMsg);
+
+        setTimeout(() => {
+          currentField.classList.remove("errorInput");
+          span.classList.remove("errorLabel");
+          span.removeChild(errMsg);
+        }, 1500);
+      }
+    }
+
+    function moveUpPlaceholder(event) {
+      let currentField = event.target;
+      let span = currentField.nextElementSibling;
+
+      span.classList.add("movedUp");
+    }
+
+    function moveDownPlaceholder(event) {
+      let currentField = event.target;
+      let span = currentField.nextElementSibling;
+
+      if (!currentField.value) {
+        span.classList.remove("movedUp");
+      }
+    }
+
+    allFields.forEach((field) => {
+      field.addEventListener("focusin", moveUpPlaceholder);
+      field.addEventListener("focusout", moveDownPlaceholder);
+    });
+
+    phone.addEventListener("keypress", checkInput, false);
+    cap.addEventListener("keypress", checkInput);
+    form.addEventListener("submit", getAndPrint);
   </script>
 </html>
