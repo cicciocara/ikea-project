@@ -1,0 +1,114 @@
+$black: #111;
+$darker-gray: #333;
+$dark-gray: #484848;
+$gray: #929292;
+$light-gray: #dfdfdf;
+$lighter-gray: #f5f5f5;
+
+form {
+  max-width: 550px;
+  margin: auto;
+  padding: 10px;
+  display: grid;
+  font-family: sans-serif;
+  color: $black;
+
+  label {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  span {
+    color: $dark-gray;
+    position: absolute;
+    pointer-events: none;
+    top: 18px;
+    left: 10px;
+    transition: 0.2s ease all;
+  }
+
+  .movedUp {
+    top: 0;
+    left: 10px;
+    font-size: small;
+    color: $gray;
+  }
+
+
+  input {
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    width: 100%;
+    color: $dark-gray;
+    border: none;
+    border-bottom: 1px solid $gray;
+    outline: none;
+    padding: 10px 2px 3px;
+    margin: 10px 5px;
+    transition: all 0.2s ease;
+    &:focus,
+    &:focus-within {
+      background-color: $lighter-gray;
+      outline: none;
+      color: #0058a3;
+      border-bottom: 2px solid #0058a3;
+    }
+  }
+  .errorInput {
+    border-bottom: 2px solid darkred !important;
+    background-color: lightcoral !important;
+    color: darkred !important;
+  }
+
+  .errorLabel {
+    top: -10px;
+    color: darkred;
+
+    white-space: nowrap;
+
+  }
+  
+
+  textarea {
+    margin: 20px;
+  }
+
+  div {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+
+  section {
+    input {
+      width: initial;
+    }
+  }
+
+  button {
+    width: 25%;
+    background-color: #111;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    margin: 10px 0;
+    padding: 10px;
+
+    &:hover {
+      background-color: $darker-gray !important;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form {
+    div {
+      grid-template-columns: 2fr 1fr;
+      label:first-child {
+        grid-column: span 2;
+      }
+    }
+  }
+}
