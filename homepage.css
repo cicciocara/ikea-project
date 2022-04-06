@@ -632,6 +632,16 @@ body {
     border-radius: 25px;
   }
 }
+.cover-layer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0.5;
+  background-color: #000000;
+}
+
 #person-form {
   display: grid;
   place-items: center;
@@ -670,6 +680,11 @@ body {
   background-image: linear-gradient(to right, #FFFFCC, #CCCCFF);
 }
 
+@media screen and (max-width: 500px) {
+  #person-form .form {
+    margin: 0 20px 0 20px;
+  }
+}
 @media screen and (max-width: 1225px) {
   .lower-nav {
     display: grid;

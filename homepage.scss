@@ -787,6 +787,16 @@ body{
 }
 //end right-onclick
 
+.cover-layer{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: .50;
+    background-color: #000000;
+}
+
 //start form
 #person-form{
     display: grid;
@@ -829,6 +839,15 @@ body{
                 padding: 10px;
                 background-image: linear-gradient(to right, #FFFFCC, #CCCCFF);
             }
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    #person-form{
+    
+        .form{
+            margin: 0 20px 0 20px;
         }
     }
 }

@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <div class="cover-layer">
+
+    </div>
         <!-- start left onlick div -->
         <div id="left-onclick">
             <div class="quit-logo">
@@ -71,7 +74,6 @@
             </div>
         </div>
     <!-- end right onclick div -->
-    <div id="still-screen">
         <nav class="upper-nav">
             <img src="assets-icon/van.svg" alt="delivery-icon">
             <a class="promo" href="#">Promo: Ricevi i tuoi ordini fino a 30kg
@@ -552,7 +554,7 @@
                         <img class="nine" src="assets-images/tutti-9.avif" alt="9"></img>
                         <img class="ten" src="assets-images/tutti-10.avif" alt="10"></img>
                         <img class="eleven" src="assets-images/tutti-11.avif" alt="11"></img>
-                        <img class="twelve" src="" alt="12"></img>
+                        <img class="twelve" src="assets-images/soggiorno-12.avif" alt="12"></img>
                     </div>
 
                     <div class="other-product">
@@ -607,7 +609,7 @@
                     <div class="info">
                         <label for="name">Name: </label>
                     </div>
-                    <input type="text" id="name" placeholder="Mario" autofocus required>
+                    <input type="text" id="name" placeholder="Mario" required>
                 </div>
                 <div class="surname">
                     <div class="info">
@@ -623,7 +625,7 @@
                 </div>
                 <div class="gender">
                     <div class="info">
-                        <label for="gender">Gender: <sub><i>male/famale/other</i></sub> </label>
+                        <label for="gender">Gender: <sub><i>male/female/other</i></sub> </label>
                     </div>
                     <input type="text" id="gender"  placeholder="male" required pattern="male|female|other">
                 </div>
@@ -773,11 +775,10 @@
                 </section>
             </section>
         </footer>
-   </div>
 
-         <!-- javascript click event -->
+         <!-- javascript events -->
      <script>
-        const stillScreen = document.getElementById("still-screen");
+        const coverLayer = document.querySelector(".cover-layer");
         const hamburgerMenu = document.getElementById("menu");
         const userRegistration = document.querySelector(".user");
         const shop = document.querySelector(".select-market");
@@ -790,22 +791,30 @@
 
         function openLeftAside() { 
             leftBar.style.visibility = "visible";
-            stillScreen.style.opacity = ".50";
+            coverLayer.style.width = "100vw";
+            coverLayer.style.height = "100vh";
+            coverLayer.style.display = "block";
         }
 
         function closeLeftAside(){
             leftBar.style.visibility = "collapse";
-            stillScreen.style.opacity = "1";
+            coverLayer.style.width = "0";
+            coverLayer.style.height = "0";
+            coverLayer.style.display = "none";
         }
 
         function openRightAside() { 
             rightBar.style.visibility = "visible";
-            stillScreen.style.opacity = ".50";
+            coverLayer.style.width = "100vw";
+            coverLayer.style.height = "100vh";
+            coverLayer.style.display = "block";
         }
 
         function closeRightAside(){
             rightBar.style.visibility = "collapse";
-            stillScreen.style.opacity = "1";
+            coverLayer.style.width = "0";
+            coverLayer.style.height = "0";
+            coverLayer.style.display = "none";
         }
 
         shop.addEventListener("click", openRightAside);
@@ -814,6 +823,8 @@
         quitIconLeftAside.addEventListener("click", closeLeftAside);
         hamburgerQueryMenu.addEventListener("click", openLeftAside);
         hamburgerMenu.addEventListener("click", openLeftAside);
+        coverLayer.addEventListener("click", closeLeftAside);
+        coverLayer.addEventListener("click", closeRightAside);
 
        //form manipulation
        const submitBtn = document.getElementById("submit");
@@ -833,9 +844,10 @@
            if(email) console.log(`user Email: `, email);
            if(rating > 0 && rating <=10) console.log("user page-rating: ", rating);
        })
+
         
     </script>
-    <!-- end javascript click event -->
+    <!-- end javascript events -->
 </body>
 
 </html>
