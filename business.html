@@ -1029,13 +1029,13 @@
       layer.style.display = "none";
     }
 
-    function showShareBtn() {
-      if (document.body.scroll > 50) {
-        console.log("hello");
-      } else {
-        console.log("nope");
-      }
-    }
+    // function showShareBtn() {
+    //   if (document.body.scroll > 50) {
+    //     console.log("hello");
+    //   } else {
+    //     console.log("nope");
+    //   }
+    // }
 
     hamburgerMenu.forEach((item) =>
       item.addEventListener("click", function () {
@@ -1058,7 +1058,6 @@
     });
 
     window.onscroll = (event) => {
-      console.log(window.pageYOffset);
       if (window.pageYOffset / 100 > 35) {
         shareBtn.style.visibility = "visible";
       } else {
