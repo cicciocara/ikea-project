@@ -6,10 +6,6 @@
     font-family: 'Roboto' , 'Open Sans' , sans-serif;
 }
 
-body{
-    overflow-y: auto;
-}
-
 .upper-nav {
     min-width: 100vw;
     background-color: black;
@@ -304,13 +300,13 @@ body{
 }
 
 //left-onclick
-#left-onclick{
+#left-aside-onclick{
     visibility: collapse;
     background-color: #ffffff;
     position: fixed;
     top: 0;
     left: 0;
-    width: 500px;
+    width: 0px;
     height: 100vh;
     z-index: 200;
 
@@ -322,7 +318,7 @@ body{
         #closeLeftAside{
             display: grid;
             place-items: center;
-            padding-right: 54px;
+            margin-right: 54px;
         }
     }
 
@@ -414,12 +410,12 @@ body{
 }
 
 @media screen and (max-width: 900px){
-    #left-onclick{
+    #left-aside-onclick{
         background-color: #ffffff;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 0;
         height: 100vh;
         z-index: 200;
     
@@ -525,12 +521,12 @@ body{
 }
 
 @media screen and (max-width: 350px){
-    #left-onclick{
+    #left-aside-onclick{
         background-color: #ffffff;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 0;
         height: 100vh;
         z-index: 200;
     
@@ -637,13 +633,13 @@ body{
 //end left-onclick
 
 //right-onclick
-#right-onclick{
+#right-aside-onclick{
     visibility: collapse;
     position: fixed;
     background-color: #ffffff;
     top: 0;
     right: 0;
-    width: 450px;
+    width: 0;
     height: 100vh;
     z-index: 200;
 
@@ -758,8 +754,8 @@ body{
 }
 
 @media screen and (max-width: 600px){
-    #right-onclick{
-        width: 100vw;
+    #right-aside-onclick{
+        width: 0;
     
         .upper-aside{
         
@@ -819,6 +815,12 @@ body{
         input{
             margin-left: 100px;
         }
+
+        .text-area{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
     
         p{
             margin-top: 24px;
@@ -845,9 +847,13 @@ body{
 
 @media screen and (max-width: 500px){
     #person-form{
-    
+
         .form{
-            margin: 0 20px 0 20px;
+            margin: 0 30px 0 30px;
+            
+            .text-area{
+                display: block;
+            }
         }
     }
 }
@@ -3569,6 +3575,17 @@ footer {
                 row-gap: 10px;
             }
 
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .footer-copyright{
+        display: flex;
+        flex-direction: column;
+
+        ul{
+            margin-top: 36px;
         }
     }
 }

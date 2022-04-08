@@ -15,7 +15,7 @@
 
     </div>
         <!-- start left onlick div -->
-        <div id="left-onclick">
+        <div id="left-aside-onclick">
             <div class="quit-logo">
                 <div id="closeLeftAside"><img src="assets-icon/black-close-icon.svg" alt="closeIcon"></div>
                 <img id="ikea-logo" src="assets-images/logo.svg" alt="logo-ikea">
@@ -47,7 +47,7 @@
     <!-- end left onclick div-->
 
     <!-- start right onclick div -->
-        <div id="right-onclick">
+        <div id="right-aside-onclick">
             <div class="upper-aside">
                 <div class="quit-aside">
                     <div id="closeRightAside"><img src="assets-icon/white-close-icon.svg" alt="closeIcon"></div>
@@ -641,6 +641,12 @@
                     </div>
                     <input type="number" id="page-rating" placeholder="8" required>
                 </div>
+                <div class="text-area">
+                    <div class="info">
+                        <label for="text-area">Give us your opinion! </label>
+                    </div>
+                    <textarea id="text-area" cols="40" rows="10" placeholder="something..."></textarea>
+                </div>
                 <p>Thanks for your feedback!</p>
                 <div class="button"><button id="submit" type="submit">Submit</button></div>
             </section>
@@ -776,78 +782,8 @@
             </section>
         </footer>
 
-         <!-- javascript events -->
-     <script>
-        const coverLayer = document.querySelector(".cover-layer");
-        const hamburgerMenu = document.getElementById("menu");
-        const userRegistration = document.querySelector(".user");
-        const shop = document.querySelector(".select-market");
-        const hamburgerQueryMenu = document.querySelector(".media-query-menu");
-        const quitIconLeftAside = document.getElementById("closeLeftAside")
-        const quitIconRightAside = document.getElementById("closeRightAside");
-        const rightBar = document.getElementById("right-onclick");
-        const leftBar = document.getElementById("left-onclick");
-       
-
-        function openLeftAside() { 
-            leftBar.style.visibility = "visible";
-            coverLayer.style.width = "100vw";
-            coverLayer.style.height = "100vh";
-            coverLayer.style.display = "block";
-        }
-
-        function closeLeftAside(){
-            leftBar.style.visibility = "collapse";
-            coverLayer.style.width = "0";
-            coverLayer.style.height = "0";
-            coverLayer.style.display = "none";
-        }
-
-        function openRightAside() { 
-            rightBar.style.visibility = "visible";
-            coverLayer.style.width = "100vw";
-            coverLayer.style.height = "100vh";
-            coverLayer.style.display = "block";
-        }
-
-        function closeRightAside(){
-            rightBar.style.visibility = "collapse";
-            coverLayer.style.width = "0";
-            coverLayer.style.height = "0";
-            coverLayer.style.display = "none";
-        }
-
-        shop.addEventListener("click", openRightAside);
-        userRegistration.addEventListener("click", openRightAside);
-        quitIconRightAside.addEventListener("click", closeRightAside);
-        quitIconLeftAside.addEventListener("click", closeLeftAside);
-        hamburgerQueryMenu.addEventListener("click", openLeftAside);
-        hamburgerMenu.addEventListener("click", openLeftAside);
-        coverLayer.addEventListener("click", closeLeftAside);
-        coverLayer.addEventListener("click", closeRightAside);
-
-       //form manipulation
-       const submitBtn = document.getElementById("submit");
-
-       submitBtn.addEventListener("click", (event) =>{
-           event.preventDefault();
-           name = document.getElementById("name").value;
-           surname = document.getElementById("surname").value;
-           age = document.getElementById("age").value;
-           gender = document.getElementById("gender").value;
-           email = document.getElementById("email-address").value;
-           rating = document.getElementById("page-rating").value;
-           if(name) console.log(`user Name: `, name);
-           if(surname) console.log(`user Surname: `, surname);
-           if(gender === "male" || gender === "female" || gender === "other") console.log(`user Gender: `, gender);
-           if(age >= 1 && age <= 100) console.log(`user Age: `, age);
-           if(email) console.log(`user Email: `, email);
-           if(rating > 0 && rating <=10) console.log("user page-rating: ", rating);
-       })
-
-        
-    </script>
-    <!-- end javascript events -->
+        <!-- JAVASCIPT homepage.js REFERENCE -->
+        <script type="text/javascript" src="homepage.js"></script>
 </body>
 
 </html>
