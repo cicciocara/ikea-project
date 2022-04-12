@@ -300,7 +300,7 @@
 }
 
 //left-onclick
-#left-aside-onclick{
+.left-aside-onclick{
     visibility: collapse;
     background-color: #ffffff;
     position: fixed;
@@ -409,8 +409,20 @@
     }
 }
 
+.open-left-900{
+    visibility: visible;
+    width: 500px;
+    transition: 0.2s ease;
+}
+
+.close-left{
+    visibility: collapse;
+    width: 0;
+    transition: 0.2s ease;
+}
+
 @media screen and (max-width: 900px){
-    #left-aside-onclick{
+    .left-aside-onclick{
         background-color: #ffffff;
         position: fixed;
         top: 0;
@@ -518,10 +530,21 @@
     
         }
     }
+    .open-left-0to899{
+        visibility: visible;
+        width: 100vw;
+        transition: 0.2s ease;
+    }
+
+    .close-left{
+        visibility: collapse;
+        width: 0;
+        transition: 0.2s ease;
+    }
 }
 
 @media screen and (max-width: 350px){
-    #left-aside-onclick{
+    .left-aside-onclick{
         background-color: #ffffff;
         position: fixed;
         top: 0;
@@ -629,11 +652,22 @@
     
         }
     }
+    .open-left-0to899{
+        visibility: visible;
+        width: 100vw;
+        transition: 0.2s ease;
+    }
+
+    .close-left{
+        visibility: collapse;
+        width: 0;
+        transition: 0.2s ease;
+    }
 }
 //end left-onclick
 
 //right-onclick
-#right-aside-onclick{
+.right-aside-onclick{
     visibility: collapse;
     position: fixed;
     background-color: #ffffff;
@@ -753,8 +787,20 @@
     }
 }
 
+.open-right-600{
+    visibility: visible;
+    width: 450px;
+    transition: 0.2s ease;
+}
+
+.close-right{
+    visibility: collapse;
+    width: 0;
+    transition: 0.2s ease;
+}
+
 @media screen and (max-width: 600px){
-    #right-aside-onclick{
+    .right-aside-onclick{
         width: 0;
     
         .upper-aside{
@@ -780,9 +826,21 @@
             }
         }
     }
+    .open-right-0to599{
+        visibility: visible;
+        width: 100vw;
+        transition: 0.2s ease;
+    }
+    
+    .close-right{
+        visibility: collapse;
+        width: 0;
+        transition: 0.2s ease;
+    }
 }
 //end right-onclick
 
+//start cover-layer
 .cover-layer{
     display: none;
     position: fixed;
@@ -792,6 +850,7 @@
     opacity: .50;
     background-color: #000000;
 }
+//end cover-layer
 
 //start form
 #person-form{

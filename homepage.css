@@ -241,7 +241,7 @@
   width: 100%;
 }
 
-#left-aside-onclick {
+.left-aside-onclick {
   visibility: collapse;
   background-color: #ffffff;
   position: fixed;
@@ -251,63 +251,63 @@
   height: 100vh;
   z-index: 200;
 }
-#left-aside-onclick .quit-logo {
+.left-aside-onclick .quit-logo {
   display: flex;
   justify-content: start;
   padding: 32px 0 0 54px;
 }
-#left-aside-onclick .quit-logo #closeLeftAside {
+.left-aside-onclick .quit-logo #closeLeftAside {
   display: grid;
   place-items: center;
   margin-right: 54px;
 }
-#left-aside-onclick .left-bar-info {
+.left-aside-onclick .left-bar-info {
   flex-grow: 1;
   padding-left: 131px;
 }
-#left-aside-onclick .left-bar-info #ikea-logo {
+.left-aside-onclick .left-bar-info #ikea-logo {
   visibility: collapse;
 }
-#left-aside-onclick .left-bar-info .product-enviroment {
+.left-aside-onclick .left-bar-info .product-enviroment {
   margin-top: 30px;
 }
-#left-aside-onclick .left-bar-info .product-enviroment h2 {
+.left-aside-onclick .left-bar-info .product-enviroment h2 {
   margin-top: 30px;
 }
-#left-aside-onclick .left-bar-info .product-enviroment h2 a {
+.left-aside-onclick .left-bar-info .product-enviroment h2 a {
   font-size: 36px;
   text-decoration: none;
   color: black;
 }
-#left-aside-onclick .left-bar-info .product-enviroment h2 a:hover {
+.left-aside-onclick .left-bar-info .product-enviroment h2 a:hover {
   text-decoration: underline;
 }
-#left-aside-onclick .left-bar-info .upper-list > li {
+.left-aside-onclick .left-bar-info .upper-list > li {
   margin-top: 24px;
   list-style: none;
 }
-#left-aside-onclick .left-bar-info .upper-list > li a {
+.left-aside-onclick .left-bar-info .upper-list > li a {
   text-decoration: none;
   font-weight: bold;
   color: black;
 }
-#left-aside-onclick .left-bar-info .upper-list > li a:hover {
+.left-aside-onclick .left-bar-info .upper-list > li a:hover {
   text-decoration: underline;
 }
-#left-aside-onclick .left-bar-info .lower-list {
+.left-aside-onclick .left-bar-info .lower-list {
   margin-top: 24px;
 }
-#left-aside-onclick .left-bar-info .lower-list li {
+.left-aside-onclick .left-bar-info .lower-list li {
   margin-top: 18px;
 }
-#left-aside-onclick .left-bar-info .lower-list li a {
+.left-aside-onclick .left-bar-info .lower-list li a {
   text-decoration: none;
   color: black;
 }
-#left-aside-onclick .left-bar-info .lower-list li:hover {
+.left-aside-onclick .left-bar-info .lower-list li:hover {
   text-decoration: underline;
 }
-#left-aside-onclick .left-bar-info .change-country {
+.left-aside-onclick .left-bar-info .change-country {
   margin-top: 50px;
   margin-bottom: 40px;
   display: flex;
@@ -318,20 +318,32 @@
   padding: 5px 10px;
   border-radius: 50px;
 }
-#left-aside-onclick .left-bar-info .change-country:hover {
+.left-aside-onclick .left-bar-info .change-country:hover {
   border: 1px solid #484848;
   cursor: pointer;
 }
-#left-aside-onclick .left-bar-info .change-country img {
+.left-aside-onclick .left-bar-info .change-country img {
   width: 24px;
 }
-#left-aside-onclick .left-bar-info .change-country h4 {
+.left-aside-onclick .left-bar-info .change-country h4 {
   align-self: center;
   color: #484848;
 }
 
+.open-left-900 {
+  visibility: visible;
+  width: 500px;
+  transition: 0.2s ease;
+}
+
+.close-left {
+  visibility: collapse;
+  width: 0;
+  transition: 0.2s ease;
+}
+
 @media screen and (max-width: 900px) {
-  #left-aside-onclick {
+  .left-aside-onclick {
     background-color: #ffffff;
     position: fixed;
     top: 0;
@@ -340,64 +352,64 @@
     height: 100vh;
     z-index: 200;
   }
-  #left-aside-onclick .quit-logo {
+  .left-aside-onclick .quit-logo {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 32px 0 0 131px;
   }
-  #left-aside-onclick .quit-logo #closeLeftAside {
+  .left-aside-onclick .quit-logo #closeLeftAside {
     display: grid;
     place-items: center;
     padding-right: 54px;
   }
-  #left-aside-onclick .left-bar-info {
+  .left-aside-onclick .left-bar-info {
     flex-grow: 1;
     padding-left: 131px;
   }
-  #left-aside-onclick .left-bar-info #ikea-logo {
+  .left-aside-onclick .left-bar-info #ikea-logo {
     visibility: collapse;
   }
-  #left-aside-onclick .left-bar-info .product-enviroment {
+  .left-aside-onclick .left-bar-info .product-enviroment {
     margin-top: 30px;
   }
-  #left-aside-onclick .left-bar-info .product-enviroment h2 {
+  .left-aside-onclick .left-bar-info .product-enviroment h2 {
     margin-top: 30px;
   }
-  #left-aside-onclick .left-bar-info .product-enviroment h2 a {
+  .left-aside-onclick .left-bar-info .product-enviroment h2 a {
     font-size: 36px;
     text-decoration: none;
     color: black;
   }
-  #left-aside-onclick .left-bar-info .product-enviroment h2 a:hover {
+  .left-aside-onclick .left-bar-info .product-enviroment h2 a:hover {
     text-decoration: underline;
   }
-  #left-aside-onclick .left-bar-info .upper-list > li {
+  .left-aside-onclick .left-bar-info .upper-list > li {
     margin-top: 24px;
     list-style: none;
   }
-  #left-aside-onclick .left-bar-info .upper-list > li a {
+  .left-aside-onclick .left-bar-info .upper-list > li a {
     text-decoration: none;
     font-weight: bold;
     color: black;
   }
-  #left-aside-onclick .left-bar-info .upper-list > li a:hover {
+  .left-aside-onclick .left-bar-info .upper-list > li a:hover {
     text-decoration: underline;
   }
-  #left-aside-onclick .left-bar-info .lower-list {
+  .left-aside-onclick .left-bar-info .lower-list {
     margin-top: 24px;
   }
-  #left-aside-onclick .left-bar-info .lower-list li {
+  .left-aside-onclick .left-bar-info .lower-list li {
     margin-top: 18px;
   }
-  #left-aside-onclick .left-bar-info .lower-list li a {
+  .left-aside-onclick .left-bar-info .lower-list li a {
     text-decoration: none;
     color: black;
   }
-  #left-aside-onclick .left-bar-info .lower-list li:hover {
+  .left-aside-onclick .left-bar-info .lower-list li:hover {
     text-decoration: underline;
   }
-  #left-aside-onclick .left-bar-info .change-country {
+  .left-aside-onclick .left-bar-info .change-country {
     margin-top: 50px;
     margin-bottom: 40px;
     display: flex;
@@ -408,20 +420,32 @@
     padding: 5px 10px;
     border-radius: 50px;
   }
-  #left-aside-onclick .left-bar-info .change-country:hover {
+  .left-aside-onclick .left-bar-info .change-country:hover {
     border: 1px solid #484848;
     cursor: pointer;
   }
-  #left-aside-onclick .left-bar-info .change-country img {
+  .left-aside-onclick .left-bar-info .change-country img {
     width: 24px;
   }
-  #left-aside-onclick .left-bar-info .change-country h4 {
+  .left-aside-onclick .left-bar-info .change-country h4 {
     align-self: center;
     color: #484848;
   }
+
+  .open-left-0to899 {
+    visibility: visible;
+    width: 100vw;
+    transition: 0.2s ease;
+  }
+
+  .close-left {
+    visibility: collapse;
+    width: 0;
+    transition: 0.2s ease;
+  }
 }
 @media screen and (max-width: 350px) {
-  #left-aside-onclick {
+  .left-aside-onclick {
     background-color: #ffffff;
     position: fixed;
     top: 0;
@@ -430,64 +454,64 @@
     height: 100vh;
     z-index: 200;
   }
-  #left-aside-onclick .quit-logo {
+  .left-aside-onclick .quit-logo {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 32px 24px 0 24px;
   }
-  #left-aside-onclick .quit-logo #closeLeftAside {
+  .left-aside-onclick .quit-logo #closeLeftAside {
     display: grid;
     place-items: center;
     padding: 0px;
   }
-  #left-aside-onclick .left-bar-info {
+  .left-aside-onclick .left-bar-info {
     flex-grow: 1;
     padding-left: 24px;
   }
-  #left-aside-onclick .left-bar-info #ikea-logo {
+  .left-aside-onclick .left-bar-info #ikea-logo {
     visibility: collapse;
   }
-  #left-aside-onclick .left-bar-info .product-enviroment {
+  .left-aside-onclick .left-bar-info .product-enviroment {
     margin-top: 30px;
   }
-  #left-aside-onclick .left-bar-info .product-enviroment h2 {
+  .left-aside-onclick .left-bar-info .product-enviroment h2 {
     margin-top: 30px;
   }
-  #left-aside-onclick .left-bar-info .product-enviroment h2 a {
+  .left-aside-onclick .left-bar-info .product-enviroment h2 a {
     font-size: 36px;
     text-decoration: none;
     color: black;
   }
-  #left-aside-onclick .left-bar-info .product-enviroment h2 a:hover {
+  .left-aside-onclick .left-bar-info .product-enviroment h2 a:hover {
     text-decoration: underline;
   }
-  #left-aside-onclick .left-bar-info .upper-list > li {
+  .left-aside-onclick .left-bar-info .upper-list > li {
     margin-top: 24px;
     list-style: none;
   }
-  #left-aside-onclick .left-bar-info .upper-list > li a {
+  .left-aside-onclick .left-bar-info .upper-list > li a {
     text-decoration: none;
     font-weight: bold;
     color: black;
   }
-  #left-aside-onclick .left-bar-info .upper-list > li a:hover {
+  .left-aside-onclick .left-bar-info .upper-list > li a:hover {
     text-decoration: underline;
   }
-  #left-aside-onclick .left-bar-info .lower-list {
+  .left-aside-onclick .left-bar-info .lower-list {
     margin-top: 24px;
   }
-  #left-aside-onclick .left-bar-info .lower-list li {
+  .left-aside-onclick .left-bar-info .lower-list li {
     margin-top: 18px;
   }
-  #left-aside-onclick .left-bar-info .lower-list li a {
+  .left-aside-onclick .left-bar-info .lower-list li a {
     text-decoration: none;
     color: black;
   }
-  #left-aside-onclick .left-bar-info .lower-list li:hover {
+  .left-aside-onclick .left-bar-info .lower-list li:hover {
     text-decoration: underline;
   }
-  #left-aside-onclick .left-bar-info .change-country {
+  .left-aside-onclick .left-bar-info .change-country {
     margin-top: 50px;
     margin-bottom: 40px;
     display: flex;
@@ -498,19 +522,31 @@
     padding: 5px 10px;
     border-radius: 50px;
   }
-  #left-aside-onclick .left-bar-info .change-country:hover {
+  .left-aside-onclick .left-bar-info .change-country:hover {
     border: 1px solid #484848;
     cursor: pointer;
   }
-  #left-aside-onclick .left-bar-info .change-country img {
+  .left-aside-onclick .left-bar-info .change-country img {
     width: 24px;
   }
-  #left-aside-onclick .left-bar-info .change-country h4 {
+  .left-aside-onclick .left-bar-info .change-country h4 {
     align-self: center;
     color: #484848;
   }
+
+  .open-left-0to899 {
+    visibility: visible;
+    width: 100vw;
+    transition: 0.2s ease;
+  }
+
+  .close-left {
+    visibility: collapse;
+    width: 0;
+    transition: 0.2s ease;
+  }
 }
-#right-aside-onclick {
+.right-aside-onclick {
   visibility: collapse;
   position: fixed;
   background-color: #ffffff;
@@ -520,45 +556,45 @@
   height: 100vh;
   z-index: 200;
 }
-#right-aside-onclick .upper-aside {
+.right-aside-onclick .upper-aside {
   background-color: #0058a3;
 }
-#right-aside-onclick .upper-aside .quit-aside {
+.right-aside-onclick .upper-aside .quit-aside {
   padding: 38px 38px 0 0;
   display: flex;
   justify-content: end;
   align-items: start;
 }
-#right-aside-onclick .upper-aside .access {
+.right-aside-onclick .upper-aside .access {
   margin: 42px 32px 0 32px;
   display: flex;
   justify-content: space-between;
 }
-#right-aside-onclick .upper-aside .access h1 {
+.right-aside-onclick .upper-aside .access h1 {
   color: #ffffff;
 }
-#right-aside-onclick .upper-aside .access button {
+.right-aside-onclick .upper-aside .access button {
   min-width: 100px;
   padding: 10px;
   font-weight: bold;
   border-radius: 25px;
   border: none;
 }
-#right-aside-onclick .upper-aside .access button:hover {
+.right-aside-onclick .upper-aside .access button:hover {
   background-color: #dedede;
 }
-#right-aside-onclick .upper-aside .ikea-family-registration {
+.right-aside-onclick .upper-aside .ikea-family-registration {
   margin-top: 32px;
   padding: 32px;
   border-top: 1px solid #ffffff;
   display: flex;
   justify-content: space-between;
 }
-#right-aside-onclick .upper-aside .ikea-family-registration h4 {
+.right-aside-onclick .upper-aside .ikea-family-registration h4 {
   color: #ffffff;
   padding-top: 8.5px;
 }
-#right-aside-onclick .upper-aside .ikea-family-registration button {
+.right-aside-onclick .upper-aside .ikea-family-registration button {
   width: 36px;
   height: 36px;
   border-radius: 25px;
@@ -566,22 +602,22 @@
   border: none;
   place-items: center;
 }
-#right-aside-onclick .upper-aside .ikea-family-registration button img {
+.right-aside-onclick .upper-aside .ikea-family-registration button img {
   width: 24px;
   transform: rotate(180deg);
 }
-#right-aside-onclick .upper-aside .ikea-business-network-registration {
+.right-aside-onclick .upper-aside .ikea-business-network-registration {
   padding: 32px;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   display: flex;
   justify-content: space-between;
 }
-#right-aside-onclick .upper-aside .ikea-business-network-registration h4 {
+.right-aside-onclick .upper-aside .ikea-business-network-registration h4 {
   color: #ffffff;
   padding-top: 8.5px;
 }
-#right-aside-onclick .upper-aside .ikea-business-network-registration button {
+.right-aside-onclick .upper-aside .ikea-business-network-registration button {
   width: 36px;
   height: 36px;
   border-radius: 25px;
@@ -589,43 +625,67 @@
   border: none;
   place-items: center;
 }
-#right-aside-onclick .upper-aside .ikea-business-network-registration button img {
+.right-aside-onclick .upper-aside .ikea-business-network-registration button img {
   width: 24px;
   transform: rotate(180deg);
 }
-#right-aside-onclick .lower-aside {
+.right-aside-onclick .lower-aside {
   color: black;
 }
-#right-aside-onclick .lower-aside ul {
+.right-aside-onclick .lower-aside ul {
   padding: 32px;
 }
-#right-aside-onclick .lower-aside ul li {
+.right-aside-onclick .lower-aside ul li {
   list-style: none;
   padding: 18px 0 18px 0;
 }
-#right-aside-onclick .lower-aside ul li a {
+.right-aside-onclick .lower-aside ul li a {
   color: black;
   text-decoration: none;
 }
-#right-aside-onclick .lower-aside ul li a:hover {
+.right-aside-onclick .lower-aside ul li a:hover {
   text-decoration: underline;
 }
 
+.open-right-600 {
+  visibility: visible;
+  width: 450px;
+  transition: 0.2s ease;
+}
+
+.close-right {
+  visibility: collapse;
+  width: 0;
+  transition: 0.2s ease;
+}
+
 @media screen and (max-width: 600px) {
-  #right-aside-onclick {
+  .right-aside-onclick {
     width: 0;
   }
-  #right-aside-onclick .upper-aside .ikea-family-registration button {
+  .right-aside-onclick .upper-aside .ikea-family-registration button {
     min-width: 36px;
     padding: 10px;
     height: 36px;
     border-radius: 25px;
   }
-  #right-aside-onclick .upper-aside .ikea-business-network-registration button {
+  .right-aside-onclick .upper-aside .ikea-business-network-registration button {
     min-width: 36px;
     padding: 10px;
     height: 36px;
     border-radius: 25px;
+  }
+
+  .open-right-0to599 {
+    visibility: visible;
+    width: 100vw;
+    transition: 0.2s ease;
+  }
+
+  .close-right {
+    visibility: collapse;
+    width: 0;
+    transition: 0.2s ease;
   }
 }
 .cover-layer {
