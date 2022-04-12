@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gift-style.css" />
+    <link rel="shortcut icon" href="https://www.ikea.com/it/it/static/favicon.838d8a3778e4d716eb72.ico"/>
+    <title>Acquista regali unici e accessibili - IKEA IT</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <!--AVVISO OFFERTA-->
+    <div class="discountCodeLine">
+      <img src="assets/icon/van.svg" alt="">
+      <a href="https://www.ikea.com/it/it/offers/limited-time-offers/" target="_blank">
+        Promo: Ricevi i tuoi ordini fino a 30kg a €5 a casa o in un Ufficio Postale fino al 6 marzo 2022
+      </a>
+    </div>
+      <!--BUTTON MENU - FULLSCREAN--->
+      <div class="side-btn-menu">
+        <button id="open-prod-full">
+          <img src="assets/icon/menu.svg" alt="">
+        </button>
+      </div>
+      <!--BUTTONS SHARE & UP - FULLSCREAN-->
+      <div class="cont-btn-share">
+        <div id="btn-up">
+          <svg class="svg-change-color" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m12.0001 6.9394 8.0007 8.0013-1.4142 1.4141L12 9.7678l-6.5869 6.586-1.414-1.4143 8.001-8z"></path></svg>
+            <span class="text-change-color">Torna all'inizio</span>
+        </div>
+        <div id="btn-share">
+          <svg  class="svg-change-color" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg"><path d="m11 7.8294-3.242 3.242-1.4143-1.4142L12 4l5.6575 5.6572-1.4143 1.4142L13 7.8284V16h-2V7.8294z"></path><path d="M2 21.0029h20v-9h-2v7H4v-7H2v9z"></path></svg>
+            <span class="text-change-color">Condividi</span>
+        </div>
+      </div>
+    <!--ASIDE CONTAINER MENU PRODUCT-->
+    <aside class="aside-product">
+      <div class="parte-superiore">
+        <button class="close-window-product">
+          <img src="assets/icon/cross.svg" alt="chiudi finestra">
+        </button>
+        <img class="logo" src="assets/images/logo.svg" alt="Ikea Logo">
+      </div>
+      <section>
+        <div>
+          <a href="http://" target="_blank">Prodotti</a>
+          <br>
+          <a href="http://" target="_blank">Ambienti</a>
+        </div>
+        <ul>
+          <li><a href="http://"><strong>Idee e ispirazione</strong></a></li>
+          <li><a href="http://"><strong>Prezzi bassi</strong></a></li>
+          <li><a href="http://"><strong>I nostri servizi</strong></a></li>
+          <li><a href="http://"><strong>Adesso in IKEA</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="http://">Servizio clienti</a></li>
+          <li><a href="http://">Dove è il mio ordine?</a></li>
+          <li><a href="http://">I nostri punti vendita</a></li>
+          <li><a href="http://">Planner e configuratori</a></li>
+          <li><a href="http://">IKEA Family</a></li>
+          <li><a href="http://">IKEA Business Network</a></li>
+        </ul>
+      </section>
+      <button class="btn-change-country">
+        <img src="assets/icon/world-site.svg">
+        <a href="https://www.ikea.com/" target="_blank">Cambia Paese</a>
+    </button>
+    </aside>
+    <!--ASIDE CONTAINER USER LOG IN-->
+    <aside class="aside-user">
+        <div>
+          <div class="accedi">
+            <button class="close-window-user">
+              <svg focusable="false" class="svg-icon  hnf-svg-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m11.9997 13.4149 4.9498 4.9497 1.4142-1.4142-4.9498-4.9497 4.9498-4.9498-1.4142-1.4142-4.9498 4.9498L7.05 5.6367 5.6357 7.051l4.9498 4.9498-4.9497 4.9497L7.05 18.3646l4.9497-4.9497z"></path></svg>
+            </button>  
+            <div>
+              <h1>Hej</h1>
+              <div class="btn-accedi">
+                <a href="https://it.accounts.ikea.com/login?state=hKFo2SBWdnNwNldCeThqWnVZSGxFcjEzdjlfdHpUQmJoS3d2SaFupWxvZ2luo3RpZNkganJyOV8tX3drYVFmLUVQRVlFd2ZkWUFud1YyaXo1NXmjY2lk2SBUZmdRcnFrY052OGNTRzNRSkxYdVVHRDI3dkFVTXplSQ&client=TfgQrqkcNv8cSG3QJLXuUGD27vAUMzeI&protocol=oauth2&redirect_uri=https%3A%2F%2Fwww.ikea.com%2Fit%2Fit%2Fprofile%2Flogin%2F&response_type=code&ui_locales=it-IT&code_chalenge=j9noxYIDu1-iTXf4zwOoeFOSJSu1cdsUEiiIcN6aOX8&code_chalenge_method=S256&scope=openid%20profile%20email&audience=https%3A%2F%2Fretail.api.ikea.com&registration=%7B%7D&consumer=OWF&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xOS4wIn0%3D">Accedi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="subscribe-container">
+          <a href="https://">Iscriviti a IKEA Family</a>
+          <button>
+            <img src="assets/icon/left-peak.svg" alt="">
+          </button>
+        </div>
+        <div class="subscribe-container">
+          <a href="https://">Iscrivit a IKEA Business Network</a>
+          <button>
+            <img src="assets/icon/left-peak.svg" alt="">
+          </button>
+        </div>
+        <ul>
+          <li><a href="">Visualizza i tuoi acquisti</a></li>
+          <li><a href="">Traccia il tuo ordine</a></li>
+          <li><a href="">Crea liste della spesa</a></li>
+          <li><a href="">Progetta online</a></li>
+        </ul>
+    </aside>
+    <!--ASIDE CONTAINER CONDIVIDI-->
+    <aside class="aside-condividi">
+      <div class="container-esc">
+        <button class="close-window-cond">
+          <svg focusable="false" class="svg-icon  hnf-svg-icon" viewBox="0 0 24 24" fill="#111" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m11.9997 13.4149 4.9498 4.9497 1.4142-1.4142-4.9498-4.9497 4.9498-4.9498-1.4142-1.4142-4.9498 4.9498L7.05 5.6367 5.6357 7.051l4.9498 4.9498-4.9497 4.9497L7.05 18.3646l4.9497-4.9497z"></path></svg>
+        </button>  
+      </div>
+
+      <section>
+        <div>
+        <img src="assets/images/PH183316-bn-gift-ideas.avif" alt="">
+        </div>
+        <article>
+          <h4>Aquista regali unici e accessibili</h4>
+          <p>In IKEA c’è il regalo perfetto per tutti.
+             Troverai idee regalo uniche e accessibili e carte regalo per tutte le occasioni.
+             Con il regalo giusto, le feste sono ancora più felici e indimenticabili.
+          </p>
+        </article>
+      </section>
+
+      <div>
+        <img src="assets/icon/pinterest-icon.svg" alt="Logo Pinterest">
+        <a target="_blank" href="https://www.pinterest.it/pin/create/bookmarklet/?media=https://www.ikea.com/images/decorazione-per-parete-creata-con-fiori-artificiali-smycka-r-9bbcfe7d8b50d63ffaf42166b59a5576.jpg?f=xxxl&url=https://www.ikea.com/it/it/ideas/gift-ideas/&description=In%20IKEA%20c%E2%80%99%C3%A8%20il%20regalo%20perfetto%20per%20tutti.%20Troverai%20idee%20regalo%20uniche%20e%20accessibili%20e%20carte%20regalo%20per%20tutte%20le%20occasioni.%20Con%20il%20regalo%20giusto,%20le%20feste%20sono%20ancora%20pi%C3%B9%20felici%20e%20indimenticabili.">
+          Pinterest</a>
+      </div>
+
+      <div>
+        <img src="assets/icon/facebook-icon.svg" alt="Logo Facebook">
+        <a target="_blank" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer.php%3Fu%3Dhttps%253A%252F%252Fwww.ikea.com%252Fit%252Fit%252Fideas%252Fgift-ideas%252F&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=it_IT">
+          Facebook</a>
+      </div>
+
+      <div>
+        <img src="assets/icon/twitter-icon.svg" alt="Logo Twitter">
+        <a target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ikea.com%2Fit%2Fit%2Fideas%2Fgift-ideas%2F&text=In%20IKEA%20c%E2%80%99%C3%A8%20il%20regalo%20perfetto%20per%20tutti.%20Troverai%20idee%20regalo%20uniche%20e%20accessibili%20e%20carte%20regalo%20per%20tutte%20le%20occasioni.%20Con%20il%20regalo%20giusto%2C%20le%20feste%20sono%20ancora%20pi%C3%B9%20felici%20e%20indimenticabili.">
+          Twitter</a>
+      </div>
+
+      <div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="m15.5353 9.879-5.6568 5.6568-1.4142-1.4142 5.6568-5.6568 1.4142 1.4142z"></path>
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9496 7.0506c-1.1716-1.1716-3.0711-1.1716-4.2427 0l-1.4142 1.4142-1.4142-1.4143 1.4142-1.4142c1.9526-1.9526 5.1185-1.9526 7.0711 0 1.9526 1.9527 1.9526 5.1185 0 7.0711l-1.4142 1.4142-1.4143-1.4142 1.4143-1.4142c1.1715-1.1716 1.1715-3.071 0-4.2427zM7.05 16.95c1.1716 1.1716 3.0711 1.1716 4.2427 0l1.4142-1.4142 1.4142 1.4142-1.4142 1.4143c-1.9526 1.9526-5.1184 1.9526-7.071 0-1.9527-1.9527-1.9527-5.1185 0-7.0711L7.05 9.879l1.4142 1.4142L7.05 12.7074c-1.1716 1.1716-1.1716 3.0711 0 4.2426z"></path>
+         </svg>
+        <a>Copia il link</a>
+      </div>
+  </aside>    
+    <!--HEADER-->
+    <header>
+        <div class="logo-ikea">
+          <img src="https://www.ikea.com/it/it/static/ikea-logo.f7d9229f806b59ec64cb.svg"alt="Ikea Logo"/>
+        </div>
+        <div class="searchBar">
+          <img class="icon-style serarchIcon" src="assets/icon/search.svg" />
+          <input type="text" placeholder="Cosa stai cercando?" />
+          <button class="btnSearch">
+            <img class="icon-style" src="assets/icon/photo.svg" />
+          </button>
+        </div>
+        <div class="info">
+          <div class="info-element">
+            <div>
+              <span>Per informazioni sulla consegna</span>
+            </div>
+            <div>
+              <img class="icon-style" src="assets/icon/box-track.svg" />
+              <a href="http://">Inserisci il codice postale</a>
+            </div>
+          </div>
+          <div class="info-element">
+            <div>
+              <span>Consulta gli orari e altro</span>
+            </div>
+            <div>
+            <img class="icon-style" src="assets/icon/box-market.svg" />
+            <a href="http://">Seleziona il negozio</a>
+            </div>
+          </div>
+        </div>
+        <!--NAV BAR MENU-->
+        <nav>
+          <button class="open-user">
+            <a href="#">
+              <img class="icon-style" src="assets/icon/user.svg" />
+            </a>
+          </button>
+          <button>
+            <a href="#">
+              <img class="icon-style" src="assets/icon/heart.svg" />
+            </a>
+          </button>
+          <button>
+            <a href="#">
+              <img class="icon-style" src="assets/icon/basket.svg" />
+            </a>
+          </button>
+          <button class="btn-menu-resp">
+            <a href="#">
+              <img class="icon-style" src="assets/icon/menu.svg" />
+            </a>
+          </button>
+        </nav>
+      <!--PRODOTTI ED INFORMAZIONI-->
+        <div class="product-container">
+          <a href="http://">Prodotti</a>
+          <a href="http://">Ambienti</a>
+        </div>
+      </div>
+      <div class="path-container">
+        <hr>
+        <div>
+          <a href="http://">Idee</a>
+          <img class="icon-style peak-rotation" src="assets/icon/left-peak.svg" />
+          <span>Idee regalo</span>
+        </div>
+      </div>
+    </header>
+    <!--MAIN-->
+    <main>
+    <!--SEZIONE 1 MAIN-->
+      <section class="main-gift-s1">
+        <article>
+          <h1>Regala un sorriso alle persone che ami con questi oggetti unici e dal prezzo accessibile</h1>
+          <p>
+            Sei alla ricerca di regali unici per far felici le persone che ti sono care? Li hai trovati.
+             IKEA ti offre innumerevoli prodotti dal prezzo accessibile per tutte le occasioni.
+              È una promessa: nel nostro assortimento troverai l'oggetto giusto.
+             Chiunque sia la persona che ti sta a cuore, con queste idee regalo capirà al volo quanto conta per te.
+          </p>
+        </article>
+          <div>
+            <img src="assets/images/PH183316-bn-gift-ideas.avif" alt="">
+          </div>
+      </section>
+    <!--SEZIONE 2 MAIN-->
+      <section class="main-gift-s2">
+    <!--ELEMENTO NUMERO 1-->
+        <div clas>
+          <a href="https://www.ikea.com/it/it/ideas/gift-ideas/acquista-regali-che-donino-vita-alla-nuova-casa-pubc267ec0c" target="blank">
+            <div>
+              <img src="assets/images/PE865615-crop001.avif" alt="">
+            </div>
+            Acquista regali che donino vita alla nuova casa
+          </a>
+          <br>
+          <img class="arrow-style" src="assets/icon/right-arrow.svg" alt="">
+        </div>
+    <!--ELEMENTO NUMERO 2-->
+        <div>
+          <a href="https://www.ikea.com/it/it/ideas/gift-ideas/regali-di-matrimonio-per-iniziare-una-nuova-vita-insieme-pubdd7263ac" target="blank">
+            <div>
+              <img src="assets/images/PE850381.avif" alt="">
+            </div>
+            Regali di matrimonio per iniziare una nuova vita insieme
+          </a>
+          <br>
+          <img class="arrow-style" src="assets/icon/right-arrow.svg" alt="">
+        </div>
+    <!--ELEMENTO NUMERO 3-->
+        <div>
+          <a href="https://www.ikea.com/it/it/ideas/gift-ideas/scopri-le-idee-regalo-per-i-collezionisti-che-fanno-parte-della-tua-vita-puba6b243b0" target="blank">
+            <div>
+              <img src="assets/images/57acaf5ae8e9ee6d703ec88cd2dfd72d.avif" alt="">
+            </div>
+            Scopri le idee regalo per i collezionisti che fanno parte della tua vita
+          </a>
+          <br>
+          <img class="arrow-style" src="assets/icon/right-arrow.svg" alt="">
+        </div>
+    <!--ELEMENTO NUMERO 4-->
+        <div>
+          <a href="https://www.ikea.com/it/it/ideas/gift-ideas/scopri-lampio-assortimento-di-piante-e-fiori-da-regalare-agli-amanti-del-verde-pubebc3d420" target="blank">
+            <div>
+              <img src="assets/images/piedistallo-per-piante-satsumas-color-legno-in-una-stanza-lu-d37f4fc8c824b5c400653f5a9e37575d.avif" alt="">
+            </div>
+            Scopri l'ampio assortimento di piante e fiori da regalare agli amanti del verde
+          </a>
+          <br>
+          <img class="arrow-style" src="assets/icon/right-arrow.svg" alt="">
+        </div>
+    <!--ELEMENTO NUMERO 5-->
+        <div>
+          <a href="https://www.ikea.com/it/it/ideas/gift-ideas/scopri-lampio-assortimento-di-piante-e-fiori-da-regalare-agli-amanti-del-verde-pubebc3d420" target="blank">
+            <div>
+              <img src="assets/images/PH180007.avif" alt="">
+            </div>
+            Idee regalo per chef di ogni livello
+          </a>
+          <br>
+          <img class="arrow-style" src="assets/icon/right-arrow.svg" alt="">
+        </div>
+    <!--ELEMENTO NUMERO 6-->
+        <div>
+          <a href="https://www.ikea.com/it/it/ideas/gift-ideas/regala-emozioni-con-gli-accessori-per-una-casa-smart-pub35e6ebc0" target="blank">
+            <div>
+              <img src="assets/images/gaming-room-lit-with-blue-light-is-furnished-with-two-monito-4950d668b600c062abb80553228f4cf7.avif" alt="">
+            </div>
+            Regala emozioni con gli accessori per una casa smart
+          </a>
+          <br>
+          <img class="arrow-style" src="assets/icon/right-arrow.svg" alt="">
+        </div>
+    <!--ELEMENTO NUMERO 7-->
+        <div>
+          <a href="https://www.ikea.com/it/it/ideas/gift-ideas/trova-il-regalo-giusto-per-tutti-i-bambini-giocattoli-e-altro-ancora-pub43036160" target="blank">
+            <div>
+              <img src="assets/images/bambino-che-guida-un-camioncino-mula.avif" alt="">
+            </div>
+            Trova il regalo giusto per tutti i bambini: giocattoli e altro ancora
+          </a>
+          <br>
+          <img class="arrow-style" src="assets/icon/right-arrow.svg" alt="">
+        </div>
+      </section>
+    <!--SEZIONE 3 MAIN-->
+    <article class="article-s3">
+      <h2>Trova il regalo perfetto per le persone che contano nella tua vita</h2>
+      <p>
+        Le persone uniche meritano regali unici.
+         Siamo tutti diversi: alcuni di noi amano le sorprese, altri preferiscono scegliere da soli.
+          Indipendentemente dall'occasione e dalla persona a cui è destinato il regalo,
+           l'assortimento IKEA è un ottimo punto di partenza.
+      </p>
+    </article>
+    <section class="main-gift-s3">
+      <!--SEZIONE GIFT-CARD-->
+      <div>
+        <a href="https://www.ikea.com/it/it/customer-service/carte-regalo-ikea-pub4423c690" target="_blank">
+          <img src="assets/images/carta-regalo-ikea-bianca.avif" alt="">
+        </a>
+        <h3>Vai sul sicuro: scegli una carta regalo IKEA</h3>
+        <p>
+          Devi fare un regalo a una persona dai gusti difficili?
+           La carta regalo IKEA è la soluzione ideale: 
+           chi la riceve potrà scegliere ciò che preferisce e non devi nemmeno incartarla. Acquistala qui.
+        </p>
+        <button>
+          <a href="https://www.ikea.com/it/it/customer-service/carte-regalo-ikea-pub4423c690">Aquista la tua carta regalo qui</a>
+        </button>
+      </div>
+      <!--SEZIONE RITIRO-->
+      <div>
+        <a href="https://www.ikea.com/it/it/customer-service/services/click-collect/#d923cac0-0737-11ec-a635-9d2940f18cc3" target="_blank">
+          <img src="assets/images/servizio-di-ritiro-presso-uffici-postali.avif" alt="">
+        </a>
+        <h3>Ritira i tuoi acquisti presso gli Uffici Postali a partire da €4</h3>
+        <p>
+          Con la nuova opzione di ritiro <strong>scegliere di ritirare i tuoi acquisti nell’ufficio postale più comodo per te.</strong>
+        </p>
+        <button>
+          <a href="https://www.ikea.com/it/it/customer-service/services/click-collect/#d923cac0-0737-11ec-a635-9d2940f18cc3">Scopri i dettagli</a>
+        </button>
+      </div>
+    </section>
+    <!--SEZIONE 4 MAIN-->
+    <section class="main-gift-s4">
+      <!--BLOCCO 1-->
+      <div>
+          <svg focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M21 4H1v16h15V10H6v8H3V6h16v7.1707c-1.1652.4118-2 1.5231-2 2.8293v3c0 1.6569 1.3431 3 3 3s3-1.3431 3-3v-3c0-1.3062-.8348-2.4175-2-2.8293V4zM8 18h2v-6H8v6zm6 0h-2v-6h2v6zm5-2c0-.5523.4477-1 1-1s1 .4477 1 1v3c0 .5523-.4477 1-1 1s-1-.4477-1-1v-3z"></path>
+          </svg>
+        <h3>Clicca e Ritira</h3>
+        <p>Acquista online e ritira i tuoi articoli in negozio.</p>
+        <a href="http://" target="_blank">Scopri di più</a>
+      </div>
+      <!--BLOCCO 2-->
+      <div>
+          <svg focusable="false"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 5C3.3432 5 2 6.3431 2 8v8c0 1.6569 1.3432 3 3 3h14c1.6569 0 3-1.3431 3-3V8c0-1.6569-1.3431-3-3-3H5zM4 8c0-.5523.4477-1 1-1h14c.5523 0 1 .4477 1 1v1H4V8zm0 4v4c0 .5523.4477 1 1 1h14c.5523 0 1-.4477 1-1v-4H4z"></path>
+          </svg>
+        <h3>Metodi di pagamento</h3>
+        <p>Tanti modi per pagare</p>
+        <a href="http://" target="_blank">Scopri di più</a>
+      </div>
+      <!--BLOCCO 1-->
+      <div>
+          <svg focusable="false" ><path d="M19.205 5.599c.9541.954 1.4145 2.2788 1.4191 3.6137 0 3.0657-2.2028 5.7259-4.1367 7.5015-1.2156 1.1161-2.5544 2.1393-3.9813 2.9729L12 20.001v-2.3516c.6699-.4304 1.9095-1.2834 3.1347-2.4084 1.8786-1.7247 3.4884-3.8702 3.4894-6.0264-.0037-.849-.2644-1.6326-.8333-2.2015-1.1036-1.1035-2.9413-1.0999-4.0445.0014l-1.7517 1.7448-1.7461-1.7462c-1.1165-1.1164-2.9267-1.1164-4.0431 0-1.6837 1.6837-.5313 4.4136.6406 6.0155.3487.4768.7386.9326 1.1472 1.3617L8 11.9982l2 .0057-.017 6-6-.0171.0056-2 2.7743.0079c-.5387-.5472-1.0629-1.1451-1.5311-1.7852-1.0375-1.4183-1.8594-3.1249-1.8597-4.9957-.0025-1.2512.3936-2.5894 1.419-3.6149 1.8976-1.8975 4.974-1.8975 6.8716 0l.3347.3347.336-.3347c1.8728-1.8722 4.9989-1.8727 6.8716 0z"></path>
+          </svg>
+        <h3>Cambi e resi</h3>
+        <p>365 giorni per ripensarci</p>
+        <a href="http://" target="_blank">Scopri di più</a>
+      </div>
+    </section>
+    <!-- SEZIONE 5 MAIN-->
+    <section class="main-gift-s5">
+      <div>
+          <a href="https://www.ikea.com/it/it/customer-service/services/delivery/">
+              <img src="assets/images/img-five-euro.png" alt="">
+          </a>
+      </div>
+      <article>
+          <h3>Ricevi i tuoi acquisti a casa o presso un Ufficio Postale</h3>
+          <p>
+            <strong>Dal 15 febbraio 2022 al 6 marzo 2022</strong> puoi scegliere di ricevere i tuoi
+               <strong>ordini fino a 30 kg</strong> a casa o presso un Ufficio Postale a soli <strong>€5.</strong> Hai bisogno di aiuto? 
+               <a href="https://www.ikea.com/it/it/customer-service/services/ordini-telefonici-pub69081480" target="_blank">
+                   Acquista telefonicamente in pochi minuti!</a>
+          </p>
+          <a href="https://www.ikea.com/it/it/customer-service/services/delivery" target="_blank">Ricevi a casa</a>
+          <br><br>
+          <a href="https://www.ikea.com/it/it/customer-service/services" target="_blank">Ritira presso un Ufficio Postale</a>
+          <br><br>
+          <p class="disclaimer">
+            Questo servizio non è applicabile ad alcuni prodotti per misura o fragilità.
+             Verificane la compatibilità aggiungendoli al carrello.
+          </p>
+      </article>
+  </section>
+  <!-- FORM -->
+  <form action="https://" method="post">
+      <h4>Iscriviti alla nostra newsletter</h4>
+    <p>Per scoprire tutte le novita del nostro catalogo regali.</p>
+      <input type="text" name="first-name" id="first-name" placeholder="Maria">
+      <input type="text" name="last-name" id="last-name" placeholder="Rossi">
+      <input type="email" name="email" id="email" placeholder="Develhope@gmail.com">
+      <button type="submit">Iscriviti</button>
+  </form>
+  </main>
+    <!--BUTTONS SHARE & UP - RESPONSIVE()-->
+    <div class="cont-btn-share-res">
+      <hr>
+      <div>
+        <div id="btn-up-res">
+          <a href="">
+            <img src="assets/icon/up-peak.svg" alt="">
+            <span>Torna all'inizio</span>
+          </a>
+        </div>
+        <div id="btn-share-resp">
+          <a>
+            <img src="assets/icon/upload.svg" alt="">
+            <span>Condividi</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER-->
+    <footer>
+      <section class="ikea-family">
+          <h4>Iscriviti a IKEA Family</h4>
+          <p>Entra nel club per dar vita alla tue idee, avrai accesso a tanti vantaggi, promozioni ed eventi dedicati.</p>
+          <span><a href="" target="_blank">Scopri di più</a></span>
+          <br>
+          <button class="btn-footer">
+             <a href="https://www.ikea.com/it/it/profile/login/" target="_blank">Iscriviti o accedi</a>
+          </button>
+      </section>
+      <section class="ikea-business">
+          <h4>Entra in IKEA Business Network</h4>
+          <p>Siamo con te in ogni tua impresa: dalla fattura in cassa alla consulenza d'arredo e tanti altri vantaggi.</p>
+          <span><a href="" target="_blank">Scopri di più</a></span>
+          <br>
+          <button class="btn-footer">
+              <a href="https://www.ikea.com/it/it/profile/login/" target="_blank">Iscriviti o accedi</a>
+          </button>
+      </section>
+      <div class="ikea-contact">
+        <div class="footer-list-header">
+          <h4>Aiuto e contatti</h4>
+          <img src="assets/icon/down-peak.svg" alt="">
+        </div>
+              <ul class="footer-list">
+                  <li><a href="https://">Servizio clienti</a></li>
+                  <li><a href="https://">Servizi di consegna</a></li>
+                  <li><a href="https://">Disponibilità prodotto</a></li>
+                  <li><a href="https://">Cambio idea e resi</a></li>
+                  <li><a href="https://">Supporto prodotti</a></li>
+                  <li><a href="https://">Pezzi di ricambio</a></li>
+                  <li><a href="https://">Dove è il mio ordine?</a></li>
+                  <li><a href="https://">Montaggio</a></li>
+                  <li><a href="https://">Garanzie</a></li>
+                  <li><a href="https://">Avvisi importanti e richiami prodotto</a></li>
+                  <li><a href="https://">Raccontaci la tua esperienza</a></li>
+                  <li><a href="https://">Tutti i nostri servizi</a></li>
+              </ul>
+      </div>
+      <div class="ikea-buy">
+        <div class="footer-list-header">
+          <h4>Acquistare in IKEA</h4>
+          <img src="assets/icon/down-peak.svg" alt="">
+        </div>
+              <ul class="footer-list">
+                  <li><a href="https://">App IKEA</a></li>
+                  <li><a href="https://">I nostri punti vendita</a></li>
+                  <li><a href="https://">Planner e configuratori</a></li>
+                  <li><a href="https://">Brochure</a></li>
+                  <li><a href="https://">IKEA Family</a></li>
+                  <li><a href="" target="_blank">IKEA Business Network</a></li>
+                  <li><a href="https://">Acquistare in IKEA</a></li>
+              </ul>
+      </div>
+      <div class="ikea-account">
+        <div class="footer-list-header">
+          <h4>Il mio account</h4>
+          <img src="assets/icon/down-peak.svg" alt="">
+        </div>
+              <ul class="footer-list">
+                  <li><a href="https://">Profilo/Login</a></li>
+                  <li><a href="https://">Lista dei desideri</a></li>
+                  <li><a href="https://">Il mio profilo IKEA Family</a></li>
+              </ul>
+      </div>
+      <div class="ikea-about-us">
+        <div class="footer-list-header">
+          <h4>A proposito di IKEA</h4>
+          <img src="assets/icon/down-peak.svg" alt="">
+        </div>
+              <ul class="footer-list">
+                  <li><a href="https://">Questa è IKEA</a></li>
+                  <li><a href="https://">Lavora con noi</a></li>
+                  <li><a href="https://">Una vita sana e sostenibile</a></li>
+                  <li><a href="https://">Clima e ambiente</a></li>
+                  <li><a href="https://">Impatto sociale</a></li>
+                  <li><a href="https://">La vita in casa</a></li>
+                  <li><a href="https://">Sala stampa</a></li>
+              </ul>
+      </div>
+      <div class="footer-icons-row">
+          <!--ICONS SOCIAL NETWORK-->
+          <div>
+            <div class="icons-social">
+              <div>
+                  <a href="https://www.facebook.com/IKEAItalia/">
+                      <img src="assets/icon/facebook-icon.svg" alt="Logo Facebook">
+                  </a>
+              </div>
+              <div>
+                  <a href="https://www.instagram.com/ikeaitalia/">
+                      <img src="assets/icon/instagram-icon.svg" alt="Logo Instagram">
+                  </a>
+              </div>
+              <div>
+                  <a href="https://www.pinterest.it/margjed/ikea/">
+                      <img src="assets/icon/pinterest-icon.svg" alt="Logo Pinterest">
+                  </a>
+              </div>
+              <div>
+                  <a href="https://twitter.com/ikeaitalia">
+                      <img src="assets/icon/twitter-icon.svg" alt="Logo Twitter">
+                  </a>
+              </div>
+              <div>
+                  <a href="https://www.youtube.com/user/IKEAitalia">
+                      <img src="assets/icon/youtube-icon.svg" alt="Logo YouTube">
+                  </a>
+              </div>
+            </div>
+          <!-- ICONS PAY METHODS-->
+            <div class="icons-pay">
+              <div>
+                <img src="assets/images/master-card.svg" alt="Carta di credito Mastercard">
+              </div>
+              <div>
+                <img src="assets/images/visa.svg" alt="Carta di credito Visa">
+              </div>
+              <div>
+                <img src="assets/images/american-express.svg" alt="Carta di credito American-express">
+              </div>
+              <div>
+                <img src="assets/images/paypal.svg" alt="Pay Pal">
+              </div>
+              <div>
+                <img src="assets/images/ikea-gift-card.svg" alt="Carta regalo IKEA">
+              </div>
+              <div>
+                <img src="assets/images/master-card-id-check.svg" alt="Mastercard SecureCode">
+              </div>
+              <div>
+                <img src="assets/images/visa-secure.svg" alt="Verified by Visa">
+              </div>
+              <div>
+                <img src="assets/images/american-express-safe-key.svg" alt="American Express Safe Key">
+              </div>
+            </div>
+          </div>
+          <button class="btn-change-country">
+              <img src="assets/icon/world-site.svg">
+              <a href="https://www.ikea.com/" target="_blank">Cambia Paese</a>
+          </button>
+      </div>
+      <div class="ikea-info">
+          <hr>
+          <section>
+              <p>© Inter IKEA Systems B.V. 1999-2022</p>
+              <ul class="footer-list-info">
+                  <li><a href="https://www.ikea.com/it/it/customer-service/terms-conditions/">Condizioni di vendita</a></li>
+                  <li><a href="https://www.ikea.com/it/it/customer-service/privacy-policy/">Privacy policy</a></li>
+                  <li><a href="https://www.ikea.com/it/it/customer-service/cookie-policy/">Informativa sui Cookies</a></li>
+                  <li><a href="https://">Impostazione del Cookie</a></li>
+                  <li><a href="https://www.ikea.com/it/it/customer-service/responsible-disclosure/">Responsible disclosure</a></li>
+                  <li><a href="https://www.ikea.com/it/it/customer-service/modello-231-pub39f212a1">Modello 231</a></li>
+              </ul>
+          </section>
+      </div>
+  </footer>
+  <script type="text/javascript" src="gift.js"></script>
+  </body>
+</html>
