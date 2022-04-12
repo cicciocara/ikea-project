@@ -75,11 +75,7 @@ const textBlack = document.querySelectorAll(".text-change-color");
 const svgBlack = document.querySelectorAll(".svg-change-color");
 
 function scrollFunction() {
-  if (
-    document.documentElement.scrollTop > 3400 &&
-    innerWidth > 1200 &&
-    outerWidth > 1200
-  ) {
+  if (document.documentElement.scrollTop > 3400 && innerWidth > 1200 && outerWidth > 1200) {
     btnShareOpen.style.display = "flex";
     btnGoUp.style.backgroundColor = "#111";
     btnShareOpen.style.backgroundColor = "#111";
@@ -109,6 +105,4 @@ btnGoUp.addEventListener("click", () => {
 
 //FOOTER LIST RESPONSIVE - DISPLAY
 const titolo = document.querySelectorAll(".footer-list-header");
-const lista = documetn.querySelectorAll(".footer-list");
-
-classList.add("footer-list-display");
+const lista = document.querySelectorAll(".footer-list");
