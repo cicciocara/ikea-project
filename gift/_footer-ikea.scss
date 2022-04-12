@@ -1,0 +1,359 @@
+footer {
+  width: 100;
+  margin-top: 3rem;
+  padding-left: 11%;
+  padding-top: 3rem;
+  padding-right: 7rem;
+  padding-bottom: 1.5rem;
+  background-color: #f1f1f1;
+  display: grid;
+  justify-content: space-between;
+  grid-template-areas:
+    "family contact buy acount about"
+    "business contact buy acount about"
+    "pay pay pay pay pay"
+    "info info info info info";
+  row-gap: 2rem;
+  column-gap: 2.5rem;
+  .ikea-family {
+    grid-area: family;
+    font-size: 0.9rem;
+    max-width: 351px;
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+    span {
+      a {
+        font-size: 0.97rem;
+        color: rgb(84, 83, 83);
+        &:hover {
+          color: black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .ikea-business {
+    grid-area: business;
+    font-size: 0.9rem;
+    max-width: 351px;
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+    span {
+      a {
+        font-size: 0.97rem;
+        color: rgb(84, 83, 83);
+        &:hover {
+          color: black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .ikea-contact {
+    grid-area: contact;
+    img {
+      height: 34px;
+      width: 34px;
+      display: none;
+    }
+  }
+  .ikea-buy {
+    grid-area: buy;
+    img {
+      height: 34px;
+      width: 34px;
+      display: none;
+    }
+  }
+  .ikea-account {
+    grid-area: acount;
+    img {
+      height: 34px;
+      width: 34px;
+      display: none;
+    }
+  }
+  .ikea-about-us {
+    grid-area: about;
+    img {
+      height: 34px;
+      width: 34px;
+      display: none;
+    }
+  }
+  .footer-list-header {
+    img {
+      display: none;
+    }
+  }
+  .footer-list {
+    list-style: none;
+    padding-left: 0;
+    li {
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+      font-size: 0.9rem;
+      a {
+        text-decoration: none;
+        color: #111;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .footer-icons-row {
+    grid-area: pay;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    div {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      .icons-social {
+        display: flex;
+        gap: 1.5rem;
+        div {
+          border-style: solid;
+          border-radius: 50%;
+          border-width: 1px;
+          border-color: #dfdfdf;
+          width: 30px;
+          height: 30px;
+          img {
+            padding-left: 3px;
+            padding-top: 5px;
+          }
+          &:hover {
+            border-color: #111;
+          }
+        }
+      }
+      .icons-pay {
+        display: flex;
+        gap: 1.5rem;
+
+        div {
+          border-style: solid;
+          padding: 5px;
+          border-width: 1px;
+          border-color: #dfdfdf;
+          img {
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+  .ikea-info {
+    grid-area: info;
+    font-size: 0.75rem;
+    line-height: 2;
+    section {
+      display: flex;
+      justify-content: space-between;
+    }
+    hr {
+      border-top: 0;
+      margin-bottom: 2rem;
+      color: #dfdfdf;
+    }
+  }
+  .footer-list-info {
+    list-style: none;
+    text-align: right;
+    li {
+      display: inline;
+      padding-left: 1rem;
+      a {
+        text-decoration: none;
+        display: inline;
+        color: #111;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .btn-footer {
+    height: 40px;
+    border-style: none;
+    background-color: black;
+    border-radius: 30px;
+    padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+    margin-top: 2rem;
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    &:hover {
+      background-color: rgb(78, 77, 77);
+    }
+  }
+  .btn-change-country {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: fit-content;
+    height: 45px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #dfdfdf;
+    border-radius: 30px;
+    padding: 0.8rem 1.3rem 0.8rem 1.3rem;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: #111;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    &:hover {
+      border-color: #111;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    row-gap: 1rem;
+    column-gap: 1.8rem;
+  }
+}
+@media (max-width: 900px) {
+  footer {
+    padding: 0;
+    row-gap: 0;
+    column-gap: 0;
+    grid-template-areas:
+      "family"
+      "business"
+      "contact"
+      "buy"
+      "acount"
+      "about"
+      "pay"
+      "pay"
+      "info";
+    .ikea-family {
+      max-width: unset;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 2.5rem;
+    }
+    .ikea-business {
+      max-width: unset;
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .footer-list-header {
+      border-top: 1px solid #dfdfdf;
+      height: 100px;
+      width: 100%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h4 {
+        padding-left: 2rem;
+      }
+      img {
+        display: flex;
+        padding-right: 2rem;
+      }
+    }
+    .footer-list {
+      display: none;
+      margin-top: 0;
+      padding-left: 3rem;
+    }
+    .footer-list-display {
+      display: block;
+      margin-top: 0;
+      padding-left: 3rem;
+    }
+    .ikea-contact {
+      width: 100%;
+    }
+    .ikea-buy {
+      width: 100%;
+    }
+    .ikea-account {
+      width: 100%;
+    }
+    .ikea-about-us {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    .footer-icons-row {
+      align-items: unset;
+      justify-content: unset;
+      flex-direction: column;
+      gap: 2rem;
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+      div {
+        align-items: unset;
+        flex-direction: column;
+        .icons-social {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .icons-pay {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+    }
+    .ikea-info {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-top: 0;
+      line-height: 2rem;
+      section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: unset;
+      }
+      hr {
+        margin-bottom: 0;
+        color: #dfdfdf;
+      }
+    }
+    .footer-list-info {
+      list-style: none;
+      text-align: left;
+      padding-left: 0;
+      margin-top: 0;
+      li {
+        white-space: nowrap;
+        display: inline;
+        padding-left: 0rem;
+        padding-right: 0.8rem;
+        a {
+          text-decoration: none;
+          display: inline;
+          color: #111;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
