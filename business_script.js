@@ -85,11 +85,10 @@ function getAndPrint() {
     text: form.info.value,
   };
 
-  window.alert("Dati inviati");
-
   for (const [key, value] of Object.entries(userData)) {
     console.log(`${key}: ${value}`);
   }
+  window.alert("Dati inviati correttamente!");
 }
 
 function checkInput(event) {
